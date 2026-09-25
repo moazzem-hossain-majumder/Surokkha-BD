@@ -4,7 +4,7 @@ Free, English-default web app (with full Bangla support) that helps people in Ba
 
 > Not an official warning system. Always follow BMD and DDM alerts.
 
-**Status:** Phase 2 (live map, shelter finder, district/shelter datasets, Supabase schema). See [`docs/phases.md`](docs/phases.md).
+**Status:** Phase 3 (auth, roles, admin dashboard, community reports). See [`docs/phases.md`](docs/phases.md). **Needs a real Supabase project to run** — see the Supabase section below.
 
 ## Stack
 Next.js 16 (App Router, TypeScript) · Tailwind CSS 4 · next-intl · Supabase · Fontsource fonts
@@ -48,19 +48,22 @@ tests/                unit, e2e, a11y (later phases)
 - `/hazards` and `/hazards/[slug]` — all 14 hazard guides (before / during / after, myths vs facts, cyclone signal table, sources)
 - `/contacts` — emergency numbers with one-tap call
 - `/plan` — local-first, printable family safety plan
-- `/map` — shelters and the last 30 days of earthquakes (USGS), with a map/list toggle
+- `/map` — shelters, the last 30 days of earthquakes (USGS), and verified community reports, with a map/list toggle
 - `/shelters` — Shelter Finder: use your location or pick a district, see the 10 nearest shelters/hospitals with distance and directions
+- `/report` — submit a community report (flooding, erosion, blocked road, etc.) with a map pin and an optional photo
+- `/login`, `/signup`, `/account` — email/password or magic-link sign-in
+- `/admin` — dashboard for coordinators and admins: alerts, shelters, report moderation, and (admin-only) an audit log
 
-## Supabase (Phase 2 schema, not yet connected to the UI)
-`supabase/migrations/` has the full schema (districts, profiles, shelters, alerts, earthquake/weather caches, a `nearest_shelters()` PostGIS function) and Row Level Security for every table. `supabase/seed/` has matching seed SQL generated from `src/content/districts.json` and `src/content/shelters.json`. The map and shelter finder currently read the static JSON directly; a later phase will point them at Supabase instead. To try the schema now:
+## Supabase — required from Phase 3 onward
+This phase needs a real Supabase project. In the SQL editor, run every file in `supabase/migrations/` in order (0001 → 0005), then both files in `supabase/seed/`. Then fill in `.env.local` (copy `.env.example`) with your project's URL, anon key, and service role key.
 
-```powershell
-# In the Supabase SQL editor, or via the Supabase CLI:
-# 1. Run supabase/migrations/0001_init.sql
-# 2. Run supabase/migrations/0002_rls.sql
-# 3. Run supabase/seed/0001_seed_districts.sql
-# 4. Run supabase/seed/0002_seed_shelters.sql
-```
+**Deploying to Vercel:** add the same three variables (`NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`) in Vercel's Project Settings → Environment Variables. Without them, the build fails, because `/account` and `/admin/*` need Supabase reachable to build as dynamic routes.
+
+**Test accounts:** sign up normally through `/signup` to get a `citizen` account. To test coordinator/admin features, sign up, then manually change that user's `role` in the `profiles` table via the Supabase Table Editor — there is deliberately no way to grant yourself a higher role through the app itself.
+
+**Known gap:** `/map` and `/shelters` still read the static JSON from Phase 2, not the live `shelters` table. A shelter you add in `/admin/shelters` won't show up there yet; that's next.
+
+See [`supabase/tests/manual_rls_checklist.md`](supabase/tests/manual_rls_checklist.md) for a step-by-step way to confirm each role can and can't do what it should.
 
 ## Content and data review needed before launch
 Hazard guide text and the emergency numbers were drafted with AI research and are **not yet verified against official BMD/DDM/FFWC publications** by a human. District coordinates are approximate, and the shelter list (18 entries) is a small hand-picked demo sample, not real DDM coverage. Each hazard page shows a draft notice until its `status` field is set to `"reviewed"` in `src/content/hazards/*.json`. See `docs/memory.md` for details. Do not present this content as authoritative until reviewed.

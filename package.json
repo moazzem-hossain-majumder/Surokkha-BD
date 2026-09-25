@@ -23,7 +23,8 @@
     "next-intl": "^4.14.7",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
-    "react-leaflet": "^5.0.0"
+    "react-leaflet": "^5.0.0",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",

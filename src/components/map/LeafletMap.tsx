@@ -9,6 +9,16 @@ import { useEffectiveTheme } from "@/lib/useTheme";
 import type { Shelter } from "@/lib/shelters";
 import type { QuakeFeature } from "@/app/api/quakes/route";
 import type { Bilingual } from "@/lib/hazards";
+import { REPORT_TYPE_LABELS, type ReportType } from "@/lib/reports";
+
+export interface MapReport {
+  id: string;
+  type: ReportType;
+  description: string;
+  lat: number;
+  lng: number;
+  createdAt: string;
+}
 
 const OSM_ATTRIBUTION = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
 const OSM_TILE_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -23,6 +33,15 @@ function shelterIcon(type: Shelter["type"]) {
   return L.divIcon({
     className: "",
     html: `<span style="display:block;width:16px;height:16px;border-radius:9999px;background:${SHELTER_COLOR[type]};border:2px solid white;box-shadow:0 0 0 1px rgba(0,0,0,.25)"></span>`,
+    iconSize: [16, 16],
+    iconAnchor: [8, 8],
+  });
+}
+
+function reportIcon() {
+  return L.divIcon({
+    className: "",
+    html: `<span style="display:block;width:16px;height:16px;border-radius:4px;transform:rotate(45deg);background:#D9730D;border:2px solid white;box-shadow:0 0 0 1px rgba(0,0,0,.25)"></span>`,
     iconSize: [16, 16],
     iconAnchor: [8, 8],
   });
@@ -49,16 +68,20 @@ function pick(text: Bilingual, locale: string) {
 export function LeafletMap({
   shelters,
   quakes,
+  reports = [],
   showShelters,
   showQuakes,
+  showReports = false,
   locale,
   center = [23.685, 90.3563],
   zoom = 7,
 }: {
   shelters: Shelter[];
   quakes: QuakeFeature[];
+  reports?: MapReport[];
   showShelters: boolean;
   showQuakes: boolean;
+  showReports?: boolean;
   locale: string;
   center?: [number, number];
   zoom?: number;
@@ -70,8 +93,9 @@ export function LeafletMap({
     const pts: [number, number][] = [];
     if (showShelters) shelters.forEach((s) => pts.push([s.lat, s.lng]));
     if (showQuakes) quakes.forEach((q) => pts.push([q.lat, q.lng]));
+    if (showReports) reports.forEach((r) => pts.push([r.lat, r.lng]));
     return pts;
-  }, [shelters, quakes, showShelters, showQuakes]);
+  }, [shelters, quakes, reports, showShelters, showQuakes, showReports]);
 
   return (
     <MapContainer center={center} zoom={zoom} scrollWheelZoom className="h-full w-full">
@@ -109,6 +133,17 @@ export function LeafletMap({
               <p className="text-xs text-ink-3">{new Date(q.time).toLocaleString(locale === "bn" ? "bn-BD" : "en-US")}</p>
             </Popup>
           </CircleMarker>
+        ))}
+
+      {showReports &&
+        reports.map((r) => (
+          <Marker key={r.id} position={[r.lat, r.lng]} icon={reportIcon()}>
+            <Popup>
+              <p className="font-semibold">{pick(REPORT_TYPE_LABELS[r.type], locale)}</p>
+              <p className="text-sm text-ink-2">{r.description}</p>
+              <p className="text-xs text-ink-3">{new Date(r.createdAt).toLocaleDateString(locale === "bn" ? "bn-BD" : "en-US")}</p>
+            </Popup>
+          </Marker>
         ))}
     </MapContainer>
   );

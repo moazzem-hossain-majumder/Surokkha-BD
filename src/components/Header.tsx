@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { LanguageSwitch } from "./LanguageSwitch";
 import { ThemeToggle } from "./ThemeToggle";
+import { AuthNav } from "./AuthNav";
 
 function Mark() {
   return (
@@ -19,6 +20,7 @@ export function Header() {
     { href: "/hazards", label: t("nav.hazards") },
     { href: "/map", label: t("nav.map") },
     { href: "/shelters", label: t("nav.shelters") },
+    { href: "/report", label: t("nav.report") },
     { href: "/contacts", label: t("nav.contacts") },
     { href: "/plan", label: t("nav.plan") },
   ] as const;
@@ -42,6 +44,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-2">
+          <AuthNav />
           <LanguageSwitch />
           <ThemeToggle />
         </div>

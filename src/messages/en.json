@@ -14,7 +14,10 @@
       "contacts": "Emergency",
       "plan": "My plan",
       "map": "Map",
-      "shelters": "Shelters"
+      "shelters": "Shelters",
+      "report": "Report",
+      "login": "Log in",
+      "account": "Account"
     }
   },
   "theme": {
@@ -151,7 +154,9 @@
       "cyclone": "Cyclone shelter",
       "flood": "Flood shelter",
       "hospital": "Hospital"
-    }
+    },
+    "layerReports": "Community reports",
+    "noReports": "No verified community reports yet."
   },
   "shelters": {
     "title": "Find a shelter",
@@ -173,6 +178,156 @@
       "cyclone": "Cyclone shelter",
       "flood": "Flood shelter",
       "hospital": "Hospital"
+    }
+  },
+  "offlineQueue": {
+    "waiting": "{count, plural, one {# report is} other {# reports are}} waiting to send. We'll try again once you're back online.",
+    "syncing": "Sending your queued report…"
+  },
+  "auth": {
+    "loginTitle": "Log in",
+    "loginIntro": "Log in to save your safety plan to your account, volunteer, or access the admin dashboard.",
+    "signupTitle": "Create an account",
+    "signupIntro": "An account lets you track your reports and, if invited, help coordinate relief.",
+    "accountTitle": "My account",
+    "modeLabel": "Sign-in method",
+    "passwordTab": "Password",
+    "magicTab": "Email link",
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 8 characters.",
+    "displayName": "Name",
+    "signIn": "Log in",
+    "signingIn": "Logging in…",
+    "sendMagicLink": "Send me a login link",
+    "sending": "Sending…",
+    "createAccount": "Create account",
+    "signingUp": "Creating account…",
+    "signOut": "Sign out",
+    "signingOut": "Signing out…",
+    "noAccount": "Don't have an account?",
+    "haveAccount": "Already have an account?",
+    "signUpLink": "Sign up",
+    "signInLink": "Log in",
+    "role": "Role",
+    "district": "District",
+    "goToAdmin": "Go to admin dashboard",
+    "roles": {
+      "citizen": "Citizen",
+      "volunteer": "Volunteer",
+      "donor": "Donor",
+      "coordinator": "Coordinator",
+      "admin": "Admin"
+    },
+    "errors": {
+      "missingFields": "Please fill in all fields.",
+      "invalidCredentials": "That email and password don't match.",
+      "sendFailed": "Couldn't send the link. Please try again.",
+      "weakPassword": "Please use a password of at least 8 characters.",
+      "alreadyRegistered": "That email is already registered. Try logging in instead.",
+      "signUpFailed": "Something went wrong creating your account. Please try again."
+    },
+    "info": {
+      "magicLinkSent": "Check your email for a login link.",
+      "checkEmail": "Check your email to confirm your account."
+    }
+  },
+  "report": {
+    "title": "Report a problem",
+    "intro": "Tell your community about flooding, erosion, a blocked road, or other hazards you can see right now.",
+    "moderationNote": "Reports are checked by a coordinator before they appear on the map.",
+    "type": "What are you reporting?",
+    "description": "What's happening?",
+    "descriptionPlaceholder": "Describe what you see, how bad it is, and anything that would help someone respond.",
+    "location": "Where is this?",
+    "useLocation": "Use my location",
+    "locationHint": "Tap the map to place or move the pin.",
+    "photo": "Add a photo (optional)",
+    "photoHint": "The photo is resized and stripped of location data before it's sent.",
+    "contact": "Your phone or email (optional)",
+    "contactPlaceholder": "Only coordinators can see this.",
+    "contactHint": "Only shared with coordinators reviewing this report, never shown publicly.",
+    "submit": "Send report",
+    "submitting": "Sending…",
+    "pinRequired": "Tap the map to mark the location before sending.",
+    "thankYou": "Thank you. Your report has been sent for review.",
+    "queuedNotice": "You're offline. Your report is saved on this device and will be sent automatically once you're back online.",
+    "errors": {
+      "photoFailed": "Couldn't process that photo. Try a different one, or skip it."
+    }
+  },
+  "admin": {
+    "title": "Admin dashboard",
+    "signedInAs": "Signed in as",
+    "saving": "Saving…",
+    "nav": {
+      "label": "Admin",
+      "overview": "Overview",
+      "alerts": "Alerts",
+      "shelters": "Shelters",
+      "reports": "Reports",
+      "audit": "Audit log"
+    },
+    "stats": {
+      "pendingReports": "Pending reports",
+      "activeAlerts": "Active alerts",
+      "activeShelters": "Active shelters"
+    },
+    "alerts": {
+      "newAlert": "New alert",
+      "hazard": "Hazard",
+      "severity": "Severity",
+      "titleEn": "Title (English)",
+      "titleBn": "Title (Bangla)",
+      "bodyEn": "Details (English)",
+      "bodyBn": "Details (Bangla)",
+      "districtCodes": "District codes",
+      "districtCodesHint": "Comma-separated district codes, e.g. BAR,PAT,BHO. Leave blank for a nationwide alert.",
+      "sourceName": "Source",
+      "sourceUrl": "Source link",
+      "expiresAt": "Expires at",
+      "create": "Publish alert",
+      "existing": "Current and recent alerts",
+      "active": "Active",
+      "expired": "Expired",
+      "expireNow": "Expire now",
+      "none": "No alerts yet."
+    },
+    "shelters": {
+      "newShelter": "Add a shelter",
+      "nameEn": "Name (English)",
+      "nameBn": "Name (Bangla)",
+      "type": "Type",
+      "district": "District",
+      "lat": "Latitude",
+      "lng": "Longitude",
+      "capacity": "Capacity",
+      "contact": "Contact",
+      "accessible": "Wheelchair accessible",
+      "sourceName": "Source",
+      "create": "Add shelter",
+      "existing": "Shelters",
+      "activate": "Activate",
+      "deactivate": "Deactivate",
+      "none": "No shelters yet.",
+      "types": {
+        "cyclone": "Cyclone shelter",
+        "flood": "Flood shelter",
+        "hospital": "Hospital",
+        "other": "Other"
+      }
+    },
+    "reports": {
+      "pending": "Pending reports",
+      "verify": "Verify",
+      "reject": "Reject",
+      "resolve": "Resolve",
+      "contact": "Contact",
+      "none": "No pending reports."
+    },
+    "audit": {
+      "title": "Audit log",
+      "none": "No activity recorded yet."
     }
   }
 }

@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import { BanglaPrompt } from "@/components/BanglaPrompt";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { OfflineQueueBanner } from "@/components/OfflineQueueBanner";
 import { ThemeScript } from "@/components/ThemeScript";
 import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
 
@@ -70,6 +71,7 @@ export default async function LocaleLayout({
             {t("skip")}
           </a>
           <BanglaPrompt />
+          <OfflineQueueBanner />
           <Header />
           <main id="main">{children}</main>
           <Footer />

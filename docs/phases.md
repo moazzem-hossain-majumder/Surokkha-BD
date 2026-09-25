@@ -72,17 +72,17 @@ Legend: **[P0]** MVP essential. **[P1]** should have. **[P2]** later.
 
 **Goal:** Trusted two-way reporting.
 
-- [ ] P3-1 Auth (sign up, log in, magic link), profiles, roles
-- [ ] P3-2 Admin dashboard shell with role guard
-- [ ] P3-3 Admin: create, edit, and expire alerts
-- [ ] P3-4 Admin: manage shelters
-- [ ] P3-5 Report form (type, pin, photo, description) with client-side photo compression
-- [ ] P3-6 Report Edge Function: validation, rate limit, EXIF stripping, IP hashing
-- [ ] P3-7 Moderation queue (verify, reject, resolve)
-- [ ] P3-8 Verified reports appear on map and list
-- [ ] P3-9 Offline report queue with background sync
-- [ ] P3-10 RLS test suite for all roles
-- [ ] P3-11 Audit log
+- [x] P3-1 Auth (sign up, log in, magic link), profiles, roles
+- [x] P3-2 Admin dashboard shell with role guard
+- [x] P3-3 Admin: create, edit, and expire alerts
+- [x] P3-4 Admin: manage shelters
+- [x] P3-5 Report form (type, pin, photo, description) with client-side photo compression
+- [x] P3-6 Report intake: validation, rate limit, EXIF stripping, IP hashing (built as a Next.js Route Handler using the service-role key, not a separate Supabase Edge Function — same security properties, simpler to deploy since it ships with the Next app)
+- [x] P3-7 Moderation queue (verify, reject, resolve)
+- [x] P3-8 Verified reports appear on map and list
+- [x] P3-9 Offline report queue with background sync
+- [x] P3-10 RLS test suite for all roles
+- [x] P3-11 Audit log
 
 **Done when:** A report goes from anonymous submission to a verified marker on the map, and RLS tests pass.
 
