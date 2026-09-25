@@ -1,0 +1,94 @@
+{
+  "slug": "nor-wester",
+  "regions": [
+    "city",
+    "river",
+    "northwest",
+    "coast"
+  ],
+  "season": {
+    "en": "Mostly March to May, before the monsoon.",
+    "bn": "বেশিরভাগ মার্চ থেকে মে, বর্ষার আগে।"
+  },
+  "where": {
+    "en": "Most often in the central and northern parts, but a storm can strike anywhere.",
+    "bn": "বেশি হয় মধ্য ও উত্তরাঞ্চলে, তবে যেকোনো জায়গায় ঝড় হতে পারে।"
+  },
+  "summary": {
+    "en": "A kalbaishakhi is a sudden storm with strong wind, lightning, and hail. Some can produce tornadoes.",
+    "bn": "কালবৈশাখী হঠাৎ আসা ঝড়, যার সাথে থাকে প্রবল বাতাস, বজ্রপাত ও শিলাবৃষ্টি। কিছু ঝড়ে টর্নেডোও হতে পারে।"
+  },
+  "before": [
+    {
+      "en": "Check forecasts and watch for dark, fast-moving clouds.",
+      "bn": "পূর্বাভাস দেখুন এবং কালো, দ্রুত সরে আসা মেঘের দিকে নজর রাখুন।"
+    },
+    {
+      "en": "Fasten roofs and tin sheets. Take in loose items.",
+      "bn": "চাল ও টিন শক্ত করে আটকান। আলগা জিনিস ঘরে তুলে রাখুন।"
+    },
+    {
+      "en": "Cut weak branches near your home.",
+      "bn": "বাড়ির কাছের দুর্বল ডাল কেটে ফেলুন।"
+    },
+    {
+      "en": "Know the strongest room or building you can shelter in.",
+      "bn": "কোন ঘর বা ভবন সবচেয়ে শক্ত এবং সেখানে আশ্রয় নেওয়া যাবে তা জেনে রাখুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Go into a strong building at once, away from windows.",
+      "bn": "এখনই জানালা থেকে দূরে কোনো পাকা ঘরে যান।"
+    },
+    {
+      "en": "If you are on a boat or river, get to shore immediately.",
+      "bn": "নৌকায় বা নদীতে থাকলে সঙ্গে সঙ্গে তীরে উঠুন।"
+    },
+    {
+      "en": "Stay away from trees, poles, and tin structures.",
+      "bn": "গাছ, খুঁটি ও টিনের কাঠামো থেকে দূরে থাকুন।"
+    },
+    {
+      "en": "If a tornado approaches, go to the lowest interior room and cover your head.",
+      "bn": "টর্নেডো এগিয়ে এলে সবচেয়ে নিচু ভেতরের ঘরে গিয়ে মাথা ঢেকে রাখুন।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Stay away from fallen wires and trees touching power lines.",
+      "bn": "ছেঁড়া তার এবং বিদ্যুতের তার ছুঁয়ে থাকা গাছ থেকে দূরে থাকুন।"
+    },
+    {
+      "en": "Check for injuries and give first aid.",
+      "bn": "আঘাত আছে কি না দেখুন এবং প্রাথমিক চিকিৎসা দিন।"
+    },
+    {
+      "en": "Repair roofs carefully. Ask for help with heavy damage.",
+      "bn": "চাল সাবধানে মেরামত করুন। বড় ক্ষতি হলে সাহায্য চান।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "A kalbaishakhi is just a normal storm, so there is no need to go inside.",
+        "bn": "কালবৈশাখী সাধারণ ঝড়, তাই ঘরে যাওয়ার দরকার নেই।"
+      },
+      "fact": {
+        "en": "These storms can bring damaging wind, lightning, and hail within minutes. Take shelter early.",
+        "bn": "এই ঝড়ে কয়েক মিনিটেই ক্ষতিকর বাতাস, বজ্রপাত ও শিলাবৃষ্টি হতে পারে। আগেই আশ্রয় নিন।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Bangladesh Meteorological Department (BMD)",
+      "url": "https://bmd.gov.bd"
+    },
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+:root {
+  --f-body: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
+  --f-display: "Bricolage Grotesque Variable", "Hind Siliguri", system-ui, sans-serif;
+}
+
+html[lang="bn"] {
+  --f-display: "Anek Bangla Variable", "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-brand-soft: var(--brand-soft);
+  --color-sun: var(--sun);
+  --color-sun-soft: var(--sun-soft);
+  --color-accent: var(--h-accent);
+  --color-accent-soft: var(--h-soft);
+  --color-sev-0: var(--sev-0);
+  --color-sev-1: var(--sev-1);
+  --color-sev-2: var(--sev-2);
+  --color-sev-3: var(--sev-3);
+  --color-sev-4: var(--sev-4);
+  --font-sans: var(--f-body);
+  --font-display: var(--f-display);
+  --radius-input: 6px;
+  --radius-card: 12px;
+  --radius-sheet: 20px;
+}
+
+html {
+  scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 5rem);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+h1, h2, h3 {
+  font-family: var(--f-display);
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+/* Bangla: taller rhythm, never letter-spaced */
+html[lang="bn"] body { line-height: 1.8; }
+html[lang="bn"] * { letter-spacing: 0 !important; }
+
+:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+img, video { filter: brightness(var(--img-dim)); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes settle {
+  from { transform: translateY(14px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.landscape-layer { animation: settle 700ms cubic-bezier(0.22, 1, 0.36, 1) both; }
+.landscape-layer:nth-child(2) { animation-delay: 120ms; }
+.landscape-layer:nth-child(3) { animation-delay: 240ms; }

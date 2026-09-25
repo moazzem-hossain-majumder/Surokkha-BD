@@ -1,0 +1,91 @@
+{
+  "slug": "salinity",
+  "regions": [
+    "coast"
+  ],
+  "season": {
+    "en": "Worst in the dry season, roughly December to May.",
+    "bn": "শুষ্ক মৌসুমে সবচেয়ে খারাপ, মোটামুটি ডিসেম্বর থেকে মে।"
+  },
+  "where": {
+    "en": "The south-west coast, such as Khulna, Satkhira, and Bagerhat.",
+    "bn": "দক্ষিণ-পশ্চিম উপকূল, যেমন খুলনা, সাতক্ষীরা ও বাগেরহাট।"
+  },
+  "summary": {
+    "en": "Sea water moves inland and makes drinking water and farmland salty, which harms health and crops.",
+    "bn": "সাগরের লোনা পানি ভেতরে ঢুকে খাবার পানি ও কৃষিজমি লবণাক্ত করে, যা স্বাস্থ্য ও ফসলের ক্ষতি করে।"
+  },
+  "before": [
+    {
+      "en": "Collect and store rainwater in clean, covered containers.",
+      "bn": "বৃষ্টির পানি পরিষ্কার ঢাকনাযুক্ত পাত্রে সংগ্রহ ও সংরক্ষণ করুন।"
+    },
+    {
+      "en": "Keep ponds and rainwater tanks covered and clean.",
+      "bn": "পুকুর ও বৃষ্টির পানির ট্যাংক ঢেকে ও পরিষ্কার রাখুন।"
+    },
+    {
+      "en": "Ask your agriculture office about salt-tolerant crops.",
+      "bn": "লবণ সহনশীল ফসলের বিষয়ে কৃষি অফিসে জিজ্ঞাসা করুন।"
+    },
+    {
+      "en": "Know the nearest source of low-salt drinking water.",
+      "bn": "কম লবণাক্ত খাবার পানির নিকটতম উৎস জেনে রাখুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Use the lowest-salt water for drinking and cooking. Use salty water only for washing.",
+      "bn": "খাবার ও রান্নায় সবচেয়ে কম লবণাক্ত পানি ব্যবহার করুন। লোনা পানি শুধু ধোয়ার কাজে ব্যবহার করুন।"
+    },
+    {
+      "en": "Give pregnant women and children the safest low-salt water available.",
+      "bn": "গর্ভবতী নারী ও শিশুদের হাতের কাছে থাকা সবচেয়ে নিরাপদ, কম লবণাক্ত পানি দিন।"
+    },
+    {
+      "en": "Do not use salty water to irrigate crops that are not salt-tolerant.",
+      "bn": "লবণ সহনশীল নয় এমন ফসলে লোনা পানি দিয়ে সেচ দেবেন না।"
+    },
+    {
+      "en": "Keep stored water covered so it stays clean.",
+      "bn": "জমানো পানি ঢেকে রাখুন যাতে পরিষ্কার থাকে।"
+    }
+  ],
+  "after": [
+    {
+      "en": "When the rains come, refill tanks and containers with rainwater.",
+      "bn": "বৃষ্টি এলে ট্যাংক ও পাত্র বৃষ্টির পানিতে ভরে নিন।"
+    },
+    {
+      "en": "If you have swelling, headaches, or high blood pressure, visit a health worker.",
+      "bn": "ফোলাভাব, মাথাব্যথা বা উচ্চ রক্তচাপ থাকলে স্বাস্থ্যকর্মীর কাছে যান।"
+    },
+    {
+      "en": "Ask local offices about safe water projects.",
+      "bn": "নিরাপদ পানির প্রকল্পের বিষয়ে স্থানীয় অফিসে খোঁজ নিন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Boiling salty water makes it safe to drink.",
+        "bn": "লোনা পানি ফুটালে খাওয়ার উপযোগী হয়।"
+      },
+      "fact": {
+        "en": "Boiling does not remove salt. Use stored rainwater or a low-salt source instead.",
+        "bn": "ফুটালে লবণ যায় না। বরং জমানো বৃষ্টির পানি বা কম লবণাক্ত উৎস ব্যবহার করুন।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    },
+    {
+      "name": "World Health Organization (WHO)",
+      "url": "https://www.who.int"
+    }
+  ],
+  "status": "draft"
+}

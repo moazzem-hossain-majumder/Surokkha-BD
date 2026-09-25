@@ -1,0 +1,159 @@
+{
+  "slug": "cyclone",
+  "regions": [
+    "coast"
+  ],
+  "season": {
+    "en": "Most storms come in May and October. The season runs roughly March to July and September to December.",
+    "bn": "বেশিরভাগ ঘূর্ণিঝড় মে ও অক্টোবরে আসে। মৌসুম মোটামুটি মার্চ থেকে জুলাই এবং সেপ্টেম্বর থেকে ডিসেম্বর।"
+  },
+  "where": {
+    "en": "Coastal districts and offshore islands along the Bay of Bengal.",
+    "bn": "বঙ্গোপসাগর উপকূলের জেলা ও দ্বীপ এলাকা।"
+  },
+  "summary": {
+    "en": "A cyclone brings strong winds, heavy rain, and a storm surge that can flood coastal land quickly. Acting early saves lives.",
+    "bn": "ঘূর্ণিঝড়ের সাথে আসে প্রবল বাতাস, ভারী বৃষ্টি ও জলোচ্ছ্বাস, যা উপকূলীয় এলাকা দ্রুত প্লাবিত করতে পারে। আগেভাগে ব্যবস্থা নিলে প্রাণ বাঁচে।"
+  },
+  "before": [
+    {
+      "en": "Know your nearest cyclone shelter and the safest route to it.",
+      "bn": "আপনার নিকটতম ঘূর্ণিঝড় আশ্রয়কেন্দ্র ও সেখানে যাওয়ার নিরাপদ পথ জেনে রাখুন।"
+    },
+    {
+      "en": "Keep a go-bag ready: drinking water, dry food, medicine, documents in a waterproof bag, a torch, and a charged phone.",
+      "bn": "জরুরি ব্যাগ প্রস্তুত রাখুন: খাবার পানি, শুকনো খাবার, ওষুধ, পানিরোধী ব্যাগে জরুরি কাগজপত্র, টর্চ ও চার্জ দেওয়া ফোন।"
+    },
+    {
+      "en": "Listen to the radio and local announcements, and learn the warning signals.",
+      "bn": "রেডিও ও স্থানীয় ঘোষণা শুনুন এবং সতর্কতা সংকেতগুলো জেনে রাখুন।"
+    },
+    {
+      "en": "Secure your boat, livestock, and loose items. Agree on a family meeting point.",
+      "bn": "নৌকা, গবাদিপশু ও আলগা জিনিস নিরাপদ করুন। পরিবারের জন্য একটি মিলনস্থল ঠিক করুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Go to the shelter early, before the winds get strong. Do not wait for the last signal.",
+      "bn": "বাতাস প্রবল হওয়ার আগেই আশ্রয়কেন্দ্রে যান। শেষ সংকেতের জন্য অপেক্ষা করবেন না।"
+    },
+    {
+      "en": "Take the elderly, children, and people with disabilities first.",
+      "bn": "বয়স্ক, শিশু ও প্রতিবন্ধী ব্যক্তিদের আগে নিয়ে যান।"
+    },
+    {
+      "en": "Stay indoors, away from windows. If the wind suddenly drops, do not go outside. The storm may not be over.",
+      "bn": "জানালা থেকে দূরে ঘরের ভেতরে থাকুন। বাতাস হঠাৎ কমে গেলেও বাইরে যাবেন না। ঝড় শেষ নাও হতে পারে।"
+    },
+    {
+      "en": "Stay away from the sea, rivers, and fallen power lines.",
+      "bn": "সাগর, নদী ও ছেঁড়া বিদ্যুতের তার থেকে দূরে থাকুন।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Stay in the shelter until officials say it is safe to leave.",
+      "bn": "কর্তৃপক্ষ নিরাপদ না বলা পর্যন্ত আশ্রয়কেন্দ্রেই থাকুন।"
+    },
+    {
+      "en": "Drink only safe water, boiled or treated. Floodwater can carry disease.",
+      "bn": "শুধু নিরাপদ পানি পান করুন, ফুটানো বা শোধন করা। বন্যার পানিতে রোগজীবাণু থাকতে পারে।"
+    },
+    {
+      "en": "Keep away from damaged buildings and loose wires. Get injuries treated.",
+      "bn": "ক্ষতিগ্রস্ত ঘরবাড়ি ও ঝুলে থাকা তার থেকে দূরে থাকুন। আঘাতের চিকিৎসা নিন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "I survived a storm before, so I can stay home this time.",
+        "bn": "আগে ঝড় সামলেছি, তাই এবার বাড়িতেই থাকতে পারব।"
+      },
+      "fact": {
+        "en": "Every storm is different, and a surge can be far more dangerous than the wind. Follow the signals.",
+        "bn": "প্রতিটি ঝড় আলাদা, আর জলোচ্ছ্বাস বাতাসের চেয়েও বিপজ্জনক হতে পারে। সংকেত মেনে চলুন।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "BMD: storm warning signals",
+      "url": "https://live6.bmd.gov.bd/p/Signals"
+    },
+    {
+      "name": "The Daily Star: what signals 1-11 mean (based on BMD)",
+      "url": "https://www.thedailystar.net/environment/weather/news/what-do-signals-1-11-mean-ports-during-storms-3317891"
+    },
+    {
+      "name": "Bangladesh Meteorological Department (BMD)",
+      "url": "https://bmd.gov.bd"
+    },
+    {
+      "name": "Cyclone Preparedness Programme (CPP)"
+    },
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    }
+  ],
+  "status": "draft",
+  "signals": [
+    {
+      "range": "1–2",
+      "name": {
+        "en": "Distant signals",
+        "bn": "দূরবর্তী সংকেত"
+      },
+      "meaning": {
+        "en": "A storm may form, or has formed, far out at sea. Ships may be in danger if they leave harbour. Stay alert.",
+        "bn": "গভীর সাগরে ঝড় সৃষ্টি হতে পারে বা হয়েছে। বন্দর ছাড়লে জাহাজ বিপদে পড়তে পারে। সতর্ক থাকুন।"
+      }
+    },
+    {
+      "range": "3–4",
+      "name": {
+        "en": "Local signals",
+        "bn": "স্থানীয় সংকেত"
+      },
+      "meaning": {
+        "en": "The port is threatened by squally weather or a storm, with winds of about 40 to 61 km/h. Start preparing.",
+        "bn": "বন্দর ঝোড়ো আবহাওয়া বা ঝড়ের হুমকিতে, বাতাসের গতি প্রায় ৪০ থেকে ৬১ কিমি/ঘণ্টা। প্রস্তুতি শুরু করুন।"
+      }
+    },
+    {
+      "range": "5–7",
+      "name": {
+        "en": "Danger signals",
+        "bn": "বিপদ সংকেত"
+      },
+      "meaning": {
+        "en": "Severe weather from a storm of slight or moderate intensity, with winds of 62 to 88 km/h, expected to cross the coast. Follow evacuation announcements.",
+        "bn": "সামান্য বা মাঝারি তীব্রতার ঝড় উপকূল অতিক্রম করবে, বাতাসের গতি ৬২ থেকে ৮৮ কিমি/ঘণ্টা। আশ্রয়ে যাওয়ার ঘোষণা মেনে চলুন।"
+      }
+    },
+    {
+      "range": "8–10",
+      "name": {
+        "en": "Great danger signals",
+        "bn": "মহাবিপদ সংকেত"
+      },
+      "meaning": {
+        "en": "Severe weather from a very intense storm, with winds of 89 km/h or more, expected to cross the coast. You should already be in a shelter.",
+        "bn": "অতি তীব্র ঝড় উপকূল অতিক্রম করবে, বাতাসের গতি ৮৯ কিমি/ঘণ্টা বা তার বেশি। আপনি আগেই আশ্রয়কেন্দ্রে থাকুন।"
+      }
+    },
+    {
+      "range": "11",
+      "name": {
+        "en": "Communication failure",
+        "bn": "যোগাযোগ বিচ্ছিন্ন"
+      },
+      "meaning": {
+        "en": "Contact with the warning centre has broken down and a devastating cyclone is feared. Treat it as the highest danger.",
+        "bn": "সতর্কতা কেন্দ্রের সাথে যোগাযোগ বিচ্ছিন্ন এবং ভয়াবহ ঘূর্ণিঝড়ের আশঙ্কা। এটিকে সর্বোচ্চ বিপদ হিসেবে ধরুন।"
+      }
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "slug": "lightning",
+  "regions": [
+    "haor",
+    "river",
+    "coast",
+    "northwest"
+  ],
+  "season": {
+    "en": "Most often in the pre-monsoon and monsoon months.",
+    "bn": "বেশি হয় বর্ষার আগে ও বর্ষার মাসগুলোতে।"
+  },
+  "where": {
+    "en": "Anywhere, and most dangerous in open fields, haors, rivers, and on hilltops.",
+    "bn": "যেকোনো জায়গায়, তবে খোলা মাঠ, হাওর, নদী ও পাহাড়ের চূড়ায় সবচেয়ে বিপজ্জনক।"
+  },
+  "summary": {
+    "en": "Lightning can strike far from the rain. People working in open fields and on water are at the greatest risk.",
+    "bn": "বৃষ্টি থেকে অনেক দূরেও বজ্রপাত হতে পারে। খোলা মাঠে ও পানিতে কাজ করা মানুষের ঝুঁকি সবচেয়ে বেশি।"
+  },
+  "before": [
+    {
+      "en": "Check the weather before going to fields or on the water.",
+      "bn": "মাঠে বা পানিতে যাওয়ার আগে আবহাওয়ার খবর দেখুন।"
+    },
+    {
+      "en": "Plan your work so you can finish and reach shelter before a storm.",
+      "bn": "ঝড়ের আগে কাজ শেষ করে আশ্রয়ে পৌঁছানোর মতো করে পরিকল্পনা করুন।"
+    },
+    {
+      "en": "Know the nearest strong building where you can shelter.",
+      "bn": "কাছের কোন পাকা ঘরে আশ্রয় নেওয়া যাবে তা জেনে রাখুন।"
+    },
+    {
+      "en": "Teach children: when you hear thunder, go inside.",
+      "bn": "শিশুদের শেখান: মেঘ ডাকলে ঘরের ভেতরে যাও।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Go inside a strong building at the first thunder. Do not wait for rain.",
+      "bn": "প্রথম মেঘ ডাকলেই পাকা ঘরের ভেতরে যান। বৃষ্টির জন্য অপেক্ষা করবেন না।"
+    },
+    {
+      "en": "Get off the water and away from open fields, hilltops, and tall trees.",
+      "bn": "পানি থেকে উঠে আসুন এবং খোলা মাঠ, পাহাড়ের চূড়া ও উঁচু গাছ থেকে দূরে থাকুন।"
+    },
+    {
+      "en": "If you are stuck outside, crouch low on the balls of your feet with your feet together. Do not lie flat.",
+      "bn": "বাইরে আটকা পড়লে দুই পা একসাথে রেখে পায়ের পাতায় ভর দিয়ে নিচু হয়ে বসুন। শুয়ে পড়বেন না।"
+    },
+    {
+      "en": "Indoors, stay away from windows, water taps, and plugged-in appliances.",
+      "bn": "ঘরের ভেতরে জানালা, পানির কল ও প্লাগে লাগানো যন্ত্র থেকে দূরে থাকুন।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Wait 30 minutes after the last thunder before going back outside.",
+      "bn": "শেষ মেঘ ডাকার ৩০ মিনিট পর বাইরে যান।"
+    },
+    {
+      "en": "If someone is struck, call for help right away. It is safe to touch them.",
+      "bn": "কেউ বজ্রাহত হলে সঙ্গে সঙ্গে সাহায্য ডাকুন। তাকে ছোঁয়া নিরাপদ।"
+    },
+    {
+      "en": "If the person is not breathing, start CPR if you know how.",
+      "bn": "ব্যক্তি শ্বাস না নিলে সিপিআর জানা থাকলে শুরু করুন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Standing under a tree keeps you safe from lightning.",
+        "bn": "গাছের নিচে দাঁড়ালে বজ্রপাত থেকে নিরাপদ থাকা যায়।"
+      },
+      "fact": {
+        "en": "Trees attract strikes and are one of the most dangerous places to stand. Go into a strong building.",
+        "bn": "গাছে বজ্রপাত বেশি পড়ে, তাই গাছের নিচে দাঁড়ানো সবচেয়ে বিপজ্জনক। পাকা ঘরে আশ্রয় নিন।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "US National Weather Service: lightning safety",
+      "url": "https://www.weather.gov/safety/lightning"
+    },
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

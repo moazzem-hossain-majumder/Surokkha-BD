@@ -1,0 +1,95 @@
+{
+  "slug": "tsunami",
+  "regions": [
+    "coast"
+  ],
+  "season": {
+    "en": "Rare. It can happen at any time of year after a strong undersea earthquake.",
+    "bn": "বিরল। শক্তিশালী সাগরতলের ভূমিকম্পের পর বছরের যেকোনো সময় হতে পারে।"
+  },
+  "where": {
+    "en": "The Bay of Bengal coast and islands.",
+    "bn": "বঙ্গোপসাগরের উপকূল ও দ্বীপ।"
+  },
+  "summary": {
+    "en": "A tsunami is a series of powerful waves caused by an undersea earthquake. The risk is low, but the danger is very high.",
+    "bn": "সুনামি হলো সাগরতলের ভূমিকম্পে সৃষ্ট এক সারি শক্তিশালী ঢেউ। ঝুঁকি কম হলেও বিপদ অত্যন্ত বেশি।"
+  },
+  "before": [
+    {
+      "en": "Know that a strong or long earthquake near the coast is a natural warning.",
+      "bn": "জানুন, উপকূলের কাছে শক্তিশালী বা দীর্ঘ ভূমিকম্প একটি স্বাভাবিক সতর্কসংকেত।"
+    },
+    {
+      "en": "Know where the nearest high ground or tall, strong building is.",
+      "bn": "নিকটতম উঁচু জায়গা বা উঁচু, শক্ত ভবন কোথায় তা জেনে রাখুন।"
+    },
+    {
+      "en": "Follow official warnings from the government.",
+      "bn": "সরকারের কাছ থেকে আসা সরকারি সতর্কবার্তা অনুসরণ করুন।"
+    },
+    {
+      "en": "Practise the evacuation route with your family.",
+      "bn": "পরিবারের সাথে সরে যাওয়ার পথ অনুশীলন করুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "If you feel strong shaking near the coast, move to high ground or an upper floor straight away. Do not wait for a warning.",
+      "bn": "উপকূলের কাছে জোরালো কাঁপুনি টের পেলে সঙ্গে সঙ্গে উঁচু জায়গায় বা ওপরের তলায় যান। সতর্কবার্তার জন্য অপেক্ষা করবেন না।"
+    },
+    {
+      "en": "Move away from the beach, river mouths, and low land.",
+      "bn": "সৈকত, নদীর মোহনা ও নিচু জমি থেকে সরে যান।"
+    },
+    {
+      "en": "Go inland and uphill on foot if roads are jammed.",
+      "bn": "রাস্তায় যানজট থাকলে হেঁটে ভেতরের দিকে ও উঁচুতে যান।"
+    },
+    {
+      "en": "Do not go to the shore to look at the sea.",
+      "bn": "সাগর দেখতে তীরে যাবেন না।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Stay away from the coast until officials say it is safe. There can be many waves.",
+      "bn": "কর্তৃপক্ষ নিরাপদ না বলা পর্যন্ত উপকূল থেকে দূরে থাকুন। অনেকগুলো ঢেউ আসতে পারে।"
+    },
+    {
+      "en": "Give first aid and get help for injured people.",
+      "bn": "আহতদের প্রাথমিক চিকিৎসা দিন এবং সাহায্য ডাকুন।"
+    },
+    {
+      "en": "Stay away from damaged buildings and power lines.",
+      "bn": "ক্ষতিগ্রস্ত ভবন ও বিদ্যুতের তার থেকে দূরে থাকুন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "A tsunami is one giant wave, so I can go back after the first one.",
+        "bn": "সুনামি একটাই বিশাল ঢেউ, তাই প্রথমটির পর ফিরে যেতে পারি।"
+      },
+      "fact": {
+        "en": "Tsunamis come as a series of waves that can last for hours. Stay away until officials say it is safe.",
+        "bn": "সুনামি একের পর এক ঢেউ হয়ে আসে, যা কয়েক ঘণ্টা চলতে পারে। কর্তৃপক্ষ নিরাপদ না বলা পর্যন্ত দূরে থাকুন।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    },
+    {
+      "name": "IFRC: disaster preparedness guidance",
+      "url": "https://www.ifrc.org"
+    },
+    {
+      "name": "Bangladesh Meteorological Department (BMD)",
+      "url": "https://bmd.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

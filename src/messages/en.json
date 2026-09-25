@@ -1,0 +1,134 @@
+{
+  "meta": {
+    "siteName": "Surokkha BD",
+    "title": "Surokkha BD: be ready, stay safe",
+    "description": "Free guides, safe places, and community help for every natural disaster in Bangladesh."
+  },
+  "header": {
+    "brand": "Surokkha BD",
+    "home": "Surokkha BD, home",
+    "skip": "Skip to main content",
+    "nav": {
+      "label": "Main",
+      "hazards": "Hazards",
+      "contacts": "Emergency",
+      "plan": "My plan"
+    }
+  },
+  "theme": {
+    "label": "Theme",
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "Match my device"
+  },
+  "lang": {
+    "label": "Language"
+  },
+  "hero": {
+    "title": "Be ready. Stay safe.",
+    "subtitle": "Free guides, safe places, and community help for every natural disaster in Bangladesh.",
+    "primary": "Explore hazards",
+    "secondary": "See severity levels",
+    "emergency": "Emergency numbers"
+  },
+  "hazards": {
+    "title": "Every hazard, one palette each",
+    "intro": "Each disaster gets its own color. Select one to see how the interface changes.",
+    "selected": "Selected hazard",
+    "previewNote": "Full guides with before, during, and after steps arrive in the next phase.",
+    "items": {
+      "cyclone": "Cyclone and storm surge",
+      "riverine-flood": "Riverine flood",
+      "flash-flood": "Flash flood",
+      "urban-waterlogging": "Urban waterlogging",
+      "riverbank-erosion": "Riverbank erosion",
+      "landslide": "Landslide",
+      "earthquake": "Earthquake",
+      "lightning": "Lightning",
+      "nor-wester": "Nor'wester and tornado",
+      "drought": "Drought",
+      "heatwave": "Heatwave",
+      "cold-wave-fog": "Cold wave and fog",
+      "salinity": "Salinity intrusion",
+      "tsunami": "Tsunami risk"
+    },
+    "viewGuide": "View full guide"
+  },
+  "severity": {
+    "title": "Severity you can read at a glance",
+    "intro": "Every level has its own shape and a written label, so it never depends on color alone.",
+    "levels": {
+      "0": "Normal",
+      "1": "Watch",
+      "2": "Warning",
+      "3": "Danger",
+      "4": "Extreme"
+    }
+  },
+  "footer": {
+    "disclaimer": "Surokkha BD is not an official warning source. Always follow alerts from the Bangladesh Meteorological Department (BMD) and the Department of Disaster Management (DDM).",
+    "status": "Project foundation preview. Content and data are placeholders until they are verified against official sources."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "This page does not exist or has moved.",
+    "home": "Go to the home page"
+  },
+  "hazardPage": {
+    "allHazards": "All hazards",
+    "season": "Season",
+    "where": "Where",
+    "before": "Before",
+    "during": "During",
+    "after": "After",
+    "signals": "Warning signals",
+    "signalNumbers": "Signal",
+    "mythsTitle": "Myth vs fact",
+    "myth": "Myth",
+    "fact": "Fact",
+    "sources": "Sources",
+    "draftNotice": "This guide is a draft and is being reviewed against official sources.",
+    "reviewed": "Reviewed against official sources.",
+    "readAloud": "Read aloud",
+    "stopReading": "Stop reading",
+    "readAloudUnsupported": "Read-aloud is not supported on this device."
+  },
+  "contacts": {
+    "title": "Emergency contacts",
+    "intro": "One-tap call. These are shared numbers for the whole country.",
+    "verified": "Last verified",
+    "sourceNote": "Numbers are checked against public sources. Always confirm locally when possible."
+  },
+  "plan": {
+    "title": "My safety plan",
+    "intro": "Answer a few questions to get a personal checklist you can save or print.",
+    "privacyNote": "This plan is saved only on your device. It is not sent anywhere.",
+    "district": "District",
+    "districtPlaceholder": "e.g. Barguna",
+    "familySize": "Number of people in your family",
+    "household": "Does your household include",
+    "elderly": "Elderly members",
+    "children": "Young children",
+    "disability": "A person with a disability",
+    "livestock": "Livestock",
+    "mainHazards": "Which hazards concern you most?",
+    "save": "Save my plan",
+    "saved": "Saved on this device",
+    "cardTitle": "Family safety card",
+    "goBag": "Go-bag checklist",
+    "relevantHazards": "Hazards to prepare for",
+    "print": "Print this plan",
+    "checklist": {
+      "water": "Drinking water for 3 days",
+      "food": "Dry, ready-to-eat food",
+      "documents": "ID and documents in a waterproof bag",
+      "torch": "Torch and spare batteries",
+      "phone": "Charged phone and a power bank",
+      "medicine": "Essential medicines",
+      "elderly": "Extra time and help planned for elderly members",
+      "children": "Comfort items and ID tags for young children",
+      "disability": "Mobility aids and any needed support planned",
+      "livestock": "A safe place identified for livestock"
+    }
+  }
+}

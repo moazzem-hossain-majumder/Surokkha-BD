@@ -1,0 +1,87 @@
+{
+  "slug": "riverbank-erosion",
+  "regions": [
+    "river"
+  ],
+  "season": {
+    "en": "Peaks during and after the monsoon floods, roughly June to November.",
+    "bn": "বর্ষার বন্যার সময় ও পরে সবচেয়ে বেশি, মোটামুটি জুন থেকে নভেম্বর।"
+  },
+  "where": {
+    "en": "Banks of large rivers such as the Padma, Jamuna, and Meghna, and river islands (chars).",
+    "bn": "পদ্মা, যমুনা ও মেঘনার মতো বড় নদীর পাড় এবং চরাঞ্চল।"
+  },
+  "summary": {
+    "en": "Rivers can cut away their banks and take land, homes, and crops. Collapse can be sudden.",
+    "bn": "নদী পাড় ভেঙে জমি, ঘরবাড়ি ও ফসল কেড়ে নিতে পারে। ভাঙন হঠাৎ হতে পারে।"
+  },
+  "before": [
+    {
+      "en": "Watch the bank for cracks, sinking ground, or leaning trees.",
+      "bn": "পাড়ে ফাটল, দেবে যাওয়া মাটি বা হেলে পড়া গাছ আছে কি না লক্ষ রাখুন।"
+    },
+    {
+      "en": "Keep a bag with documents, medicine, and essentials ready to move.",
+      "bn": "কাগজপত্র, ওষুধ ও জরুরি জিনিসসহ একটি ব্যাগ সরিয়ে নেওয়ার জন্য প্রস্তুত রাখুন।"
+    },
+    {
+      "en": "Choose a safe place to move to, away from the bank.",
+      "bn": "পাড় থেকে দূরে সরে যাওয়ার জন্য একটি নিরাপদ জায়গা ঠিক করুন।"
+    },
+    {
+      "en": "Keep copies of land and ID documents somewhere safe.",
+      "bn": "জমি ও পরিচয়পত্রের কাগজের কপি নিরাপদ জায়গায় রাখুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Move away from the bank at the first sign of collapse.",
+      "bn": "ভাঙনের প্রথম লক্ষণেই পাড় থেকে সরে যান।"
+    },
+    {
+      "en": "Keep children well away from the edge.",
+      "bn": "শিশুদের কিনারা থেকে অনেক দূরে রাখুন।"
+    },
+    {
+      "en": "Do not stand on ground that overhangs the water.",
+      "bn": "পানির ওপর ঝুলে থাকা মাটিতে দাঁড়াবেন না।"
+    },
+    {
+      "en": "Move people first, then livestock and belongings if there is time.",
+      "bn": "আগে মানুষ, সময় থাকলে তারপর গবাদিপশু ও জিনিসপত্র সরান।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Report your loss to the local government office (Union Parishad or Upazila).",
+      "bn": "আপনার ক্ষতির কথা স্থানীয় সরকারি অফিসে (ইউনিয়ন পরিষদ বা উপজেলা) জানান।"
+    },
+    {
+      "en": "Ask about relief and support for families who have lost land.",
+      "bn": "জমি হারানো পরিবারের জন্য ত্রাণ ও সহায়তার খোঁজ নিন।"
+    },
+    {
+      "en": "Stay away from newly formed edges. More ground can fall.",
+      "bn": "নতুন তৈরি কিনারা থেকে দূরে থাকুন। আরও মাটি ধসে পড়তে পারে।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Erosion is slow, so there is always time to react.",
+        "bn": "ভাঙন ধীরে হয়, তাই সবসময় সময় থাকে।"
+      },
+      "fact": {
+        "en": "A bank can collapse in minutes once cracks appear. Move at the first signs.",
+        "bn": "ফাটল দেখা দিলে কয়েক মিনিটেই পাড় ভেঙে পড়তে পারে। প্রথম লক্ষণেই সরে যান।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

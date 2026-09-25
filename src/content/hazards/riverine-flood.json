@@ -1,0 +1,95 @@
+{
+  "slug": "riverine-flood",
+  "regions": [
+    "river"
+  ],
+  "season": {
+    "en": "Mostly June to September, during the monsoon.",
+    "bn": "বেশিরভাগ জুন থেকে সেপ্টেম্বর, বর্ষাকালে।"
+  },
+  "where": {
+    "en": "Floodplains of the Brahmaputra-Jamuna, Ganges, and Meghna river systems.",
+    "bn": "ব্রহ্মপুত্র-যমুনা, গঙ্গা ও মেঘনা নদী ব্যবস্থার প্লাবনভূমি।"
+  },
+  "summary": {
+    "en": "Rivers rise slowly and spread across low land, covering homes, roads, and crops for days or weeks.",
+    "bn": "নদী ধীরে ধীরে বেড়ে নিচু জমিতে ছড়িয়ে পড়ে এবং বাড়িঘর, রাস্তা ও ফসল কয়েক দিন বা সপ্তাহ ডুবিয়ে রাখে।"
+  },
+  "before": [
+    {
+      "en": "Follow flood forecasts and warnings from official sources.",
+      "bn": "সরকারি উৎস থেকে বন্যার পূর্বাভাস ও সতর্কবার্তা অনুসরণ করুন।"
+    },
+    {
+      "en": "Move food, seeds, documents, and valuables to a high place or a raised platform.",
+      "bn": "খাবার, বীজ, কাগজপত্র ও মূল্যবান জিনিস উঁচু জায়গায় বা মাচায় সরিয়ে রাখুন।"
+    },
+    {
+      "en": "Store safe drinking water and water purification tablets.",
+      "bn": "নিরাপদ খাবার পানি ও পানি বিশুদ্ধকরণ ট্যাবলেট মজুত রাখুন।"
+    },
+    {
+      "en": "Plan a safe place for livestock and know where your nearest flood shelter is.",
+      "bn": "গবাদিপশুর জন্য নিরাপদ জায়গা ঠিক করুন এবং নিকটতম বন্যা আশ্রয়কেন্দ্র জেনে রাখুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Move to higher ground or a shelter early, before water blocks the way.",
+      "bn": "পানি পথ আটকে দেওয়ার আগেই উঁচু জায়গায় বা আশ্রয়কেন্দ্রে যান।"
+    },
+    {
+      "en": "Do not walk, swim, or drive through floodwater. Currents can be strong.",
+      "bn": "বন্যার পানিতে হাঁটবেন না, সাঁতার কাটবেন না বা গাড়ি চালাবেন না। স্রোত প্রবল হতে পারে।"
+    },
+    {
+      "en": "Keep children close and away from the water's edge.",
+      "bn": "শিশুদের কাছে রাখুন এবং পানির কিনারা থেকে দূরে রাখুন।"
+    },
+    {
+      "en": "Drink only safe water. Turn off electricity if water enters the house and it is safe to do so.",
+      "bn": "শুধু নিরাপদ পানি পান করুন। ঘরে পানি ঢুকলে এবং নিরাপদ হলে বিদ্যুৎ বন্ধ করুন।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Return home only after officials say it is safe.",
+      "bn": "কর্তৃপক্ষ নিরাপদ বললে তবেই বাড়ি ফিরুন।"
+    },
+    {
+      "en": "Clean and disinfect your home, wells, and tools. Watch for snakes.",
+      "bn": "ঘর, কুয়া ও যন্ত্রপাতি পরিষ্কার ও জীবাণুমুক্ত করুন। সাপ থেকে সাবধান থাকুন।"
+    },
+    {
+      "en": "Get treatment quickly for diarrhoea, fever, or skin infections.",
+      "bn": "ডায়রিয়া, জ্বর বা চামড়ার সংক্রমণ হলে দ্রুত চিকিৎসা নিন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Floodwater that looks calm is safe to wade through.",
+        "bn": "শান্ত দেখালে বন্যার পানিতে হেঁটে যাওয়া নিরাপদ।"
+      },
+      "fact": {
+        "en": "Currents can be strong, and water can hide holes and hazards or carry disease. Stay out.",
+        "bn": "স্রোত প্রবল হতে পারে, পানির নিচে গর্ত বা বিপদ লুকিয়ে থাকতে পারে এবং রোগজীবাণু থাকতে পারে। পানিতে নামবেন না।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Flood Forecasting and Warning Centre (FFWC)",
+      "url": "http://www.ffwc.gov.bd"
+    },
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    },
+    {
+      "name": "IFRC: disaster preparedness guidance",
+      "url": "https://www.ifrc.org"
+    }
+  ],
+  "status": "draft"
+}

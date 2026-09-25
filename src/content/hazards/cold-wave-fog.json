@@ -1,0 +1,91 @@
+{
+  "slug": "cold-wave-fog",
+  "regions": [
+    "northwest"
+  ],
+  "season": {
+    "en": "Mostly December to February.",
+    "bn": "বেশিরভাগ ডিসেম্বর থেকে ফেব্রুয়ারি।"
+  },
+  "where": {
+    "en": "Northern and north-western districts, with fog across many river and plain areas.",
+    "bn": "উত্তর ও উত্তর-পশ্চিমের জেলা, এবং নদী ও সমতল অঞ্চলের অনেক জায়গায় কুয়াশা।"
+  },
+  "summary": {
+    "en": "Cold nights and dense fog are hard on children, older people, and poor families without warm clothes. Fog also makes travel dangerous.",
+    "bn": "ঠান্ডা রাত ও ঘন কুয়াশা শিশু, বয়স্ক এবং গরম কাপড়হীন দরিদ্র পরিবারের জন্য কষ্টকর। কুয়াশায় চলাচলও বিপজ্জনক।"
+  },
+  "before": [
+    {
+      "en": "Get warm clothes and blankets ready before winter.",
+      "bn": "শীতের আগে গরম কাপড় ও কম্বল প্রস্তুত রাখুন।"
+    },
+    {
+      "en": "Plan how to keep babies and older people warm at night.",
+      "bn": "রাতে শিশু ও বয়স্কদের গরম রাখার উপায় ঠিক করুন।"
+    },
+    {
+      "en": "Keep some food and clean water stored.",
+      "bn": "কিছু খাবার ও পরিষ্কার পানি জমা রাখুন।"
+    },
+    {
+      "en": "Plan travel for daylight, and avoid the early morning fog if you can.",
+      "bn": "দিনের আলোয় ভ্রমণের পরিকল্পনা করুন এবং পারলে ভোরের কুয়াশা এড়িয়ে চলুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Wear several thin layers and cover your head, hands, and feet.",
+      "bn": "কয়েক স্তর পাতলা কাপড় পরুন এবং মাথা, হাত ও পা ঢেকে রাখুন।"
+    },
+    {
+      "en": "Keep children and older people indoors, especially at night and early morning.",
+      "bn": "শিশু ও বয়স্কদের, বিশেষ করে রাতে ও ভোরে, ঘরের ভেতরে রাখুন।"
+    },
+    {
+      "en": "Never burn charcoal or wood in a closed room. It releases a deadly gas.",
+      "bn": "বন্ধ ঘরে কয়লা বা কাঠ জ্বালাবেন না। এতে প্রাণঘাতী গ্যাস তৈরি হয়।"
+    },
+    {
+      "en": "In fog, drive slowly with lights on. Boats should wait for the fog to clear.",
+      "bn": "কুয়াশায় বাতি জ্বালিয়ে ধীরে চালান। নৌযান কুয়াশা কাটা পর্যন্ত অপেক্ষা করবে।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Get medical care if a child or older person has a bad cough or trouble breathing.",
+      "bn": "শিশু বা বয়স্কের তীব্র কাশি বা শ্বাসকষ্ট হলে চিকিৎসা নিন।"
+    },
+    {
+      "en": "Check on neighbours who may not have warm clothes.",
+      "bn": "গরম কাপড় নেই এমন প্রতিবেশীদের খোঁজ নিন।"
+    },
+    {
+      "en": "Share spare blankets and clothes with families in need.",
+      "bn": "প্রয়োজনে থাকা পরিবারের সাথে বাড়তি কম্বল ও কাপড় ভাগ করুন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "A coal or charcoal fire in a closed room is a good way to stay warm.",
+        "bn": "বন্ধ ঘরে কয়লা বা কাঠের আগুন গরম থাকার ভালো উপায়।"
+      },
+      "fact": {
+        "en": "Burning charcoal or wood indoors can release carbon monoxide, which can kill. Keep the room ventilated.",
+        "bn": "ঘরের ভেতরে কয়লা বা কাঠ পোড়ালে কার্বন মনোক্সাইড তৈরি হয়, যা প্রাণঘাতী। ঘরে বাতাস চলাচলের ব্যবস্থা রাখুন।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Bangladesh Meteorological Department (BMD)",
+      "url": "https://bmd.gov.bd"
+    },
+    {
+      "name": "World Health Organization (WHO)",
+      "url": "https://www.who.int"
+    }
+  ],
+  "status": "draft"
+}

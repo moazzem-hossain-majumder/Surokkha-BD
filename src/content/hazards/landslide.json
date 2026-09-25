@@ -1,0 +1,91 @@
+{
+  "slug": "landslide",
+  "regions": [
+    "hill"
+  ],
+  "season": {
+    "en": "Mostly during heavy monsoon rain, roughly June to September.",
+    "bn": "বেশিরভাগ বর্ষার ভারী বৃষ্টিতে, মোটামুটি জুন থেকে সেপ্টেম্বর।"
+  },
+  "where": {
+    "en": "Hill areas of Chattogram, Cox's Bazar, Bandarban, Rangamati, and Khagrachhari, including hill settlements and camps.",
+    "bn": "চট্টগ্রাম, কক্সবাজার, বান্দরবান, রাঙামাটি ও খাগড়াছড়ির পাহাড়ি এলাকা, পাহাড়ি বসতি ও ক্যাম্পসহ।"
+  },
+  "summary": {
+    "en": "Soaked hill slopes can slide without warning and bury homes below. Cutting hills makes slides more likely.",
+    "bn": "ভিজে যাওয়া পাহাড়ের ঢাল হঠাৎ ধসে নিচের ঘরবাড়ি চাপা দিতে পারে। পাহাড় কাটলে ধসের ঝুঁকি বাড়ে।"
+  },
+  "before": [
+    {
+      "en": "Do not cut hills or live at the foot or edge of a steep slope if you can avoid it.",
+      "bn": "পাহাড় কাটবেন না এবং সম্ভব হলে খাড়া ঢালের পাদদেশে বা কিনারায় থাকবেন না।"
+    },
+    {
+      "en": "Learn the warning signs: new cracks, leaning trees, and muddy spring water.",
+      "bn": "সতর্ক লক্ষণ জানুন: নতুন ফাটল, হেলে পড়া গাছ ও ঘোলা ঝরনার পানি।"
+    },
+    {
+      "en": "Plan where your family will go if you are told to leave.",
+      "bn": "সরে যেতে বললে পরিবার কোথায় যাবে তা আগে ঠিক করুন।"
+    },
+    {
+      "en": "Listen to heavy-rain warnings and leave when officials tell you to.",
+      "bn": "ভারী বৃষ্টির সতর্কবার্তা শুনুন এবং কর্তৃপক্ষ বললে সরে যান।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Leave the slope area when heavy rain is warned. Do not wait for the ground to move.",
+      "bn": "ভারী বৃষ্টির সতর্কবার্তা এলে ঢাল এলাকা ছেড়ে যান। মাটি নড়ার জন্য অপেক্ষা করবেন না।"
+    },
+    {
+      "en": "If a slide starts, move sideways, out of its path, not downhill.",
+      "bn": "ধস শুরু হলে নিচের দিকে নয়, পাশে সরে তার পথ থেকে বেরিয়ে যান।"
+    },
+    {
+      "en": "Stay alert at night. Slides often happen when people are asleep.",
+      "bn": "রাতে সজাগ থাকুন। মানুষ ঘুমিয়ে থাকলে প্রায়ই ধস হয়।"
+    },
+    {
+      "en": "Do not go back for belongings.",
+      "bn": "জিনিসপত্র আনতে ফিরে যাবেন না।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Stay away from the slide area. More ground can fall.",
+      "bn": "ধসের এলাকা থেকে দূরে থাকুন। আরও মাটি ধসে পড়তে পারে।"
+    },
+    {
+      "en": "Call for help for anyone trapped. Do not dig alone in unstable ground.",
+      "bn": "কেউ আটকা পড়লে সাহায্য ডাকুন। অস্থির মাটিতে একা খুঁড়বেন না।"
+    },
+    {
+      "en": "Do not return to damaged homes until they are checked.",
+      "bn": "পরীক্ষা না হওয়া পর্যন্ত ক্ষতিগ্রস্ত ঘরে ফিরবেন না।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Landslides only happen while it is raining.",
+        "bn": "ধস শুধু বৃষ্টির সময়ই হয়।"
+      },
+      "fact": {
+        "en": "They can also happen hours or days after heavy rain, when the soil is still soaked.",
+        "bn": "ভারী বৃষ্টির কয়েক ঘণ্টা বা দিন পরেও, মাটি ভেজা থাকলে ধস হতে পারে।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    },
+    {
+      "name": "Bangladesh Meteorological Department (BMD)",
+      "url": "https://bmd.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

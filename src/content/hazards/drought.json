@@ -1,0 +1,91 @@
+{
+  "slug": "drought",
+  "regions": [
+    "northwest"
+  ],
+  "season": {
+    "en": "The dry season, roughly November to May, and worst before the monsoon.",
+    "bn": "শুষ্ক মৌসুম, মোটামুটি নভেম্বর থেকে মে, বর্ষার আগে সবচেয়ে খারাপ।"
+  },
+  "where": {
+    "en": "The north-west, especially the Barind Tract, and parts of the west.",
+    "bn": "উত্তর-পশ্চিম, বিশেষ করে বরেন্দ্র অঞ্চল এবং পশ্চিমের কিছু এলাকা।"
+  },
+  "summary": {
+    "en": "Long dry spells and falling groundwater cause water shortages and crop loss.",
+    "bn": "দীর্ঘ শুষ্ক সময় ও নেমে যাওয়া ভূগর্ভস্থ পানির কারণে পানির সংকট ও ফসলের ক্ষতি হয়।"
+  },
+  "before": [
+    {
+      "en": "Store drinking water and use it carefully.",
+      "bn": "খাবার পানি মজুত রাখুন এবং হিসাব করে ব্যবহার করুন।"
+    },
+    {
+      "en": "Ask your local agriculture office about crops that need less water.",
+      "bn": "কম পানিতে চাষ করা যায় এমন ফসলের বিষয়ে স্থানীয় কৃষি অফিসে জিজ্ঞাসা করুন।"
+    },
+    {
+      "en": "Collect rainwater and keep ponds in good condition.",
+      "bn": "বৃষ্টির পানি সংরক্ষণ করুন এবং পুকুর ভালো অবস্থায় রাখুন।"
+    },
+    {
+      "en": "Plan feed and water for livestock.",
+      "bn": "গবাদিপশুর খাবার ও পানির ব্যবস্থা আগে থেকে ঠিক করুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Keep water for drinking and cooking first.",
+      "bn": "আগে খাবার ও রান্নার পানি রাখুন।"
+    },
+    {
+      "en": "Water crops efficiently, at cooler times of day.",
+      "bn": "দিনের ঠান্ডা সময়ে কম অপচয়ে ফসলে সেচ দিন।"
+    },
+    {
+      "en": "Watch children and older people for signs of dehydration.",
+      "bn": "শিশু ও বয়স্কদের পানিশূন্যতার লক্ষণে নজর রাখুন।"
+    },
+    {
+      "en": "Follow local advice on water use.",
+      "bn": "পানি ব্যবহারে স্থানীয় নির্দেশনা মেনে চলুন।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Ask the agriculture office which crops suit the next season.",
+      "bn": "পরবর্তী মৌসুমে কোন ফসল উপযোগী তা কৃষি অফিসে জানুন।"
+    },
+    {
+      "en": "Repair wells, ponds, and pumps.",
+      "bn": "কুয়া, পুকুর ও পাম্প মেরামত করুন।"
+    },
+    {
+      "en": "Ask your local office about relief and support.",
+      "bn": "ত্রাণ ও সহায়তার বিষয়ে স্থানীয় অফিসে খোঁজ নিন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Drought only means there is no rain.",
+        "bn": "খরা মানে শুধু বৃষ্টি না হওয়া।"
+      },
+      "fact": {
+        "en": "Falling groundwater and repeated dry spells can cause shortages even when some rain falls.",
+        "bn": "কিছু বৃষ্টি হলেও ভূগর্ভস্থ পানির স্তর নামা ও বারবার শুষ্ক সময়ের কারণে সংকট হতে পারে।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    },
+    {
+      "name": "Bangladesh Meteorological Department (BMD)",
+      "url": "https://bmd.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

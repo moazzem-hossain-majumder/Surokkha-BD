@@ -1,0 +1,91 @@
+{
+  "slug": "urban-waterlogging",
+  "regions": [
+    "city"
+  ],
+  "season": {
+    "en": "Any heavy rain, most often during the monsoon.",
+    "bn": "যেকোনো ভারী বৃষ্টিতে, বেশি হয় বর্ষাকালে।"
+  },
+  "where": {
+    "en": "Dhaka, Chattogram, Khulna, and other cities with weak drainage.",
+    "bn": "ঢাকা, চট্টগ্রাম, খুলনা ও দুর্বল নিষ্কাশন ব্যবস্থার অন্যান্য শহর।"
+  },
+  "summary": {
+    "en": "When drains cannot carry heavy rain away, streets and homes fill with dirty water that can also hide open manholes.",
+    "bn": "ভারী বৃষ্টির পানি ড্রেনে সরতে না পারলে রাস্তা ও ঘর নোংরা পানিতে ভরে যায়, যেখানে খোলা ম্যানহোলও লুকিয়ে থাকতে পারে।"
+  },
+  "before": [
+    {
+      "en": "Never throw plastic or waste into drains. It blocks the water.",
+      "bn": "ড্রেনে প্লাস্টিক বা আবর্জনা ফেলবেন না। এতে পানি আটকে যায়।"
+    },
+    {
+      "en": "Keep valuables and electrical items off the floor.",
+      "bn": "মূল্যবান ও বৈদ্যুতিক জিনিস মেঝে থেকে উঁচুতে রাখুন।"
+    },
+    {
+      "en": "Know a higher route to home, work, and school.",
+      "bn": "বাড়ি, কর্মস্থল ও স্কুলে যাওয়ার একটি উঁচু পথ জেনে রাখুন।"
+    },
+    {
+      "en": "Keep a torch and a charged phone at hand.",
+      "bn": "টর্চ ও চার্জ দেওয়া ফোন হাতের কাছে রাখুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Avoid walking in dirty water. Open manholes can be hidden under it.",
+      "bn": "নোংরা পানিতে হাঁটা এড়িয়ে চলুন। নিচে খোলা ম্যানহোল থাকতে পারে।"
+    },
+    {
+      "en": "Stay away from electric poles, wires, and metal fences in water.",
+      "bn": "পানিতে থাকা বিদ্যুতের খুঁটি, তার ও ধাতব বেড়া থেকে দূরে থাকুন।"
+    },
+    {
+      "en": "Do not drive or ride through deep water.",
+      "bn": "গভীর পানির মধ্য দিয়ে গাড়ি বা রিকশা চালাবেন না।"
+    },
+    {
+      "en": "If water enters your home, switch off the power at the main switch if it is safe.",
+      "bn": "ঘরে পানি ঢুকলে এবং নিরাপদ হলে মেইন সুইচ বন্ধ করুন।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Wash hands and feet with clean water and soap after contact with dirty water.",
+      "bn": "নোংরা পানি ছোঁয়ার পর পরিষ্কার পানি ও সাবান দিয়ে হাত-পা ধুয়ে ফেলুন।"
+    },
+    {
+      "en": "Clean and disinfect floors and walls. Throw away spoiled food.",
+      "bn": "মেঝে ও দেয়াল পরিষ্কার ও জীবাণুমুক্ত করুন। নষ্ট খাবার ফেলে দিন।"
+    },
+    {
+      "en": "Get treatment for fever, diarrhoea, or skin infections.",
+      "bn": "জ্বর, ডায়রিয়া বা চামড়ার সংক্রমণ হলে চিকিৎসা নিন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Standing water is only a nuisance.",
+        "bn": "জমা পানি শুধু বিরক্তিকর।"
+      },
+      "fact": {
+        "en": "It can hide open manholes, carry disease, and pass electricity from damaged lines.",
+        "bn": "এতে খোলা ম্যানহোল লুকিয়ে থাকতে পারে, রোগজীবাণু থাকতে পারে এবং ক্ষতিগ্রস্ত তার থেকে বিদ্যুৎ ছড়াতে পারে।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    },
+    {
+      "name": "World Health Organization (WHO)",
+      "url": "https://www.who.int"
+    }
+  ],
+  "status": "draft"
+}

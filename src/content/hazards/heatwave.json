@@ -1,0 +1,93 @@
+{
+  "slug": "heatwave",
+  "regions": [
+    "city",
+    "northwest",
+    "river"
+  ],
+  "season": {
+    "en": "Mostly April to June, before the monsoon.",
+    "bn": "বেশিরভাগ এপ্রিল থেকে জুন, বর্ষার আগে।"
+  },
+  "where": {
+    "en": "Widespread, most often in the west and north-west and in crowded cities.",
+    "bn": "ব্যাপক এলাকায়, বেশি হয় পশ্চিম ও উত্তর-পশ্চিমে এবং ঘনবসতিপূর্ণ শহরে।"
+  },
+  "summary": {
+    "en": "Very hot days and nights can cause heat exhaustion and heatstroke, especially for children, older people, and outdoor workers.",
+    "bn": "খুব গরম দিন ও রাত হিটস্ট্রোক ও অতিরিক্ত ক্লান্তির কারণ হতে পারে, বিশেষ করে শিশু, বয়স্ক ও বাইরে কাজ করা মানুষের।"
+  },
+  "before": [
+    {
+      "en": "Learn the signs of heat illness: heavy sweating, dizziness, headache, and nausea.",
+      "bn": "গরমজনিত অসুস্থতার লক্ষণ জানুন: প্রচুর ঘাম, মাথা ঘোরা, মাথাব্যথা ও বমি বমি ভাব।"
+    },
+    {
+      "en": "Plan outdoor work for early morning or evening.",
+      "bn": "বাইরের কাজ ভোরে বা সন্ধ্যায় করার পরিকল্পনা করুন।"
+    },
+    {
+      "en": "Keep drinking water and oral rehydration salts (ORS) at home.",
+      "bn": "ঘরে খাবার পানি ও খাবার স্যালাইন রাখুন।"
+    },
+    {
+      "en": "Check on older neighbours and people who live alone.",
+      "bn": "বয়স্ক প্রতিবেশী ও একা থাকা মানুষের খোঁজ নিন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Drink water often, even if you are not thirsty.",
+      "bn": "পিপাসা না পেলেও ঘন ঘন পানি পান করুন।"
+    },
+    {
+      "en": "Stay in the shade or a cool place in the middle of the day.",
+      "bn": "দিনের মাঝখানে ছায়ায় বা ঠান্ডা জায়গায় থাকুন।"
+    },
+    {
+      "en": "Wear light, loose clothes and cover your head.",
+      "bn": "হালকা, ঢিলেঢালা কাপড় পরুন এবং মাথা ঢেকে রাখুন।"
+    },
+    {
+      "en": "Never leave a child or an older person in a closed room or vehicle.",
+      "bn": "শিশু বা বয়স্ক কাউকে বন্ধ ঘরে বা গাড়িতে রেখে যাবেন না।"
+    }
+  ],
+  "after": [
+    {
+      "en": "If someone feels dizzy or weak, move them to a cool place and give sips of water or ORS.",
+      "bn": "কেউ মাথা ঘোরা বা দুর্বলতা অনুভব করলে ঠান্ডা জায়গায় নিয়ে যান এবং অল্প অল্প করে পানি বা খাবার স্যালাইন দিন।"
+    },
+    {
+      "en": "If the skin is hot and dry, or the person is confused or faints, it may be heatstroke. Get medical help now and cool the body with wet cloths.",
+      "bn": "ত্বক গরম ও শুকনো হলে, অথবা ব্যক্তি দিশেহারা হলে বা অজ্ঞান হলে হিটস্ট্রোক হতে পারে। এখনই চিকিৎসা সহায়তা নিন এবং ভেজা কাপড়ে শরীর ঠান্ডা করুন।"
+    },
+    {
+      "en": "Keep drinking water for the rest of the day.",
+      "bn": "দিনভর পানি পান করতে থাকুন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "I only need to drink when I feel thirsty.",
+        "bn": "পিপাসা পেলেই শুধু পানি খেলে চলবে।"
+      },
+      "fact": {
+        "en": "Thirst comes late. In the heat, drink water regularly through the day.",
+        "bn": "পিপাসা দেরিতে পায়। গরমে সারা দিন নিয়মিত পানি পান করুন।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "World Health Organization (WHO)",
+      "url": "https://www.who.int"
+    },
+    {
+      "name": "Bangladesh Meteorological Department (BMD)",
+      "url": "https://bmd.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

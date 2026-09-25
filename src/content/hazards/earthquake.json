@@ -1,0 +1,100 @@
+{
+  "slug": "earthquake",
+  "regions": [
+    "coast",
+    "river",
+    "haor",
+    "hill",
+    "city",
+    "northwest"
+  ],
+  "season": {
+    "en": "Any time of year, with no warning.",
+    "bn": "বছরের যেকোনো সময়, কোনো আগাম সতর্কতা ছাড়াই।"
+  },
+  "where": {
+    "en": "Across the country. Risk is higher in the north-east and south-east, and in crowded cities with weak buildings.",
+    "bn": "সারা দেশে। উত্তর-পূর্ব ও দক্ষিণ-পূর্বে এবং দুর্বল ভবনের ঘনবসতিপূর্ণ শহরে ঝুঁকি বেশি।"
+  },
+  "summary": {
+    "en": "Shaking comes suddenly and lasts seconds to a minute. Most injuries come from falling objects and collapsing buildings.",
+    "bn": "কাঁপুনি হঠাৎ আসে এবং কয়েক সেকেন্ড থেকে এক মিনিট থাকে। বেশিরভাগ আঘাত পড়ন্ত জিনিস ও ভবন ধসে হয়।"
+  },
+  "before": [
+    {
+      "en": "Fix tall shelves and heavy furniture to the wall. Keep heavy items low.",
+      "bn": "লম্বা তাক ও ভারী আসবাব দেয়ালের সাথে আটকে রাখুন। ভারী জিনিস নিচে রাখুন।"
+    },
+    {
+      "en": "Find the safe spots in each room, such as under a sturdy table, away from windows.",
+      "bn": "প্রতিটি ঘরে নিরাপদ জায়গা চিনে রাখুন, যেমন শক্ত টেবিলের নিচে, জানালা থেকে দূরে।"
+    },
+    {
+      "en": "Practise Drop, Cover, and Hold On with your family.",
+      "bn": "পরিবারের সাথে মাটিতে বসা, মাথা ঢাকা ও শক্ত করে ধরে থাকার অনুশীলন করুন।"
+    },
+    {
+      "en": "Keep exits clear. Keep a torch, a whistle, and a first-aid kit near your bed.",
+      "bn": "বের হওয়ার পথ খোলা রাখুন। বিছানার কাছে টর্চ, হুইসেল ও প্রাথমিক চিকিৎসার বাক্স রাখুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Drop to the ground, take cover under a sturdy table, and hold on until the shaking stops.",
+      "bn": "মাটিতে বসে পড়ুন, শক্ত টেবিলের নিচে আশ্রয় নিন এবং কাঁপুনি থামা পর্যন্ত ধরে থাকুন।"
+    },
+    {
+      "en": "Stay away from windows, glass, and heavy objects that can fall.",
+      "bn": "জানালা, কাচ ও পড়ে যেতে পারে এমন ভারী জিনিস থেকে দূরে থাকুন।"
+    },
+    {
+      "en": "If you are outside, move to an open area away from buildings, wires, and trees.",
+      "bn": "বাইরে থাকলে ভবন, তার ও গাছ থেকে দূরে খোলা জায়গায় যান।"
+    },
+    {
+      "en": "Do not use a lift.",
+      "bn": "লিফট ব্যবহার করবেন না।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Expect aftershocks. Drop, cover, and hold on again each time.",
+      "bn": "পরবর্তী কম্পনের জন্য প্রস্তুত থাকুন। প্রতিবার আবার মাটিতে বসে মাথা ঢেকে ধরে থাকুন।"
+    },
+    {
+      "en": "Check yourself and others for injuries. Give first aid.",
+      "bn": "নিজেকে ও অন্যদের আঘাত আছে কি না দেখুন। প্রাথমিক চিকিৎসা দিন।"
+    },
+    {
+      "en": "If your building is damaged, leave by the stairs. If you smell gas, switch off the supply and get out.",
+      "bn": "ভবন ক্ষতিগ্রস্ত হলে সিঁড়ি দিয়ে বেরিয়ে যান। গ্যাসের গন্ধ পেলে সংযোগ বন্ধ করে বেরিয়ে যান।"
+    },
+    {
+      "en": "Use text messages instead of calls so the phone lines stay free.",
+      "bn": "ফোন লাইন খালি রাখতে কলের বদলে টেক্সট মেসেজ ব্যবহার করুন।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Stand in a doorway during an earthquake.",
+        "bn": "ভূমিকম্পের সময় দরজার চৌকাঠে দাঁড়ান।"
+      },
+      "fact": {
+        "en": "Drop, cover, and hold on under a sturdy table instead. A doorway is not safer in most buildings.",
+        "bn": "বরং শক্ত টেবিলের নিচে বসে মাথা ঢেকে ধরে থাকুন। বেশিরভাগ ভবনে দরজার চৌকাঠ বেশি নিরাপদ নয়।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "ShakeOut: Drop, Cover, and Hold On",
+      "url": "https://www.shakeout.org/dropcoverholdon/"
+    },
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

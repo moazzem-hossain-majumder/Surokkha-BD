@@ -1,0 +1,95 @@
+{
+  "slug": "flash-flood",
+  "regions": [
+    "haor"
+  ],
+  "season": {
+    "en": "Mostly March to May, before the monsoon, and sometimes early in the monsoon.",
+    "bn": "বেশিরভাগ মার্চ থেকে মে, বর্ষার আগে এবং কখনো বর্ষার শুরুতে।"
+  },
+  "where": {
+    "en": "Haor and hill-foot areas of the north-east, such as Sunamganj, Sylhet, Netrokona, Kishoreganj, Moulvibazar, and Habiganj.",
+    "bn": "উত্তর-পূর্বের হাওর ও পাহাড়ের পাদদেশের এলাকা, যেমন সুনামগঞ্জ, সিলেট, নেত্রকোনা, কিশোরগঞ্জ, মৌলভীবাজার ও হবিগঞ্জ।"
+  },
+  "summary": {
+    "en": "Heavy rain in the hills upstream can flood a haor within hours, often just before the rice harvest.",
+    "bn": "উজানের পাহাড়ে ভারী বৃষ্টিতে কয়েক ঘণ্টার মধ্যেই হাওর প্লাবিত হতে পারে, প্রায়ই ধান কাটার ঠিক আগে।"
+  },
+  "before": [
+    {
+      "en": "Watch for warnings about heavy rain in the upstream hills, including in India.",
+      "bn": "উজানের পাহাড়ে, ভারতসহ, ভারী বৃষ্টির সতর্কবার্তার দিকে নজর রাখুন।"
+    },
+    {
+      "en": "When a warning comes, harvest ripe crops early if you can do it safely.",
+      "bn": "সতর্কবার্তা এলে নিরাপদে সম্ভব হলে পাকা ফসল আগেভাগে কেটে নিন।"
+    },
+    {
+      "en": "Keep a boat, a torch, and a charged phone ready.",
+      "bn": "নৌকা, টর্চ ও চার্জ দেওয়া ফোন প্রস্তুত রাখুন।"
+    },
+    {
+      "en": "Know the nearest high ground or shelter and how to reach it.",
+      "bn": "নিকটতম উঁচু জায়গা বা আশ্রয়কেন্দ্র এবং সেখানে যাওয়ার পথ জেনে রাখুন।"
+    }
+  ],
+  "during": [
+    {
+      "en": "Move to high ground at once. Do not wait to see how high the water gets.",
+      "bn": "এখনই উঁচু জায়গায় যান। পানি কতটা বাড়ে তা দেখার জন্য অপেক্ষা করবেন না।"
+    },
+    {
+      "en": "Never cross fast-moving water on foot or by boat.",
+      "bn": "স্রোতের পানি হেঁটে বা নৌকায় পার হবেন না।"
+    },
+    {
+      "en": "Stay away from embankments that may break.",
+      "bn": "ভেঙে যেতে পারে এমন বাঁধ থেকে দূরে থাকুন।"
+    },
+    {
+      "en": "Move livestock only if it is safe. Never risk a life for property.",
+      "bn": "গবাদিপশু নিরাপদ হলেই সরান। সম্পদের জন্য প্রাণের ঝুঁকি নেবেন না।"
+    }
+  ],
+  "after": [
+    {
+      "en": "Wait for the water to fall before returning.",
+      "bn": "পানি নেমে যাওয়ার পর ফিরুন।"
+    },
+    {
+      "en": "Use safe water, and clean and disinfect wells and tubewells.",
+      "bn": "নিরাপদ পানি ব্যবহার করুন এবং কুয়া ও টিউবওয়েল পরিষ্কার ও জীবাণুমুক্ত করুন।"
+    },
+    {
+      "en": "Report damage to the local government office.",
+      "bn": "ক্ষয়ক্ষতির খবর স্থানীয় সরকারি অফিসে জানান।"
+    }
+  ],
+  "myths": [
+    {
+      "myth": {
+        "en": "Flash floods only happen where it is raining nearby.",
+        "bn": "আশপাশে বৃষ্টি হলেই কেবল আকস্মিক বন্যা হয়।"
+      },
+      "fact": {
+        "en": "Rain far upstream can flood a haor within hours, even under clear skies.",
+        "bn": "অনেক উজানের বৃষ্টিতে আকাশ পরিষ্কার থাকলেও কয়েক ঘণ্টায় হাওর প্লাবিত হতে পারে।"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "name": "Flood Forecasting and Warning Centre (FFWC)",
+      "url": "http://www.ffwc.gov.bd"
+    },
+    {
+      "name": "Bangladesh Meteorological Department (BMD)",
+      "url": "https://bmd.gov.bd"
+    },
+    {
+      "name": "Department of Disaster Management (DDM)",
+      "url": "https://ddm.gov.bd"
+    }
+  ],
+  "status": "draft"
+}

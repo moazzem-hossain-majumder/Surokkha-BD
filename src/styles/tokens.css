@@ -1,0 +1,98 @@
+/* Design tokens. Source of truth: docs/design.md. Never hardcode hex in components. */
+
+:root {
+  /* Brand base (light) */
+  --bg:#F5F8F7; --surface:#FFFFFF; --surface-2:#EAF0EE; --border:#D3DEDA;
+  --ink:#0E1F27; --ink-2:#3E545C; --ink-3:#6A7E84;
+  --brand:#0B7A65; --brand-ink:#FFFFFF; --brand-soft:#D8F0E9;
+  --sun:#E5484D; --sun-soft:#FDE5E6;
+
+  /* Severity (always paired with a shape and a label) */
+  --sev-0:#5E7B76; --sev-1:#B08900; --sev-2:#D9730D; --sev-3:#D6342C; --sev-4:#8E1B4F;
+
+  /* Semantic */
+  --success:#1E8E5A; --info:#1F6FEB;
+
+  /* Active hazard scope (defaults to brand) */
+  --h-accent: var(--brand);
+  --h-soft: var(--brand-soft);
+
+  --img-dim:1;
+  color-scheme: light;
+}
+
+/* Explicit dark */
+:root[data-theme="dark"] {
+  --bg:#0A1419; --surface:#0F1D24; --surface-2:#152730; --border:#233842;
+  --ink:#E8F0EE; --ink-2:#A9BDBF; --ink-3:#7C9296;
+  --brand:#3FCBA9; --brand-ink:#04211A; --brand-soft:#0F3A31;
+  --sun:#FF6B70; --sun-soft:#3B1518;
+  --sev-0:#8AA6A0; --sev-1:#F2C94C; --sev-2:#FF9F45; --sev-3:#FF6B62; --sev-4:#F26BA5;
+  --success:#4FD08C; --info:#6CA8FF;
+  --img-dim:.92;
+  color-scheme: dark;
+}
+
+/* System dark (when the user has not chosen light) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+  --bg:#0A1419; --surface:#0F1D24; --surface-2:#152730; --border:#233842;
+    --ink:#E8F0EE; --ink-2:#A9BDBF; --ink-3:#7C9296;
+    --brand:#3FCBA9; --brand-ink:#04211A; --brand-soft:#0F3A31;
+    --sun:#FF6B70; --sun-soft:#3B1518;
+    --sev-0:#8AA6A0; --sev-1:#F2C94C; --sev-2:#FF9F45; --sev-3:#FF6B62; --sev-4:#F26BA5;
+    --success:#4FD08C; --info:#6CA8FF;
+    --img-dim:.92;
+    color-scheme: dark;
+  }
+}
+
+/* Hazard scopes: set data-hazard on any wrapper */
+[data-hazard="cyclone"] { --h-accent:#4B3FBF; --h-soft:#E8E6FB; }
+[data-hazard="riverine-flood"] { --h-accent:#1565C0; --h-soft:#E1EEFB; }
+[data-hazard="flash-flood"] { --h-accent:#0088A8; --h-soft:#DDF3F8; }
+[data-hazard="urban-waterlogging"] { --h-accent:#3F5B7A; --h-soft:#E4EAF1; }
+[data-hazard="riverbank-erosion"] { --h-accent:#A4562B; --h-soft:#F7E7DD; }
+[data-hazard="landslide"] { --h-accent:#7A4B2A; --h-soft:#EFE3D8; }
+[data-hazard="earthquake"] { --h-accent:#B3261E; --h-soft:#FBE4E2; }
+[data-hazard="lightning"] { --h-accent:#B87A00; --h-soft:#FFF2CC; }
+[data-hazard="nor-wester"] { --h-accent:#6B4E9B; --h-soft:#EDE6F6; }
+[data-hazard="drought"] { --h-accent:#A67C00; --h-soft:#F8EFCF; }
+[data-hazard="heatwave"] { --h-accent:#D1490F; --h-soft:#FDE6DA; }
+[data-hazard="cold-wave-fog"] { --h-accent:#4D7C8A; --h-soft:#E3EEF1; }
+[data-hazard="salinity"] { --h-accent:#2C8C7E; --h-soft:#DDF1EE; }
+[data-hazard="tsunami"] { --h-accent:#0B5E73; --h-soft:#D9EBF0; }
+
+:root[data-theme="dark"] {
+  [data-hazard="cyclone"] { --h-accent:#9A90FF; --h-soft:#221E4F; }
+  [data-hazard="riverine-flood"] { --h-accent:#5AA9FF; --h-soft:#12294A; }
+  [data-hazard="flash-flood"] { --h-accent:#3CD0F0; --h-soft:#0D3440; }
+  [data-hazard="urban-waterlogging"] { --h-accent:#8FB0D3; --h-soft:#1B2A3A; }
+  [data-hazard="riverbank-erosion"] { --h-accent:#E7936A; --h-soft:#3E2415; }
+  [data-hazard="landslide"] { --h-accent:#C99668; --h-soft:#33210F; }
+  [data-hazard="earthquake"] { --h-accent:#FF7A70; --h-soft:#421512; }
+  [data-hazard="lightning"] { --h-accent:#FFC53D; --h-soft:#3D2F00; }
+  [data-hazard="nor-wester"] { --h-accent:#B79BE8; --h-soft:#2B2040; }
+  [data-hazard="drought"] { --h-accent:#E5B93C; --h-soft:#3A2E08; }
+  [data-hazard="heatwave"] { --h-accent:#FF8A50; --h-soft:#43200E; }
+  [data-hazard="cold-wave-fog"] { --h-accent:#9CC7D4; --h-soft:#1B3138; }
+  [data-hazard="salinity"] { --h-accent:#6EDBC8; --h-soft:#0F3A34; }
+  [data-hazard="tsunami"] { --h-accent:#4FB7D2; --h-soft:#0C2E38; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) [data-hazard="cyclone"] { --h-accent:#9A90FF; --h-soft:#221E4F; }
+  :root:not([data-theme="light"]) [data-hazard="riverine-flood"] { --h-accent:#5AA9FF; --h-soft:#12294A; }
+  :root:not([data-theme="light"]) [data-hazard="flash-flood"] { --h-accent:#3CD0F0; --h-soft:#0D3440; }
+  :root:not([data-theme="light"]) [data-hazard="urban-waterlogging"] { --h-accent:#8FB0D3; --h-soft:#1B2A3A; }
+  :root:not([data-theme="light"]) [data-hazard="riverbank-erosion"] { --h-accent:#E7936A; --h-soft:#3E2415; }
+  :root:not([data-theme="light"]) [data-hazard="landslide"] { --h-accent:#C99668; --h-soft:#33210F; }
+  :root:not([data-theme="light"]) [data-hazard="earthquake"] { --h-accent:#FF7A70; --h-soft:#421512; }
+  :root:not([data-theme="light"]) [data-hazard="lightning"] { --h-accent:#FFC53D; --h-soft:#3D2F00; }
+  :root:not([data-theme="light"]) [data-hazard="nor-wester"] { --h-accent:#B79BE8; --h-soft:#2B2040; }
+  :root:not([data-theme="light"]) [data-hazard="drought"] { --h-accent:#E5B93C; --h-soft:#3A2E08; }
+  :root:not([data-theme="light"]) [data-hazard="heatwave"] { --h-accent:#FF8A50; --h-soft:#43200E; }
+  :root:not([data-theme="light"]) [data-hazard="cold-wave-fog"] { --h-accent:#9CC7D4; --h-soft:#1B3138; }
+  :root:not([data-theme="light"]) [data-hazard="salinity"] { --h-accent:#6EDBC8; --h-soft:#0F3A34; }
+  :root:not([data-theme="light"]) [data-hazard="tsunami"] { --h-accent:#4FB7D2; --h-soft:#0C2E38; }
+}

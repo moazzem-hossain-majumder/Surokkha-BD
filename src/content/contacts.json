@@ -1,0 +1,88 @@
+[
+  {
+    "id": "national-emergency",
+    "number": "999",
+    "name": {
+      "en": "National Emergency Service",
+      "bn": "জাতীয় জরুরি সেবা"
+    },
+    "what": {
+      "en": "Police, fire service, and ambulance. Toll free from any phone, 24 hours.",
+      "bn": "পুলিশ, ফায়ার সার্ভিস ও অ্যাম্বুলেন্স। যেকোনো ফোন থেকে বিনামূল্যে, ২৪ ঘণ্টা।"
+    },
+    "source": {
+      "name": "U.S. Embassy in Bangladesh: Emergency Assistance",
+      "url": "https://bd.usembassy.gov/emergency-assistance/"
+    },
+    "verified": "2026-09-25",
+    "featured": true
+  },
+  {
+    "id": "fire",
+    "number": "16163",
+    "name": {
+      "en": "Fire Service and Civil Defence",
+      "bn": "ফায়ার সার্ভিস ও সিভিল ডিফেন্স"
+    },
+    "what": {
+      "en": "Fire service hotline for emergencies and rescue.",
+      "bn": "জরুরি অবস্থা ও উদ্ধারের জন্য ফায়ার সার্ভিসের হটলাইন।"
+    },
+    "source": {
+      "name": "Bangladesh Fire Service and Civil Defence (announcement)",
+      "url": "https://fireservice.gov.bd/site/news/6a667278-6740-4008-a528-b2abd04812ea/The-new-hotline-number-of-the-fire-service-for-emergency-services-is-16163"
+    },
+    "verified": "2026-09-25"
+  },
+  {
+    "id": "health",
+    "number": "16263",
+    "name": {
+      "en": "Health Helpline",
+      "bn": "স্বাস্থ্য বাতায়ন"
+    },
+    "what": {
+      "en": "Health advice from a doctor, by phone.",
+      "bn": "ফোনে চিকিৎসকের স্বাস্থ্য পরামর্শ।"
+    },
+    "source": {
+      "name": "Bethuri Union Parishad (government site)",
+      "url": "https://bethuriup.gopalganj.gov.bd/en/site/page/%E0%A6%95%E0%A6%B2-%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F%E0%A6%BE%E0%A6%B0-%E0%A6%B8%E0%A6%AE%E0%A7%82%E0%A6%B9"
+    },
+    "verified": "2026-09-25"
+  },
+  {
+    "id": "national-helpline",
+    "number": "333",
+    "name": {
+      "en": "National Helpline",
+      "bn": "জাতীয় হেল্পলাইন"
+    },
+    "what": {
+      "en": "Government information and service helpline.",
+      "bn": "সরকারি তথ্য ও সেবা হেল্পলাইন।"
+    },
+    "source": {
+      "name": "Wikipedia: Telephone numbers in Bangladesh",
+      "url": "https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh"
+    },
+    "verified": "2026-09-25"
+  },
+  {
+    "id": "women-children",
+    "number": "109",
+    "name": {
+      "en": "Helpline for violence against women and children",
+      "bn": "নারী ও শিশু নির্যাতন প্রতিরোধ হেল্পলাইন"
+    },
+    "what": {
+      "en": "Support for women and children facing violence or abuse.",
+      "bn": "সহিংসতা বা নির্যাতনের শিকার নারী ও শিশুদের সহায়তা।"
+    },
+    "source": {
+      "name": "Wikipedia: Telephone numbers in Bangladesh",
+      "url": "https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh"
+    },
+    "verified": "2026-09-25"
+  }
+]
