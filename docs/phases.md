@@ -53,16 +53,16 @@ Legend: **[P0]** MVP essential. **[P1]** should have. **[P2]** later.
 
 **Goal:** Location-aware safety.
 
-- [ ] P2-1 Database schema and RLS for `hazards`, `districts`, `alerts`, `shelters`, caches
-- [ ] P2-2 Seed districts, hazards, and an initial curated shelter set
-- [ ] P2-3 Leaflet map component (dynamic import) with light and dark tile styling
-- [ ] P2-4 USGS earthquake sync job plus map layer
-- [ ] P2-5 Open-Meteo rainfall and weather sync plus layer
-- [ ] P2-6 Alerts: model, admin-entered alerts, severity badges, expiry logic
-- [ ] P2-7 Home risk banner reads real alerts
-- [ ] P2-8 Shelter finder: list, map, nearest to me, district fallback, directions link
-- [ ] P2-9 Freshness and "showing saved data" states everywhere
-- [ ] P2-10 Overpass import script for OSM shelters and hospitals
+- [x] P2-1 Database schema and RLS SQL written (supabase/migrations). Not yet run against a real project, and the app does not query it yet (see note in memory.md)
+- [x] P2-2 Seed data written: all 64 districts (supabase/seed + src/content/districts.json) and a curated sample of 18 shelters/hospitals (supabase/seed + src/content/shelters.json)
+- [x] P2-3 Leaflet map component (dynamic import) with light and dark tile styling
+- [x] P2-4 USGS earthquake sync job plus map layer
+- [ ] P2-5 Open-Meteo rainfall and weather sync plus layer (deferred to keep Phase 2 scoped; earthquakes and shelters were prioritized)
+- [ ] P2-6 Alerts: model, admin-entered alerts, severity badges, expiry logic (schema exists in migrations; admin UI and home banner wiring deferred to Phase 3, alongside auth)
+- [ ] P2-7 Home risk banner reads real alerts (depends on P2-6 and auth; deferred)
+- [x] P2-8 Shelter finder: list, map, nearest to me, district fallback, directions link
+- [x] P2-9 Freshness labels added on the map (shelter source note, earthquake fetch time/error state)
+- [ ] P2-10 Overpass import script for OSM shelters and hospitals (deferred; current shelter list is a small hand-curated seed, see memory.md)
 
 **Done when:** A user can find the nearest shelter and see current alerts with sources and freshness.
 

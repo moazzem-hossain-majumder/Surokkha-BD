@@ -13,7 +13,7 @@
 - **Dev environment:** Windows, VS Code, Node LTS, Git
 - **Budget:** $0 (free tiers only)
 - **Current phase:** Phase 0, Setup
-- **Current task:** Phase 1 complete. Next: deploy to Vercel (P0-8, if not already done), review draft hazard content against BMD/DDM, then start Phase 2 (map and shelters)
+- **Current task:** Phase 2 (map, shelters, districts) mostly complete. Next: connect a real Supabase project and run the migrations, then move to Phase 3 (auth, community reports, admin)
 - **Last updated:** _(date)_
 
 ## 2. Doc map
@@ -101,6 +101,16 @@ Template (copy for each session):
 - Next steps:
 - Files touched:
 ```
+
+### Session 2.0 (Phase 2 build)
+- Done: 64-district dataset (src/content/districts.json, approximate centroid coordinates, flagged for verification against BBS/LGED); curated 18-shelter/hospital seed (src/content/shelters.json, explicitly a demo sample, not exhaustive); geo helper (haversine + nearest-N, src/lib/geo.ts); `/api/quakes` route proxying the USGS feed for a Bangladesh bounding box (30 days, magnitude ≥2.5, 10-minute cache, fails gracefully to an empty list); `/map` page with a Leaflet map (react-leaflet 5, CARTO light/dark tiles matched to the active theme), shelter/earthquake layer toggles, and a map/list view switch; `/shelters` page (Shelter Finder) with "use my location" geolocation, a district fallback, nearest-10 sorting, distance shown, and an OSM directions link; Supabase migrations written (districts, profiles, shelters, alerts, quake_cache, weather_cache, nearest_shelters() PostGIS function, and RLS policies for every table) plus matching seed SQL generated from the JSON content — **written but not yet run against a real project, and the app still reads from static JSON, not the database**
+- Verified in build environment: lint, typecheck, production build (44 static/dynamic pages), smoke-tested `/map`, `/shelters`, and `/api/quakes` on both locales
+- IMPORTANT: `/api/quakes` could not reach earthquake.usgs.gov in the sandboxed build environment (network allowlist), so it was only verified to fail gracefully there. **You must confirm on your own machine that it returns real earthquake data.**
+- IMPORTANT: district coordinates are approximate town/HQ centroids I assembled from general geographic knowledge, not an authoritative dataset. Good enough for map pins and "nearest district" style features at this stage, but re-verify before treating them as precise (P6-4 already covers a broader content review; add this to that pass).
+- Shelter data is a small hand-picked sample (18 entries) meant to prove the UI works, not real DDM shelter coverage. P2-10 (OSM import) and a real DDM dataset are still needed before this is trustworthy for actual disaster response.
+- Deferred from the original Phase 2 plan to keep this delivery scoped: Open-Meteo weather sync/layer (P2-5), the alerts model's admin UI and Home risk banner wiring (P2-6/P2-7, which need auth from Phase 3 anyway), and the Overpass OSM import (P2-10). Supabase RLS was written but has no automated test suite yet (that's P3-10).
+- Workflow note: switched to a clone-based update workflow (keep the folder and `.git`, replace files, commit, push) instead of delete-and-reinit, to preserve commit history on GitHub.
+- Next steps: create the real Supabase project, run `supabase/migrations` then `supabase/seed`, wire `.env.local`, then start Phase 3 (auth, roles, community reports, admin dashboard, and switching shelters/alerts over to the database)
 
 ### Session 1.0 (Phase 1 build)
 - Done: UI primitives (Button, Card, Badge, Segmented, Accordion); hazard content system (14 hazards, bilingual JSON in src/content/hazards, typed via src/lib/hazards.ts); hazard index and detail pages with before/during/after, myths vs facts, cyclone signal table, sources, read-aloud; emergency contacts page (999, 16163, 16263, 333, 109) with one-tap call; My Safety Plan (local-first, printable); header nav; minimal PWA (manifest, icons placeholder, service worker with stale-while-revalidate for hazard/contacts/plan pages)

@@ -69,6 +69,21 @@ html[lang="bn"] * { letter-spacing: 0 !important; }
 
 img, video { filter: brightness(var(--img-dim)); }
 
+/* Dark-mode map tiles: OpenStreetMap has no free dark style, so the tile images
+   are inverted with CSS instead. Markers/popups live in a separate Leaflet pane
+   and are untouched. */
+.map-tiles-dark {
+  filter: invert(1) hue-rotate(180deg) brightness(0.95) contrast(0.9);
+}
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: var(--surface);
+  color: var(--ink);
+}
+.leaflet-container {
+  background: var(--surface-2);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

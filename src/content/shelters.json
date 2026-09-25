@@ -1,0 +1,254 @@
+[
+  {
+    "id": "sh-01",
+    "name": {
+      "en": "Gabtoli Cyclone Shelter",
+      "bn": "গাবতলী ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "BAR",
+    "lat": 22.098,
+    "lng": 90.115,
+    "capacity": 800,
+    "contact": "Local Union Parishad",
+    "accessible": true
+  },
+  {
+    "id": "sh-02",
+    "name": {
+      "en": "Patharghata Government Primary School Shelter",
+      "bn": "পাথরঘাটা সরকারি প্রাথমিক বিদ্যালয় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "BAR",
+    "lat": 22.1583,
+    "lng": 89.9714,
+    "capacity": 500,
+    "contact": "Upazila Disaster Management Committee",
+    "accessible": false
+  },
+  {
+    "id": "sh-03",
+    "name": {
+      "en": "Kuakata Cyclone Shelter",
+      "bn": "কুয়াকাটা ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "PAT",
+    "lat": 21.8189,
+    "lng": 90.1197,
+    "capacity": 600,
+    "contact": "Local Union Parishad",
+    "accessible": true
+  },
+  {
+    "id": "sh-04",
+    "name": {
+      "en": "Galachipa Multipurpose Shelter",
+      "bn": "গলাচিপা বহুমুখী আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "PAT",
+    "lat": 22.1667,
+    "lng": 90.4167,
+    "capacity": 450,
+    "contact": "Upazila Disaster Management Committee",
+    "accessible": false
+  },
+  {
+    "id": "sh-05",
+    "name": {
+      "en": "Char Fasson Cyclone Shelter",
+      "bn": "চরফ্যাশন ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "BHO",
+    "lat": 22.1922,
+    "lng": 90.7644,
+    "capacity": 700,
+    "contact": "Local Union Parishad",
+    "accessible": true
+  },
+  {
+    "id": "sh-06",
+    "name": {
+      "en": "Monpura Cyclone Shelter",
+      "bn": "মনপুরা ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "BHO",
+    "lat": 22.3167,
+    "lng": 90.95,
+    "capacity": 350,
+    "contact": "Local Union Parishad",
+    "accessible": false
+  },
+  {
+    "id": "sh-07",
+    "name": {
+      "en": "Shyamnagar Cyclone Shelter",
+      "bn": "শ্যামনগর ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "SAT",
+    "lat": 22.3333,
+    "lng": 89.1,
+    "capacity": 500,
+    "contact": "Upazila Disaster Management Committee",
+    "accessible": true
+  },
+  {
+    "id": "sh-08",
+    "name": {
+      "en": "Dacope Multipurpose Shelter",
+      "bn": "দাকোপ বহুমুখী আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "KHU",
+    "lat": 22.5833,
+    "lng": 89.5,
+    "capacity": 400,
+    "contact": "Local Union Parishad",
+    "accessible": false
+  },
+  {
+    "id": "sh-09",
+    "name": {
+      "en": "Kutubdia Cyclone Shelter",
+      "bn": "কুতুবদিয়া ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "COX",
+    "lat": 21.8167,
+    "lng": 91.85,
+    "capacity": 550,
+    "contact": "Local Union Parishad",
+    "accessible": true
+  },
+  {
+    "id": "sh-10",
+    "name": {
+      "en": "Teknaf Cyclone Shelter",
+      "bn": "টেকনাফ ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "COX",
+    "lat": 20.8628,
+    "lng": 92.3057,
+    "capacity": 600,
+    "contact": "Upazila Disaster Management Committee",
+    "accessible": false
+  },
+  {
+    "id": "sh-11",
+    "name": {
+      "en": "Sandwip Cyclone Shelter",
+      "bn": "সন্দ্বীপ ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "CGRAM",
+    "lat": 22.4833,
+    "lng": 91.4333,
+    "capacity": 650,
+    "contact": "Local Union Parishad",
+    "accessible": true
+  },
+  {
+    "id": "sh-12",
+    "name": {
+      "en": "Hatiya Cyclone Shelter",
+      "bn": "হাতিয়া ঘূর্ণিঝড় আশ্রয়কেন্দ্র"
+    },
+    "type": "cyclone",
+    "district": "NOA",
+    "lat": 22.4333,
+    "lng": 91.1167,
+    "capacity": 700,
+    "contact": "Local Union Parishad",
+    "accessible": false
+  },
+  {
+    "id": "sh-13",
+    "name": {
+      "en": "Sunamganj Flood Shelter",
+      "bn": "সুনামগঞ্জ বন্যা আশ্রয়কেন্দ্র"
+    },
+    "type": "flood",
+    "district": "SUN",
+    "lat": 25.0658,
+    "lng": 91.395,
+    "capacity": 400,
+    "contact": "District Disaster Management Committee",
+    "accessible": true
+  },
+  {
+    "id": "sh-14",
+    "name": {
+      "en": "Derai Flood Shelter",
+      "bn": "দিরাই বন্যা আশ্রয়কেন্দ্র"
+    },
+    "type": "flood",
+    "district": "SUN",
+    "lat": 24.9167,
+    "lng": 91.4667,
+    "capacity": 300,
+    "contact": "Upazila Disaster Management Committee",
+    "accessible": false
+  },
+  {
+    "id": "sh-15",
+    "name": {
+      "en": "Sadar Hospital, Barguna",
+      "bn": "সদর হাসপাতাল, বরগুনা"
+    },
+    "type": "hospital",
+    "district": "BAR",
+    "lat": 22.0953,
+    "lng": 90.1121,
+    "capacity": 100,
+    "contact": "Civil Surgeon Office",
+    "accessible": true
+  },
+  {
+    "id": "sh-16",
+    "name": {
+      "en": "Sadar Hospital, Cox's Bazar",
+      "bn": "সদর হাসপাতাল, কক্সবাজার"
+    },
+    "type": "hospital",
+    "district": "COX",
+    "lat": 21.4272,
+    "lng": 92.0058,
+    "capacity": 250,
+    "contact": "Civil Surgeon Office",
+    "accessible": true
+  },
+  {
+    "id": "sh-17",
+    "name": {
+      "en": "Sadar Hospital, Khulna",
+      "bn": "সদর হাসপাতাল, খুলনা"
+    },
+    "type": "hospital",
+    "district": "KHU",
+    "lat": 22.8456,
+    "lng": 89.5403,
+    "capacity": 400,
+    "contact": "Civil Surgeon Office",
+    "accessible": true
+  },
+  {
+    "id": "sh-18",
+    "name": {
+      "en": "Sadar Hospital, Bandarban",
+      "bn": "সদর হাসপাতাল, বান্দরবান"
+    },
+    "type": "hospital",
+    "district": "BAN",
+    "lat": 22.1953,
+    "lng": 92.2184,
+    "capacity": 100,
+    "contact": "Civil Surgeon Office",
+    "accessible": false
+  }
+]

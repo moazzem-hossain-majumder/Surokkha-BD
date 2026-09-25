@@ -17,6 +17,8 @@ export function Header() {
   const t = useTranslations("header");
   const nav = [
     { href: "/hazards", label: t("nav.hazards") },
+    { href: "/map", label: t("nav.map") },
+    { href: "/shelters", label: t("nav.shelters") },
     { href: "/contacts", label: t("nav.contacts") },
     { href: "/plan", label: t("nav.plan") },
   ] as const;

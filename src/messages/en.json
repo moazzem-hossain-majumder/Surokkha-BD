@@ -12,7 +12,9 @@
       "label": "Main",
       "hazards": "Hazards",
       "contacts": "Emergency",
-      "plan": "My plan"
+      "plan": "My plan",
+      "map": "Map",
+      "shelters": "Shelters"
     }
   },
   "theme": {
@@ -129,6 +131,48 @@
       "children": "Comfort items and ID tags for young children",
       "disability": "Mobility aids and any needed support planned",
       "livestock": "A safe place identified for livestock"
+    }
+  },
+  "map": {
+    "title": "Live map",
+    "intro": "Shelters and recent earthquakes in and around Bangladesh, on one map.",
+    "layerShelters": "Shelters",
+    "layerQuakes": "Earthquakes (30 days)",
+    "viewLabel": "View",
+    "viewMap": "Map",
+    "viewList": "List",
+    "shelterSource": "Shelters: curated sample for this preview",
+    "quakeSource": "Earthquakes: USGS, updated",
+    "quakeLoading": "Loading recent earthquakes…",
+    "quakeError": "Could not load earthquake data right now.",
+    "noQuakes": "No earthquakes of magnitude 2.5 or higher in the last 30 days.",
+    "capacity": "Capacity",
+    "shelterType": {
+      "cyclone": "Cyclone shelter",
+      "flood": "Flood shelter",
+      "hospital": "Hospital"
+    }
+  },
+  "shelters": {
+    "title": "Find a shelter",
+    "intro": "Find the nearest cyclone shelter, flood shelter, or hospital.",
+    "useLocation": "Use my location",
+    "or": "or",
+    "chooseDistrict": "Choose a district",
+    "locating": "Finding your location…",
+    "locationDenied": "We couldn't get your location. Choose your district instead.",
+    "locationUnsupported": "Location is not supported on this device. Choose your district instead.",
+    "showingNear": "Showing shelters near",
+    "myLocation": "your location",
+    "emptyState": "Use your location or choose a district to see the nearest shelters.",
+    "capacity": "Capacity",
+    "accessible": "Accessible",
+    "directions": "Directions",
+    "sourceNote": "This is a curated sample of shelters for this preview, not a complete list. A full dataset from DDM and OpenStreetMap is planned for a later phase.",
+    "shelterType": {
+      "cyclone": "Cyclone shelter",
+      "flood": "Flood shelter",
+      "hospital": "Hospital"
     }
   }
 }
