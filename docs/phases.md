@@ -92,15 +92,15 @@ Legend: **[P0]** MVP essential. **[P1]** should have. **[P2]** later.
 
 **Goal:** Coordination.
 
-- [ ] P4-1 Needs model and coordinator create/edit UI
-- [ ] P4-2 Public needs board with progress bars (needed / pledged / delivered)
-- [ ] P4-3 Pledge flow with status transitions and activity log
-- [ ] P4-4 Donor and coordinator views
-- [ ] P4-5 Volunteer profile with skills and availability
-- [ ] P4-6 Task creation and public task list with filters
-- [ ] P4-7 Application and accept/decline flow
-- [ ] P4-8 Email notifications for key events (free tier)
-- [ ] P4-9 Basic coordinator stats
+- [x] P4-1 Needs model and coordinator create/edit UI
+- [x] P4-2 Public needs board with progress bars (needed / pledged / delivered)
+- [x] P4-3 Pledge flow with status transitions and activity log
+- [x] P4-4 Donor and coordinator views
+- [x] P4-5 Volunteer profile with skills and availability
+- [x] P4-6 Task creation and public task list (district/skill filters deferred, see memory.md)
+- [x] P4-7 Application and accept/decline flow
+- [x] P4-8 Email notifications for key events (free tier) -- Resend, HTTP API, no SDK
+- [x] P4-9 Basic coordinator stats
 
 **Done when:** A coordinator posts a need and a task, a donor pledges, a volunteer applies, and every status change is visible and logged.
 

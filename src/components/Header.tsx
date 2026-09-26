@@ -21,6 +21,8 @@ export function Header() {
     { href: "/map", label: t("nav.map") },
     { href: "/shelters", label: t("nav.shelters") },
     { href: "/report", label: t("nav.report") },
+    { href: "/relief", label: t("nav.relief") },
+    { href: "/volunteer", label: t("nav.volunteer") },
     { href: "/contacts", label: t("nav.contacts") },
     { href: "/plan", label: t("nav.plan") },
   ] as const;

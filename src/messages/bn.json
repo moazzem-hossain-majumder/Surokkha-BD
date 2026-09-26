@@ -17,7 +17,9 @@
       "shelters": "আশ্রয়কেন্দ্র",
       "report": "রিপোর্ট",
       "login": "লগ ইন",
-      "account": "অ্যাকাউন্ট"
+      "account": "অ্যাকাউন্ট",
+      "relief": "ত্রাণ",
+      "volunteer": "স্বেচ্ছাসেবক"
     }
   },
   "theme": {
@@ -266,12 +268,16 @@
       "alerts": "সতর্কবার্তা",
       "shelters": "আশ্রয়কেন্দ্র",
       "reports": "রিপোর্ট",
-      "audit": "কার্যকলাপ লগ"
+      "audit": "কার্যকলাপ লগ",
+      "relief": "ত্রাণ",
+      "volunteers": "স্বেচ্ছাসেবক"
     },
     "stats": {
       "pendingReports": "অপেক্ষমাণ রিপোর্ট",
       "activeAlerts": "সক্রিয় সতর্কবার্তা",
-      "activeShelters": "সক্রিয় আশ্রয়কেন্দ্র"
+      "activeShelters": "সক্রিয় আশ্রয়কেন্দ্র",
+      "needsFulfilled": "সম্পূর্ণ প্রতিশ্রুত চাহিদা",
+      "taskFillRate": "স্বেচ্ছাসেবক কাজ পূরণের হার"
     },
     "alerts": {
       "newAlert": "নতুন সতর্কবার্তা",
@@ -328,6 +334,138 @@
     "audit": {
       "title": "কার্যকলাপ লগ",
       "none": "এখনো কোনো কার্যকলাপ রেকর্ড হয়নি।"
+    },
+    "relief": {
+      "newNeed": "চাহিদা পোস্ট করুন",
+      "district": "জেলা",
+      "item": "সামগ্রী",
+      "unit": "একক",
+      "qtyNeeded": "প্রয়োজনীয় পরিমাণ",
+      "deadline": "সময়সীমা (ঐচ্ছিক)",
+      "note": "মন্তব্য (ঐচ্ছিক)",
+      "create": "চাহিদা পোস্ট করুন",
+      "existing": "বর্তমান চাহিদাসমূহ",
+      "none": "এখনো কোনো চাহিদা পোস্ট করা হয়নি।",
+      "markFulfilled": "পূরণকৃত হিসেবে চিহ্নিত করুন",
+      "close": "বন্ধ করুন",
+      "pledgedOfNeeded": "{needed} {unit}-এর মধ্যে {pledged} {unit} প্রতিশ্রুত",
+      "delivered": "সরবরাহ করা হয়েছে",
+      "status": {
+        "open": "খোলা",
+        "fulfilled": "পূরণকৃত",
+        "closed": "বন্ধ"
+      },
+      "pledgeStatus": {
+        "pledged": "প্রতিশ্রুত",
+        "in_transit": "পথে আছে",
+        "delivered": "সরবরাহ করা হয়েছে",
+        "cancelled": "বাতিল",
+        "advanceTo": {
+          "in_transit": "পথে আছে হিসেবে চিহ্নিত করুন",
+          "delivered": "সরবরাহকৃত হিসেবে চিহ্নিত করুন"
+        },
+        "cancel": "বাতিল করুন"
+      },
+      "handover": {
+        "drop_off": "নিজে পৌঁছানো",
+        "pickup": "সংগ্রহ",
+        "courier": "কুরিয়ার",
+        "other": "অন্যান্য"
+      }
+    },
+    "volunteers": {
+      "newTask": "কাজ পোস্ট করুন",
+      "taskTitle": "কাজের শিরোনাম",
+      "taskDescription": "বিবরণ",
+      "requiredSkills": "প্রয়োজনীয় দক্ষতা",
+      "slots": "প্রয়োজনীয় স্বেচ্ছাসেবক সংখ্যা",
+      "district": "জেলা",
+      "location": "অবস্থান",
+      "createTask": "কাজ পোস্ট করুন",
+      "existingTasks": "বর্তমান কাজসমূহ",
+      "noneYet": "এখনো কোনো কাজ পোস্ট করা হয়নি।",
+      "taskStatus": {
+        "open": "খোলা",
+        "filled": "পূর্ণ",
+        "closed": "বন্ধ"
+      },
+      "slotsFilled": "{total}-এর মধ্যে {filled}টি গৃহীত",
+      "closeTask": "কাজ বন্ধ করুন",
+      "accept": "গ্রহণ করুন",
+      "decline": "প্রত্যাখ্যান করুন",
+      "noApplications": "এখনো কোনো আবেদন নেই।",
+      "noSkillsListed": "কোনো দক্ষতা তালিকাভুক্ত নেই"
+    }
+  },
+  "relief": {
+    "title": "রিলিফলিংক",
+    "intro": "সমন্বয়কারীদের পোস্ট করা প্রকৃত চাহিদা, প্রতিশ্রুতি থেকে সরবরাহ পর্যন্ত স্বচ্ছ অগ্রগতিসহ।",
+    "disclaimer": "সুরক্ষা বিডি কোনো অর্থ লেনদেন পরিচালনা করে না। প্রতিশ্রুতি শুধু সামগ্রী ও হস্তান্তরের জন্য।",
+    "none": "এই মুহূর্তে কোনো খোলা চাহিদা নেই।",
+    "pledgedOfNeeded": "{needed} {unit}-এর মধ্যে {pledged} {unit} প্রতিশ্রুত",
+    "delivered": "সরবরাহ করা হয়েছে",
+    "deadline": "সময়সীমা",
+    "makeAPledge": "প্রতিশ্রুতি দিন",
+    "signInToPledge": "এই চাহিদায় প্রতিশ্রুতি দিতে সাইন ইন করুন।",
+    "pledgeQty": "আপনি যে পরিমাণ দিতে পারবেন",
+    "handoverMethod": "হস্তান্তর পদ্ধতি",
+    "pledgeNote": "মন্তব্য (ঐচ্ছিক)",
+    "pledgeSubmit": "প্রতিশ্রুতি জমা দিন",
+    "pledgeSuccess": "ধন্যবাদ — আপনার প্রতিশ্রুতি নথিভুক্ত হয়েছে। সমন্বয়কারীকে জানানো হয়েছে।",
+    "submitting": "জমা হচ্ছে…",
+    "activityLog": "কার্যক্রম লগ",
+    "activityLine": "{qty} {unit} — {status}",
+    "noActivity": "এখনো কোনো প্রতিশ্রুতি নেই।",
+    "status": {
+      "open": "খোলা",
+      "fulfilled": "পূরণকৃত",
+      "closed": "বন্ধ"
+    },
+    "pledgeStatus": {
+      "pledged": "প্রতিশ্রুত",
+      "in_transit": "পথে আছে",
+      "delivered": "সরবরাহ করা হয়েছে",
+      "cancelled": "বাতিল"
+    },
+    "handover": {
+      "drop_off": "আমি নিজে পৌঁছে দেব",
+      "pickup": "সংগ্রহের ব্যবস্থা করুন",
+      "courier": "কুরিয়ার/পরিবহন সেবা",
+      "other": "অন্যান্য"
+    }
+  },
+  "volunteer": {
+    "title": "স্বেচ্ছাসেবক হাব",
+    "intro": "আপনার দক্ষতা ও সময় নিবন্ধন করুন, তারপর সমন্বয়কারীদের পোস্ট করা কাছাকাছি কাজে আবেদন করুন।",
+    "becomeAVolunteer": "স্বেচ্ছাসেবক হোন",
+    "yourProfile": "আপনার স্বেচ্ছাসেবক প্রোফাইল",
+    "skills": "দক্ষতা",
+    "district": "জেলা",
+    "availability": "সময়",
+    "availabilities": {
+      "weekdays": "সপ্তাহের কর্মদিবস",
+      "weekends": "সপ্তাহান্তে",
+      "anytime": "যেকোনো সময়",
+      "on_call": "ডাকলে আসবেন"
+    },
+    "createProfile": "প্রোফাইল সংরক্ষণ করুন",
+    "updateProfile": "প্রোফাইল আপডেট করুন",
+    "saving": "সংরক্ষণ হচ্ছে…",
+    "openTasks": "খোলা কাজ",
+    "noTasks": "এই মুহূর্তে কোনো খোলা কাজ নেই।",
+    "slotsFilled": "{total}-এর মধ্যে {filled}টি স্থান পূর্ণ",
+    "taskFull": "এই কাজে জনবল পূর্ণ হয়ে গেছে।",
+    "signInToApply": "আবেদন করতে সাইন ইন করুন।",
+    "needProfileToApply": "আবেদনের আগে উপরে আপনার স্বেচ্ছাসেবক প্রোফাইল তৈরি করুন।",
+    "apply": "আবেদন করুন",
+    "applyNotePlaceholder": "সংক্ষিপ্ত মন্তব্য (ঐচ্ছিক)",
+    "applySuccess": "আবেদন পাঠানো হয়েছে। সমন্বয়কারীকে জানানো হয়েছে।",
+    "submitting": "জমা হচ্ছে…",
+    "applicationStatus": {
+      "applied": "আবেদন করা হয়েছে — পর্যালোচনাধীন",
+      "accepted": "গৃহীত",
+      "declined": "প্রত্যাখ্যাত",
+      "withdrawn": "প্রত্যাহার করা হয়েছে"
     }
   }
 }

@@ -19,6 +19,8 @@ export default async function AdminLayout({
     { href: "/admin/alerts", label: t("nav.alerts") },
     { href: "/admin/shelters", label: t("nav.shelters") },
     { href: "/admin/reports", label: t("nav.reports") },
+    { href: "/admin/relief", label: t("nav.relief") },
+    { href: "/admin/volunteers", label: t("nav.volunteers") },
     ...(profile.role === "admin" ? [{ href: "/admin/audit", label: t("nav.audit") }] : []),
   ] as const;
 

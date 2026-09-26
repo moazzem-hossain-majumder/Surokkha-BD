@@ -25,3 +25,13 @@ export async function getReportPhotoUrl(path: string, expiresInSeconds = 300): P
   if (error) return null;
   return data.signedUrl;
 }
+
+// Looks up a user's email by id for server-side email notifications (ReliefLink,
+// Volunteer Hub). auth.users is never readable via a normal RLS-scoped session,
+// so this narrow lookup is one of the few places the service role is used.
+export async function getUserEmail(userId: string): Promise<string | null> {
+  const admin = createAdminClient();
+  const { data, error } = await admin.auth.admin.getUserById(userId);
+  if (error) return null;
+  return data.user?.email ?? null;
+}

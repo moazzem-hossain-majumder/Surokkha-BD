@@ -17,7 +17,9 @@
       "shelters": "Shelters",
       "report": "Report",
       "login": "Log in",
-      "account": "Account"
+      "account": "Account",
+      "relief": "Relief",
+      "volunteer": "Volunteer"
     }
   },
   "theme": {
@@ -266,12 +268,16 @@
       "alerts": "Alerts",
       "shelters": "Shelters",
       "reports": "Reports",
-      "audit": "Audit log"
+      "audit": "Audit log",
+      "relief": "Relief",
+      "volunteers": "Volunteers"
     },
     "stats": {
       "pendingReports": "Pending reports",
       "activeAlerts": "Active alerts",
-      "activeShelters": "Active shelters"
+      "activeShelters": "Active shelters",
+      "needsFulfilled": "Needs fully pledged",
+      "taskFillRate": "Volunteer task fill rate"
     },
     "alerts": {
       "newAlert": "New alert",
@@ -328,6 +334,138 @@
     "audit": {
       "title": "Audit log",
       "none": "No activity recorded yet."
+    },
+    "relief": {
+      "newNeed": "Post a need",
+      "district": "District",
+      "item": "Item",
+      "unit": "Unit",
+      "qtyNeeded": "Quantity needed",
+      "deadline": "Deadline (optional)",
+      "note": "Note (optional)",
+      "create": "Post need",
+      "existing": "Current needs",
+      "none": "No needs posted yet.",
+      "markFulfilled": "Mark fulfilled",
+      "close": "Close",
+      "pledgedOfNeeded": "{pledged} of {needed} {unit} pledged",
+      "delivered": "Delivered",
+      "status": {
+        "open": "Open",
+        "fulfilled": "Fulfilled",
+        "closed": "Closed"
+      },
+      "pledgeStatus": {
+        "pledged": "Pledged",
+        "in_transit": "In transit",
+        "delivered": "Delivered",
+        "cancelled": "Cancelled",
+        "advanceTo": {
+          "in_transit": "Mark in transit",
+          "delivered": "Mark delivered"
+        },
+        "cancel": "Cancel"
+      },
+      "handover": {
+        "drop_off": "Drop-off",
+        "pickup": "Pickup",
+        "courier": "Courier",
+        "other": "Other"
+      }
+    },
+    "volunteers": {
+      "newTask": "Post a task",
+      "taskTitle": "Task title",
+      "taskDescription": "Description",
+      "requiredSkills": "Required skills",
+      "slots": "Volunteers needed",
+      "district": "District",
+      "location": "Location",
+      "createTask": "Post task",
+      "existingTasks": "Current tasks",
+      "noneYet": "No tasks posted yet.",
+      "taskStatus": {
+        "open": "Open",
+        "filled": "Filled",
+        "closed": "Closed"
+      },
+      "slotsFilled": "{filled} of {total} accepted",
+      "closeTask": "Close task",
+      "accept": "Accept",
+      "decline": "Decline",
+      "noApplications": "No applications yet.",
+      "noSkillsListed": "No skills listed"
+    }
+  },
+  "relief": {
+    "title": "ReliefLink",
+    "intro": "Real needs posted by coordinators, with transparent progress from pledge to delivery.",
+    "disclaimer": "Surokkha BD does not handle payments. Pledges are in-kind items and handover only.",
+    "none": "No open needs right now.",
+    "pledgedOfNeeded": "{pledged} of {needed} {unit} pledged",
+    "delivered": "Delivered",
+    "deadline": "Deadline",
+    "makeAPledge": "Make a pledge",
+    "signInToPledge": "Sign in to pledge toward this need.",
+    "pledgeQty": "Quantity you can provide",
+    "handoverMethod": "Handover method",
+    "pledgeNote": "Note (optional)",
+    "pledgeSubmit": "Submit pledge",
+    "pledgeSuccess": "Thank you — your pledge was recorded. The coordinator has been notified.",
+    "submitting": "Submitting…",
+    "activityLog": "Activity log",
+    "activityLine": "{qty} {unit} — {status}",
+    "noActivity": "No pledges yet.",
+    "status": {
+      "open": "Open",
+      "fulfilled": "Fulfilled",
+      "closed": "Closed"
+    },
+    "pledgeStatus": {
+      "pledged": "Pledged",
+      "in_transit": "In transit",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled"
+    },
+    "handover": {
+      "drop_off": "I'll drop it off",
+      "pickup": "Please arrange pickup",
+      "courier": "Courier / transport service",
+      "other": "Other"
+    }
+  },
+  "volunteer": {
+    "title": "Volunteer Hub",
+    "intro": "Register your skills and availability, then apply to tasks coordinators post near you.",
+    "becomeAVolunteer": "Become a volunteer",
+    "yourProfile": "Your volunteer profile",
+    "skills": "Skills",
+    "district": "District",
+    "availability": "Availability",
+    "availabilities": {
+      "weekdays": "Weekdays",
+      "weekends": "Weekends",
+      "anytime": "Anytime",
+      "on_call": "On call"
+    },
+    "createProfile": "Save profile",
+    "updateProfile": "Update profile",
+    "saving": "Saving…",
+    "openTasks": "Open tasks",
+    "noTasks": "No open tasks right now.",
+    "slotsFilled": "{filled} of {total} slots filled",
+    "taskFull": "This task is fully staffed.",
+    "signInToApply": "Sign in to apply.",
+    "needProfileToApply": "Set up your volunteer profile above before applying.",
+    "apply": "Apply",
+    "applyNotePlaceholder": "A short note (optional)",
+    "applySuccess": "Application sent. The coordinator has been notified.",
+    "submitting": "Submitting…",
+    "applicationStatus": {
+      "applied": "Applied — awaiting review",
+      "accepted": "Accepted",
+      "declined": "Declined",
+      "withdrawn": "Withdrawn"
     }
   }
 }
