@@ -23,6 +23,10 @@ export function Header() {
     { href: "/report", label: t("nav.report") },
     { href: "/relief", label: t("nav.relief") },
     { href: "/volunteer", label: t("nav.volunteer") },
+    { href: "/explorer", label: t("nav.explorer") },
+    { href: "/quiz", label: t("nav.quiz") },
+    { href: "/games", label: t("nav.games") },
+    { href: "/ferries", label: t("nav.ferries") },
     { href: "/contacts", label: t("nav.contacts") },
     { href: "/plan", label: t("nav.plan") },
   ] as const;

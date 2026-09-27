@@ -19,7 +19,11 @@
       "login": "Log in",
       "account": "Account",
       "relief": "Relief",
-      "volunteer": "Volunteer"
+      "volunteer": "Volunteer",
+      "explorer": "Explorer",
+      "quiz": "Quiz",
+      "games": "Games",
+      "ferries": "Ferries"
     }
   },
   "theme": {
@@ -74,7 +78,11 @@
   },
   "footer": {
     "disclaimer": "Surokkha BD is not an official warning source. Always follow alerts from the Bangladesh Meteorological Department (BMD) and the Department of Disaster Management (DDM).",
-    "status": "Project foundation preview. Content and data are placeholders until they are verified against official sources."
+    "status": "Project foundation preview. Content and data are placeholders until they are verified against official sources.",
+    "moreLinksLabel": "More",
+    "progressLink": "My progress and badges",
+    "teacherLink": "Teacher mode (printable worksheets)",
+    "liteLink": "Lite mode (text-only, low data)"
   },
   "notFound": {
     "title": "Page not found",
@@ -270,7 +278,8 @@
       "reports": "Reports",
       "audit": "Audit log",
       "relief": "Relief",
-      "volunteers": "Volunteers"
+      "volunteers": "Volunteers",
+      "ferries": "Ferries"
     },
     "stats": {
       "pendingReports": "Pending reports",
@@ -395,6 +404,32 @@
       "decline": "Decline",
       "noApplications": "No applications yet.",
       "noSkillsListed": "No skills listed"
+    },
+    "ferries": {
+      "newSchedule": "Add a route",
+      "route": "Route name",
+      "fromPlace": "From",
+      "toPlace": "To",
+      "departs": "Departure time(s)",
+      "days": "Days of operation",
+      "contact": "Contact (optional)",
+      "sourceName": "Source",
+      "createSchedule": "Add route",
+      "existingSchedules": "Current routes",
+      "noneYet": "No routes added yet.",
+      "deleteSchedule": "Delete",
+      "helpRequests": "Help requests",
+      "noRequests": "No help requests yet.",
+      "contact_label": "Contact",
+      "status": {
+        "open": "Open",
+        "answered": "Answered",
+        "closed": "Closed"
+      },
+      "reply": "Reply",
+      "replyPlaceholder": "Type a reply…",
+      "markAnswered": "Send reply",
+      "close": "Close without reply"
     }
   },
   "relief": {
@@ -467,5 +502,108 @@
       "declined": "Declined",
       "withdrawn": "Withdrawn"
     }
+  },
+  "explorer": {
+    "title": "Data Explorer",
+    "intro": "Look back at Bangladesh's major recorded disasters -- by hazard type, by year, or by district.",
+    "disclaimer": "Figures are drawn from public secondary sources and often disputed between reports; see each event's source and note. Not a substitute for official BMD/DDM/BBS statistics.",
+    "filterByDistrict": "Filter by district",
+    "allDistricts": "All districts",
+    "downloadCsv": "Download CSV",
+    "hazardComparison": "Estimated deaths by hazard type",
+    "hazardComparisonNote": "Totals use the midpoint of each event's reported death-toll range, so treat these as rough comparisons, not precise counts.",
+    "hazardComparisonSummary": "A bar chart comparing estimated total deaths across {count} hazard types.",
+    "estimatedDeaths": "Estimated deaths",
+    "affected": "Affected",
+    "timeline": "Timeline",
+    "source": "Source",
+    "link": "link",
+    "noData": "No events match this filter."
+  },
+  "quiz": {
+    "title": "Hazard Quiz",
+    "intro": "Pick a hazard and test what you know.",
+    "start": "Start quiz →",
+    "questionOf": "Question {current} of {total}",
+    "next": "Next",
+    "finish": "See results",
+    "resultsTitle": "You scored {score} out of {total}",
+    "resultsNote": "Review the hazard guide any time to brush up.",
+    "noQuestions": "No quiz questions for this hazard yet."
+  },
+  "games": {
+    "title": "Games",
+    "intro": "Learn safety skills the fun way.",
+    "lightning": {
+      "title": "Lightning: Safe or Not?",
+      "description": "Decide whether each situation is safe or dangerous during a lightning storm.",
+      "safe": "Safe",
+      "notSafe": "Not safe",
+      "next": "Next",
+      "finish": "See results",
+      "resultsTitle": "You got {correct} out of {total} right",
+      "perfect": "Perfect score! You know your lightning safety.",
+      "resultsNote": "Review the lightning guide for anything you missed."
+    },
+    "goBag": {
+      "title": "Pack a Go-Bag",
+      "description": "You have room for a limited number of items. Choose wisely.",
+      "instructions": "Tap up to {max} items to pack, then pack your bag.",
+      "selectedCount": "{count} / {max} selected",
+      "packBag": "Pack the bag",
+      "resultsTitle": "You packed {picked} of {total} essential items",
+      "wrongPicked": "{count} of your picks weren't essential -- that's space you could have used better.",
+      "missedItems": "You missed",
+      "playAgain": "Play again"
+    }
+  },
+  "teacher": {
+    "title": "Teacher Mode",
+    "intro": "Printable, hazard-by-hazard worksheets: a safety checklist plus quiz questions with an answer key.",
+    "openWorksheet": "Open worksheet →",
+    "showAnswerKey": "Show answer key",
+    "print": "Print",
+    "quizSection": "Quiz questions",
+    "answerKey": "Answer key",
+    "noQuestions": "No quiz questions for this hazard yet."
+  },
+  "lite": {
+    "title": "Surokkha BD -- Lite",
+    "intro": "A text-only version of this site for slow connections. No maps or images.",
+    "emergency": "Emergency",
+    "contactsLink": "Emergency contacts",
+    "hazardGuides": "Hazard guides",
+    "other": "Other",
+    "sheltersLink": "Shelters (list)",
+    "planLink": "My safety plan",
+    "reliefLink": "ReliefLink",
+    "fullSiteLink": "Go to the full site",
+    "note": "Bookmark this page for quick access when your connection is slow."
+  },
+  "ferries": {
+    "title": "Ferry & Boat Schedules",
+    "intro": "Routes for launches and ferries in flood-prone and river/coastal areas.",
+    "disclaimer": "Schedules change by season and demand. Times shown may be approximate or unverified -- confirm at the terminal or with BIWTA before you travel.",
+    "contact": "Contact",
+    "source": "Source",
+    "none": "No routes listed yet.",
+    "requestHelp": "Ask about a route",
+    "requestHelpIntro": "Can't find your route, or need to know if a sailing is delayed? Ask here and a coordinator will get back to you.",
+    "route": "Route",
+    "routePlaceholder": "e.g. Dhaka to Bhola",
+    "message": "Your question",
+    "messagePlaceholder": "What do you need to know?",
+    "contactOptional": "Contact (optional)",
+    "submitRequest": "Send request",
+    "submitting": "Sending…",
+    "requestSuccess": "Sent. A coordinator will follow up here or by your contact info if you gave one."
+  },
+  "progress": {
+    "title": "My Progress",
+    "intro": "Badges are saved on this device only.",
+    "quizzesCompleted": "{count} of {total} hazard quizzes completed",
+    "earned": "Earned",
+    "notYetEarned": "Not yet earned",
+    "localNote": "Progress is stored only in this browser. Clearing site data will reset it."
   }
 }

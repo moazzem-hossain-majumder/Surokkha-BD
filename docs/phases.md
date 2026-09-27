@@ -110,15 +110,15 @@ Legend: **[P0]** MVP essential. **[P1]** should have. **[P2]** later.
 
 **Goal:** Reach and depth.
 
-- [ ] P5-1 Historical events dataset (verified, sourced) and import
-- [ ] P5-2 Data Explorer: timeline, hazard comparison, district view, CSV download
-- [ ] P5-3 Chart accessibility (text summaries, data tables)
-- [ ] P5-4 Quiz engine and questions for all hazards
-- [ ] P5-5 Two mini-games (for example lightning-safe-or-not, go-bag packing)
-- [ ] P5-6 Badges and local progress
-- [ ] P5-7 Teacher mode with printable worksheets
-- [ ] P5-8 Lite mode (text-first pages, no maps by default) and slow-connection suggestion
-- [ ] P5-9 Ferry and boat schedule board and "request help" form
+- [x] P5-1 Historical events dataset (verified, sourced) and import
+- [x] P5-2 Data Explorer: timeline, hazard comparison, district view, CSV download
+- [x] P5-3 Chart accessibility (text summaries, data tables)
+- [x] P5-4 Quiz engine and questions for all hazards
+- [x] P5-5 Two mini-games (lightning-safe-or-not, go-bag packing)
+- [x] P5-6 Badges and local progress
+- [x] P5-7 Teacher mode with printable worksheets
+- [x] P5-8 Lite mode (text-first pages, no maps by default) and slow-connection suggestion
+- [x] P5-9 Ferry and boat schedule board and "request help" form
 
 **Done when:** Lite mode loads under 100 KB and all quizzes are playable in both languages.
 
