@@ -1,0 +1,33 @@
+name: Keep Supabase awake
+
+# Why two keep-alive mechanisms (this AND vercel.json's cron):
+# - Supabase's free tier pauses a project after ~7 days with no real API
+#   activity (see docs.supabase.com/guides/platform/free-project-pausing).
+# - Vercel's Hobby-plan cron is once-per-day ONLY (a more frequent schedule
+#   fails at deploy time) and is documented as best-effort with no retries
+#   and only "within the scheduled hour" timing precision.
+# - Losing the database the week before a pitch/demo is exactly the kind of
+#   failure worth paying a little redundancy for. This workflow hits the
+#   app's existing /api/health endpoint (src/app/api/health/route.ts, which
+#   pings Supabase's own auth health check -- already there from an earlier
+#   phase, no need for a second bespoke endpoint) on its own independent
+#   schedule (Tue and Fri), so a missed Vercel run on a given day doesn't
+#   matter.
+#
+# Setup: set SITE_URL as a repository variable (Settings -> Secrets and
+# variables -> Actions -> Variables) to your deployed URL, e.g.
+# https://surokkha-bd.vercel.app -- no secret needed, /api/health is public.
+
+on:
+  schedule:
+    - cron: "0 6 * * 2,5" # Tuesday and Friday, 06:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping health endpoint
+        env:
+          SITE_URL: ${{ vars.SITE_URL }}
+        run: curl -sf -o /dev/null -w "%{http_code}\n" "$SITE_URL/api/health"

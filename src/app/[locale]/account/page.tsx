@@ -6,6 +6,7 @@ import { getDistrict } from "@/lib/districts";
 import { Card } from "@/components/ui/Card";
 import { LinkButton } from "@/components/ui/Button";
 import { SignOutButton } from "./SignOutButton";
+import { DeleteAccountForm } from "./DeleteAccountForm";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -56,6 +57,9 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
           <SignOutButton locale={locale} />
         </div>
       </Card>
+      <div className="mt-6">
+        <DeleteAccountForm locale={locale} />
+      </div>
     </div>
   );
 }

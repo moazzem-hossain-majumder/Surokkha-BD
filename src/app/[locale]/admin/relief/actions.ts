@@ -67,6 +67,11 @@ export async function updatePledgeStatus(locale: string, pledgeId: string, statu
 
   if (error || !pledge) return;
 
+  // The donor's account may since have been deleted (see migration 0010 --
+  // pledges.donor_id is nullable and set null on account deletion), in which
+  // case there's simply no one left to notify.
+  if (!pledge.donor_id) return;
+
   const email = await getUserEmail(pledge.donor_id);
   if (!email) return;
   const item = (pledge as unknown as { relief_needs: { item: string } | null }).relief_needs?.item ?? "your pledge";

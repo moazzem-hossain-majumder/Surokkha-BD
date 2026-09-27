@@ -17,6 +17,15 @@ export function Footer() {
           <Link href="/lite" className="underline">
             {t("liteLink")}
           </Link>
+          <Link href="/privacy" className="underline">
+            {t("privacyLink")}
+          </Link>
+          <Link href="/terms" className="underline">
+            {t("termsLink")}
+          </Link>
+          <Link href="/case-study" className="underline">
+            {t("caseStudyLink")}
+          </Link>
         </nav>
         <p className="mt-4 text-sm text-ink-3">{t("status")}</p>
       </div>

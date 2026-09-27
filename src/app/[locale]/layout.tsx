@@ -29,7 +29,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
     title: { default: t("title"), template: `%s | ${t("siteName")}` },
     description: t("description"),
-    alternates: { languages: { en: "/", bn: "/bn" } },
+    // NOTE (P6-7 SEO pass): this used to hardcode alternates.languages to
+    // "/" and "/bn" -- correct on the homepage, WRONG on every other page,
+    // since Next.js metadata inherits a layout's `alternates` verbatim on
+    // any page that doesn't set its own. That would have told search
+    // engines every page's Bangla version is the homepage. Per-page
+    // hreflang would need either ~40 individual generateMetadata functions
+    // or a pathname header threaded through proxy.ts (which also runs
+    // locale + auth-session logic I can't test live) -- both bigger than
+    // this pass. sitemap.xml (src/app/sitemap.ts) already declares the
+    // correct en/bn alternate for every real path and is an
+    // equally-valid signal to search engines, so dropping the wrong
+    // per-page tag here is a strict improvement, not a loss.
   };
 }
 

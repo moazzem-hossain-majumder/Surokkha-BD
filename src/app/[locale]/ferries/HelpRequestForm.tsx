@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
 import { submitFerryHelpRequest, type HelpRequestFormState } from "./actions";
@@ -10,6 +10,7 @@ const initialState: HelpRequestFormState = { error: null, success: false };
 export function HelpRequestForm({ locale }: { locale: string }) {
   const t = useTranslations("ferries");
   const [state, action, pending] = useActionState(submitFerryHelpRequest.bind(null, locale), initialState);
+  const [startedAt] = useState(() => Date.now());
 
   if (state.success) {
     return <p className="text-sm font-semibold text-brand">{t("requestSuccess")}</p>;
@@ -17,6 +18,16 @@ export function HelpRequestForm({ locale }: { locale: string }) {
 
   return (
     <form action={action} className="grid gap-4">
+      <input type="hidden" name="startedAt" value={startedAt} />
+      {/* Honeypot: real visitors never see or fill this field. */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-0 w-0 overflow-hidden"
+      />
       <label className="block">
         <span className="text-sm font-semibold">{t("route")}</span>
         <input name="route" required placeholder={t("routePlaceholder")} className="mt-1 h-11 w-full rounded-input border border-border bg-surface px-3" />

@@ -128,18 +128,18 @@ Legend: **[P0]** MVP essential. **[P1]** should have. **[P2]** later.
 
 **Goal:** Ship-quality and NGO-ready.
 
-- [ ] P6-1 Full accessibility audit (axe plus NVDA plus keyboard)
-- [ ] P6-2 Performance pass to hit Lighthouse 90+ on mobile
-- [ ] P6-3 Test on a real low-end Android phone and throttled network
-- [ ] P6-4 Bangla content review by a fluent reviewer, and a safety-content review by a subject expert
-- [ ] P6-5 Security review: headers, CSP, rate limits, RLS
-- [ ] P6-6 Privacy policy, terms, and data deletion
-- [ ] P6-7 SEO, `hreflang`, and social share images (en and bn)
-- [ ] P6-8 README with architecture diagram, screenshots, and roadmap
-- [ ] P6-9 Demo video (2 to 3 minutes)
-- [ ] P6-10 Case study page for the portfolio
-- [ ] P6-11 NGO pitch deck: problem, solution, pilot plan, partnership asks
-- [ ] P6-12 Keep-alive cron and pre-demo checklist
+- [~] P6-1 Full accessibility audit (axe plus NVDA plus keyboard) -- code-side prep done (semantic HTML, aria-labels, accessible chart tables); the actual audit needs a human with axe/NVDA, see docs/PHASE6_HUMAN_CHECKLIST.md
+- [~] P6-2 Performance pass to hit Lighthouse 90+ on mobile -- cannot run Lighthouse from this environment; see docs/PHASE6_HUMAN_CHECKLIST.md
+- [ ] P6-3 Test on a real low-end Android phone and throttled network -- needs physical hardware, see docs/PHASE6_HUMAN_CHECKLIST.md
+- [ ] P6-4 Bangla content review by a fluent reviewer, and a safety-content review by a subject expert -- needs human reviewers, see docs/PHASE6_HUMAN_CHECKLIST.md
+- [x] P6-5 Security review: headers, CSP, rate limits, RLS -- see docs/SECURITY_REVIEW.md; found and fixed a real privilege-escalation bug in profiles.role
+- [x] P6-6 Privacy policy, terms, and data deletion -- draft content (needs legal review) plus a working account-deletion flow; fixed several FK constraints that were silently blocking it
+- [x] P6-7 SEO, `hreflang`, and social share images (en and bn) -- sitemap.xml with per-page alternates, robots.txt, dynamic OG images; also fixed an existing bug where every page's hreflang wrongly pointed to the homepage
+- [x] P6-8 README with architecture diagram, screenshots, and roadmap -- README + Mermaid diagram done; screenshots need a human with a browser (cannot capture from this session)
+- [~] P6-9 Demo video (2 to 3 minutes) -- cannot record video from this session; a shot-by-shot script was provided instead
+- [x] P6-10 Case study page for the portfolio -- `/case-study`, bilingual
+- [~] P6-11 NGO pitch deck: problem, solution, pilot plan, partnership asks -- built as a Claude artifact in the same conversation, not part of this codebase zip
+- [x] P6-12 Keep-alive cron and pre-demo checklist -- reused the existing /api/health endpoint rather than adding a redundant one; two independent schedules (Vercel + GitHub Actions)
 
 **Done when:** A stranger can use the site, the case study reads well, and the pitch deck is ready.
 

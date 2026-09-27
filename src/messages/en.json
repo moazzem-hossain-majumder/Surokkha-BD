@@ -82,7 +82,10 @@
     "moreLinksLabel": "More",
     "progressLink": "My progress and badges",
     "teacherLink": "Teacher mode (printable worksheets)",
-    "liteLink": "Lite mode (text-only, low data)"
+    "liteLink": "Lite mode (text-only, low data)",
+    "privacyLink": "Privacy policy",
+    "termsLink": "Terms of use",
+    "caseStudyLink": "Case study"
   },
   "notFound": {
     "title": "Page not found",
@@ -240,7 +243,14 @@
     "info": {
       "magicLinkSent": "Check your email for a login link.",
       "checkEmail": "Check your email to confirm your account."
-    }
+    },
+    "saving": "Saving…",
+    "cancel": "Cancel",
+    "deleteAccount": "Delete my account",
+    "deleteAccountWarning": "This permanently deletes your login and profile.",
+    "deleteAccountNote": "Content you posted (alerts, reports, pledges, tasks) is kept for the public record but is no longer linked to your account. This cannot be undone.",
+    "deleteAccountConfirmLabel": "Type DELETE to confirm",
+    "deleteAccountConfirm": "Permanently delete my account"
   },
   "report": {
     "title": "Report a problem",
@@ -605,5 +615,31 @@
     "earned": "Earned",
     "notYetEarned": "Not yet earned",
     "localNote": "Progress is stored only in this browser. Clearing site data will reset it."
+  },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms of Use",
+    "lastUpdated": "Last updated"
+  },
+  "caseStudy": {
+    "kicker": "Case study",
+    "title": "Surokkha BD: a solo-built disaster-preparedness platform for Bangladesh",
+    "subtitle": "A $0-budget, bilingual Next.js + Supabase app covering 14 hazards, community reporting, relief coordination, volunteer matching, and a learning layer -- built phase by phase toward an NGO pilot.",
+    "problemHeading": "The problem",
+    "problemBody": "Bangladesh faces more natural-hazard exposure than almost anywhere on Earth -- cyclones, riverine and flash floods, riverbank erosion, landslides, and more -- but preparedness information is scattered, often English-only, and rarely connects the person who has a need to the person who could meet it. Surokkha BD (।surokkha। = protection/safety) sets out to be one bilingual place for hazard guidance, community-verified ground reports, relief coordination, and volunteer matching.",
+    "solutionHeading": "The solution",
+    "solutionBody": "A phased build across six phases: (1) a bilingual knowledge core that works offline, (2) a live map with shelters and earthquake data, (3) authentication, roles, and community reporting with moderation, (4) ReliefLink and a Volunteer Hub for actually coordinating help, (5) a data explorer, quizzes, games, and a low-bandwidth mode for reach, and (6) the security, accessibility, and content-review pass this case study itself is part of.",
+    "stackHeading": "Stack and constraints",
+    "stackBody": "Next.js 16 (App Router, TypeScript), Tailwind 4, next-intl, Supabase (Postgres + PostGIS + Auth + Storage + Row Level Security), Leaflet, deployed on Vercel -- all on free tiers, by design, to prove the concept costs nothing to run before asking an NGO for anything.",
+    "decisionsHeading": "Decisions worth calling out",
+    "decision1": "Every write path has Row Level Security matching the actual role model (citizen/volunteer/donor/coordinator/admin), not just application-level checks -- and a security review pass (P6-5) still found and fixed a real self-escalation bug in that RLS, which is its own lesson in why defense-in-depth matters even when you think you got it right the first time.",
+    "decision2": "Historical disaster data and quiz content were built from real, cited secondary sources and the app's own already-vetted safety guidance respectively -- never invented, per an explicit house rule against fabricating death tolls or safety claims.",
+    "decision3": "ReliefLink and the Volunteer Hub deliberately don't move money or add role-gating beyond what the PRD asked for -- pledges are in-kind commitments with a public, de-identified activity log, keeping scope (and liability) narrow for a first pilot.",
+    "decision4": "Account deletion required fixing several foreign-key constraints that would have silently prevented some users from ever deleting their account -- a good example of a requirement (P6-6, \"data deletion\") surfacing a real schema bug that a feature-only pass would have missed.",
+    "honestyHeading": "What's still open",
+    "honestyBody": "This is a portfolio/pilot project, not a finished product: the historical-event and ferry-schedule data need verification against primary sources (BMD, DDM, BIWTA), the Bangla content needs a native-speaker review, and the app has not yet been tested on a real low-end Android phone or audited with a screen reader. All of it is tracked openly rather than glossed over -- see the project's own internal documentation for the full list.",
+    "roadmapHeading": "What's next",
+    "roadmapBody": "Pilot with one NGO partner in one region, replace placeholder/secondary-sourced data with verified primary sources as that partnership provides them, and let real usage -- not more solo development -- decide which Phase 5/6 features matter enough to invest further in.",
+    "footerNote": "Built solo, phase by phase, with an AI pair-programming collaborator handling implementation under an explicit set of house rules (never invent facts, ask before big decisions, small reviewable steps) -- itself part of what this project demonstrates."
   }
 }
