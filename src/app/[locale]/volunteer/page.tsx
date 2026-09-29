@@ -17,7 +17,7 @@ export default async function VolunteerHubPage({ params }: { params: Promise<{ l
   } = await supabase.auth.getUser();
 
   const [{ data: tasksData }, { data: profileData }, { data: applicationsData }] = await Promise.all([
-    supabase.from("volunteer_tasks_public").select("*").order("created_at", { ascending: false }).limit(50),
+    supabase.from("volunteer_tasks_public").select("*").eq("status", "open").order("created_at", { ascending: false }).limit(50),
     user ? supabase.from("volunteers").select("skills, district_code, availability").eq("user_id", user.id).maybeSingle() : Promise.resolve({ data: null }),
     user ? supabase.from("task_applications").select("task_id, status").eq("volunteer_id", user.id) : Promise.resolve({ data: null }),
   ]);

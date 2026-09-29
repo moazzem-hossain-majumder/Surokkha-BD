@@ -113,7 +113,11 @@ vercel.json             Vercel cron config (keep-alive)
 ## Supabase setup
 
 Run every file in `supabase/migrations/` **in order** (0001 through 0010), then every file
-in `supabase/seed/`. Fill in `.env.local` (copy `.env.example`) with your project's URL,
+in `supabase/seed/`. **Every file is safe to run again**: policies are dropped and recreated,
+and seed files skip rows that already exist (verified by running all of them three times in a
+row on PostgreSQL 16 + PostGIS against a stand-in for Supabase's `auth`/`storage` schemas --
+not on Supabase itself). If you ran the *old* seed files twice and have duplicate rows, run
+`supabase/maintenance/dedupe_seed_rows.sql` once. Fill in `.env.local` (copy `.env.example`) with your project's URL,
 anon/publishable key, and service role key, plus `RESEND_API_KEY` for email notifications.
 
 **Deploying to Vercel:** add the same env vars in Project Settings -> Environment Variables.

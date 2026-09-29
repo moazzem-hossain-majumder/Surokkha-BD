@@ -1,3 +1,4 @@
+-- (Safe to re-run: rows that already exist are skipped.)
 -- Surokkha BD: seed data for historical_events (Phase 5)
 --
 -- Figures below are drawn from public secondary sources (Wikipedia articles
@@ -11,9 +12,8 @@
 -- before any public/pilot launch. Bangla text is a first-pass translation,
 -- not yet reviewed by a native speaker (see memory.md open content questions).
 
-insert into historical_events
-  (hazard_slug, name_en, name_bn, year, deaths_min, deaths_max, affected, damage_usd, district_codes, summary_en, summary_bn, source_name, source_url, note)
-values
+insert into historical_events (hazard_slug, name_en, name_bn, year, deaths_min, deaths_max, affected, damage_usd, district_codes, summary_en, summary_bn, source_name, source_url, note)
+select * from (values
   (
     'earthquake', '1897 Great Assam Earthquake', '১৮৯৭ সালের মহা আসাম ভূমিকম্প', 1897,
     1500, null, null, null, array['SYL'],
@@ -93,4 +93,6 @@ values
     'অক্টোবরে বাংলাদেশের দক্ষিণ-মধ্য উপকূলে একটি ঘূর্ণিঝড় আঘাত হানে, যা ঘূর্ণিঝড় মৌসুমের জন্য অস্বাভাবিকভাবে দেরিতে ঘটে।',
     'Wikipedia (2022 South Asian floods)', 'https://en.wikipedia.org/wiki/2022_South_Asian_floods',
     'Landfall district(s) not confirmed against a primary source yet -- TODO(source) before relying on this for the district-view filter.'
-  );
+  )
+) as v(hazard_slug, name_en, name_bn, year, deaths_min, deaths_max, affected, damage_usd, district_codes, summary_en, summary_bn, source_name, source_url, note)
+where not exists (select 1 from historical_events t where t.name_en = v.name_en and t.year = v.year);

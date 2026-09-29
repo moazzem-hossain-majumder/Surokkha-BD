@@ -1,3 +1,4 @@
+-- (Safe to re-run: rows that already exist are skipped.)
 -- Surokkha BD: seed data for ferry_schedules (Phase 5)
 --
 -- IMPORTANT: exact launch/ferry departure times in Bangladesh change by
@@ -15,7 +16,7 @@
 -- and a real source_url before a pilot launch.
 
 insert into ferry_schedules (route, from_place, to_place, departs, days, contact, source_name)
-values
+select * from (values
   (
     'Dhaka (Sadarghat) - Barisal launch',
     'Sadarghat, Dhaka', 'Barisal River Port',
@@ -39,4 +40,6 @@ values
     'Daily, both directions',
     'BIWTC / terminal enquiry desk',
     'General public knowledge of this long-standing national-highway ferry crossing -- not independently verified, see note in this seed file'
-  );
+  )
+) as v(route, from_place, to_place, departs, days, contact, source_name)
+where not exists (select 1 from ferry_schedules t where t.route = v.route);

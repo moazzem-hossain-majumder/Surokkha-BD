@@ -20,7 +20,7 @@ supabase.from('profiles').update({ role: 'admin' }).eq('user_id', me)
 
 ...and grant themselves admin/coordinator access to the whole `/admin` area. **Fixed** with
 a `BEFORE UPDATE` trigger (`lock_role_on_self_update`) that resets `role` to its previous
-value unless the request is already coming from a coordinator/admin.
+value unless the caller is the SQL editor / service role (no end-user session, so manual promotion still works) or an existing admin. (An earlier draft of this trigger checked `is_coordinator_or_admin()`, which is false in the SQL editor and would have silently blocked manual promotions -- caught while writing the test checklist.)
 
 **If this project has been deployed and tested already, run this before assuming nobody
 found it:**

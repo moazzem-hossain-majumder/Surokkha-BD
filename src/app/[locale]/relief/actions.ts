@@ -30,6 +30,9 @@ export async function createPledge(
   } = await supabase.auth.getUser();
   if (!user) return { error: "Sign in to pledge.", success: false };
 
+  const { data: need } = await supabase.from("relief_needs").select("item, created_by, status").eq("id", parsed.data.needId).maybeSingle();
+  if (!need || need.status !== "open") return { error: "This need is no longer open.", success: false };
+
   const { error } = await supabase.from("pledges").insert({
     need_id: parsed.data.needId,
     donor_id: user.id,
@@ -44,8 +47,7 @@ export async function createPledge(
   revalidatePath(`/${locale}/relief/${parsed.data.needId}`);
 
   // Best-effort notification to the coordinator who posted the need.
-  const { data: need } = await supabase.from("relief_needs").select("item, created_by").eq("id", parsed.data.needId).maybeSingle();
-  if (need?.created_by) {
+  if (need.created_by) {
     const email = await getUserEmail(need.created_by);
     if (email) {
       await sendEmail(

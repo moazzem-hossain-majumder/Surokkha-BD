@@ -18,26 +18,36 @@ returns boolean language sql stable as $$
 $$;
 
 -- Districts: public read, nobody writes via the API (seeded by migration only).
+drop policy if exists "districts_public_read" on districts;
 create policy "districts_public_read" on districts for select using (true);
 
 -- Profiles: a user reads and updates their own row; coordinators/admins can read all.
+drop policy if exists "profiles_read_own" on profiles;
 create policy "profiles_read_own" on profiles for select using (
   user_id = auth.uid() or is_coordinator_or_admin()
 );
+drop policy if exists "profiles_update_own" on profiles;
 create policy "profiles_update_own" on profiles for update using (user_id = auth.uid());
+drop policy if exists "profiles_insert_own" on profiles;
 create policy "profiles_insert_own" on profiles for insert with check (user_id = auth.uid());
 
 -- Shelters: public reads active shelters; only coordinators/admins write.
+drop policy if exists "shelters_public_read" on shelters;
 create policy "shelters_public_read" on shelters for select using (active);
+drop policy if exists "shelters_coordinator_write" on shelters;
 create policy "shelters_coordinator_write" on shelters for all using (is_coordinator_or_admin())
   with check (is_coordinator_or_admin());
 
 -- Alerts: public reads non-expired alerts; only coordinators/admins write.
+drop policy if exists "alerts_public_read" on alerts;
 create policy "alerts_public_read" on alerts for select using (expires_at > now());
+drop policy if exists "alerts_coordinator_write" on alerts;
 create policy "alerts_coordinator_write" on alerts for all using (is_coordinator_or_admin())
   with check (is_coordinator_or_admin());
 
 -- Caches: public read (used to render the map); only the service role writes
 -- (scheduled jobs use the service role key, which bypasses RLS by design).
+drop policy if exists "quake_cache_public_read" on quake_cache;
 create policy "quake_cache_public_read" on quake_cache for select using (true);
+drop policy if exists "weather_cache_public_read" on weather_cache;
 create policy "weather_cache_public_read" on weather_cache for select using (true);

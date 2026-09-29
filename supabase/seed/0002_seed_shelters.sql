@@ -1,8 +1,10 @@
+-- (Safe to re-run: rows that already exist are skipped.)
 -- Surokkha BD: seed data for shelters (Phase 2)
 -- Generated from src/content/shelters.json. This is a small curated sample
 -- for the prototype/demo, not an exhaustive list. See architecture.md P2-10.
 
-insert into shelters (name_en, name_bn, type, district_code, location, capacity, contact, accessible, source_name) values
+insert into shelters (name_en, name_bn, type, district_code, location, capacity, contact, accessible, source_name)
+select * from (values
   ('Gabtoli Cyclone Shelter', 'গাবতলী ঘূর্ণিঝড় আশ্রয়কেন্দ্র', 'cyclone', 'BAR', st_setsrid(st_makepoint(90.115, 22.098), 4326)::geography, 800, 'Local Union Parishad', true, 'Surokkha BD curated seed (Phase 2)'),
   ('Patharghata Government Primary School Shelter', 'পাথরঘাটা সরকারি প্রাথমিক বিদ্যালয় আশ্রয়কেন্দ্র', 'cyclone', 'BAR', st_setsrid(st_makepoint(89.9714, 22.1583), 4326)::geography, 500, 'Upazila Disaster Management Committee', false, 'Surokkha BD curated seed (Phase 2)'),
   ('Kuakata Cyclone Shelter', 'কুয়াকাটা ঘূর্ণিঝড় আশ্রয়কেন্দ্র', 'cyclone', 'PAT', st_setsrid(st_makepoint(90.1197, 21.8189), 4326)::geography, 600, 'Local Union Parishad', true, 'Surokkha BD curated seed (Phase 2)'),
@@ -20,4 +22,6 @@ insert into shelters (name_en, name_bn, type, district_code, location, capacity,
   ('Sadar Hospital, Barguna', 'সদর হাসপাতাল, বরগুনা', 'hospital', 'BAR', st_setsrid(st_makepoint(90.1121, 22.0953), 4326)::geography, 100, 'Civil Surgeon Office', true, 'Surokkha BD curated seed (Phase 2)'),
   ('Sadar Hospital, Cox''s Bazar', 'সদর হাসপাতাল, কক্সবাজার', 'hospital', 'COX', st_setsrid(st_makepoint(92.0058, 21.4272), 4326)::geography, 250, 'Civil Surgeon Office', true, 'Surokkha BD curated seed (Phase 2)'),
   ('Sadar Hospital, Khulna', 'সদর হাসপাতাল, খুলনা', 'hospital', 'KHU', st_setsrid(st_makepoint(89.5403, 22.8456), 4326)::geography, 400, 'Civil Surgeon Office', true, 'Surokkha BD curated seed (Phase 2)'),
-  ('Sadar Hospital, Bandarban', 'সদর হাসপাতাল, বান্দরবান', 'hospital', 'BAN', st_setsrid(st_makepoint(92.2184, 22.1953), 4326)::geography, 100, 'Civil Surgeon Office', false, 'Surokkha BD curated seed (Phase 2)');
+  ('Sadar Hospital, Bandarban', 'সদর হাসপাতাল, বান্দরবান', 'hospital', 'BAN', st_setsrid(st_makepoint(92.2184, 22.1953), 4326)::geography, 100, 'Civil Surgeon Office', false, 'Surokkha BD curated seed (Phase 2)')
+) as v(name_en, name_bn, type, district_code, location, capacity, contact, accessible, source_name)
+where not exists (select 1 from shelters t where t.name_en = v.name_en and t.district_code = v.district_code);

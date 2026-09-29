@@ -23,7 +23,8 @@
       "explorer": "Explorer",
       "quiz": "Quiz",
       "games": "Games",
-      "ferries": "Ferries"
+      "ferries": "Ferries",
+      "more": "More"
     }
   },
   "theme": {
@@ -109,7 +110,8 @@
     "reviewed": "Reviewed against official sources.",
     "readAloud": "Read aloud",
     "stopReading": "Stop reading",
-    "readAloudUnsupported": "Read-aloud is not supported on this device."
+    "readAloudUnsupported": "Read-aloud is not supported on this device.",
+    "readAloudNoVoice": "This device has no voice for this language, so it can't read the page aloud. Bangla voices are not built into Chrome on Windows. Try Microsoft Edge (it offers Bangla online voices), an Android phone with Bangla voice data installed, or switch the page to English."
   },
   "contacts": {
     "title": "Emergency contacts",

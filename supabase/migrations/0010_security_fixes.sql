@@ -27,7 +27,13 @@ security definer
 set search_path = public
 as $$
 begin
-  if not is_coordinator_or_admin() then
+  -- auth.uid() is null for the SQL editor / Table Editor / service role (no
+  -- end-user session) -- those are trusted and may change roles freely; this
+  -- is how you promote someone manually. For a signed-in app user, only an
+  -- existing admin may change a role (a coordinator could otherwise promote
+  -- themselves to admin).
+  if auth.uid() is not null
+     and not exists (select 1 from profiles where user_id = auth.uid() and role = 'admin') then
     new.role := old.role;
   end if;
   return new;
@@ -45,7 +51,7 @@ security definer
 set search_path = public
 as $$
 begin
-  if not is_coordinator_or_admin() then
+  if auth.uid() is not null and not is_coordinator_or_admin() then
     new.verified := old.verified;
   end if;
   return new;

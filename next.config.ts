@@ -17,13 +17,18 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 // login is worse than shipping a slightly looser one that's easy to verify
 // visually. This is flagged in memory.md as a good next hardening step once
 // you can test it.
+// React's development build calls eval() (for readable stack traces) and
+// Turbopack's hot reload uses a websocket, so `next dev` needs both allowed.
+// Production builds get neither -- verify with `npm run build && npm run start`.
+const isDev = process.env.NODE_ENV !== "production";
+
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https://tile.openstreetmap.org",
   "font-src 'self' data:",
-  "connect-src 'self' https://*.supabase.co",
+  `connect-src 'self' https://*.supabase.co${isDev ? " ws://localhost:* http://localhost:*" : ""}`,
   "frame-ancestors 'none'",
   "base-uri 'self'",
   "form-action 'self'",

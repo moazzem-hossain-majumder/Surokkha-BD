@@ -12,20 +12,26 @@ alter table audit_log enable row level security;
 --   always starting at status = 'pending'. The app's /api/reports route does
 --   the real validation, rate limiting, and photo handling server-side; this
 --   policy is defense in depth in case of a direct client insert.
+drop policy if exists "reports_read_verified" on reports;
 create policy "reports_read_verified" on reports for select using (status = 'verified');
+drop policy if exists "reports_read_own" on reports;
 create policy "reports_read_own" on reports for select using (reporter_id = auth.uid());
+drop policy if exists "reports_read_moderator" on reports;
 create policy "reports_read_moderator" on reports for select using (is_coordinator_or_admin());
 
+drop policy if exists "reports_insert" on reports;
 create policy "reports_insert" on reports for insert with check (
   status = 'pending'
   and (reporter_id = auth.uid() or reporter_id is null)
 );
 
+drop policy if exists "reports_moderate" on reports;
 create policy "reports_moderate" on reports for update using (is_coordinator_or_admin())
   with check (is_coordinator_or_admin());
 
 -- Audit log: admins only. Rows are written by security-definer triggers, so no
 -- insert policy is needed for normal users.
+drop policy if exists "audit_log_admin_read" on audit_log;
 create policy "audit_log_admin_read" on audit_log for select using (
   exists (select 1 from profiles where user_id = auth.uid() and role = 'admin')
 );
@@ -37,6 +43,7 @@ create policy "audit_log_admin_read" on audit_log for select using (
 -- only through short-lived signed URLs generated server-side for coordinators
 -- and admins, so no public select policy is granted either.
 -- ---------------------------------------------------------------------------
+drop policy if exists "report_photos_no_public_access" on storage.objects;
 create policy "report_photos_no_public_access" on storage.objects for select using (
   bucket_id = 'report-photos' and is_coordinator_or_admin()
 );

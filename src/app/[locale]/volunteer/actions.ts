@@ -61,6 +61,9 @@ export async function applyToTask(locale: string, _prev: ApplyFormState, formDat
   const { data: profile } = await supabase.from("volunteers").select("user_id").eq("user_id", user.id).maybeSingle();
   if (!profile) return { error: "Set up your volunteer profile first.", success: false };
 
+  const { data: task } = await supabase.from("volunteer_tasks").select("title, created_by, status").eq("id", parsed.data.taskId).maybeSingle();
+  if (!task || task.status !== "open") return { error: "This task is no longer open.", success: false };
+
   const { error } = await supabase.from("task_applications").insert({
     task_id: parsed.data.taskId,
     volunteer_id: user.id,
@@ -71,8 +74,7 @@ export async function applyToTask(locale: string, _prev: ApplyFormState, formDat
 
   revalidatePath(`/${locale}/volunteer`);
 
-  const { data: task } = await supabase.from("volunteer_tasks").select("title, created_by").eq("id", parsed.data.taskId).maybeSingle();
-  if (task?.created_by) {
+  if (task.created_by) {
     const email = await getUserEmail(task.created_by);
     if (email) {
       await sendEmail(
