@@ -1,11 +1,15 @@
 # Surokkha BD (সুরক্ষা) — National Disaster Resilience Platform
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-surokkha--bd--1fjh.vercel.app-0070f3?style=for-the-badge&logo=vercel)](https://surokkha-bd-1fjh.vercel.app/)
 [![Next.js 16](https://img.shields.io/badge/Next.js-16_App_Router-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4.0-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 [![Supabase](https://img.shields.io/badge/Supabase-Postgres_%2B_PostGIS-3ecf8e?style=for-the-badge&logo=supabase)](https://supabase.com/)
 [![E2E Test Suite](https://img.shields.io/badge/E2E_Tests-100%25_PASS-success?style=for-the-badge)](docs/images/testing/all_phases_results.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+
+> 🚀 **Live Production URL:** **[https://surokkha-bd-1fjh.vercel.app/](https://surokkha-bd-1fjh.vercel.app/)**  
+> 🌐 **বাংলা সংস্করণ (Bengali):** **[https://surokkha-bd-1fjh.vercel.app/bn](https://surokkha-bd-1fjh.vercel.app/bn)**
 
 > **Free, bilingual (English & বাংলা) disaster preparedness, real-time crisis response, and community recovery platform tailored for Bangladesh.** Built with a $0 infrastructure budget on free tiers, fully offline-resilient, and featuring life-saving GIS navigation, crowd-sourced incident reporting, relief coordination, and gamified public education.
 
@@ -229,6 +233,7 @@ copy .env.example .env.local
 ```
 Configure your Supabase and optional Resend keys:
 ```env
+NEXT_PUBLIC_SITE_URL=https://surokkha-bd-1fjh.vercel.app
 NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
