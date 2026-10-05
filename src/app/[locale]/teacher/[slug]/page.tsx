@@ -5,6 +5,8 @@ import { isHazardSlug, getHazard } from "@/lib/hazards";
 import type { QuizQuestion } from "@/lib/quiz";
 import { Worksheet } from "./Worksheet";
 
+export const dynamic = "force-dynamic";
+
 export default async function TeacherWorksheetPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);

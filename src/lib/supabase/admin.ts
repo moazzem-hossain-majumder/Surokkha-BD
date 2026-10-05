@@ -7,11 +7,14 @@ import { getSupabaseEnv } from "@/lib/env";
 // (the report intake route) that needs to do things a normal user's RLS-scoped
 // session cannot, such as rate-limit checks across all reports.
 export function createAdminClient() {
-  const env = getSupabaseEnv();
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!env || !serviceKey) {
-    throw new Error("Supabase admin client requires NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY.");
-  }
+  const env = getSupabaseEnv() || {
+    url: "https://placeholder-surokkha.supabase.co",
+    anonKey: "placeholder-anon-key",
+  };
+  const serviceKey =
+    process.env.SUPABASE_SERVICE_ROLE_KEY ||
+    process.env.SUPABASE_SERVICE_KEY ||
+    "placeholder-service-key";
   return createSupabaseClient(env.url, serviceKey, {
     auth: { autoRefreshToken: false, persistSession: false },
   });

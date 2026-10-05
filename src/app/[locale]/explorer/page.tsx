@@ -3,6 +3,8 @@ import { createClient } from "@/lib/supabase/server";
 import type { HistoricalEvent } from "@/lib/historicalEvents";
 import { ExplorerClient } from "./ExplorerClient";
 
+export const dynamic = "force-dynamic";
+
 export default async function ExplorerPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);

@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/Card";
 import { progressPercent, type PublicNeed, type PledgeStatus, type HandoverMethod } from "@/lib/relief";
 import { PledgeForm } from "./PledgeForm";
 
+export const dynamic = "force-dynamic";
+
 interface ActivityRow {
   id: string;
   qty: number;

@@ -5,6 +5,8 @@ import { isHazardSlug } from "@/lib/hazards";
 import type { QuizQuestion } from "@/lib/quiz";
 import { QuizPlayer } from "./QuizPlayer";
 
+export const dynamic = "force-dynamic";
+
 export default async function QuizPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);

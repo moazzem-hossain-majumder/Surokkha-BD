@@ -4,6 +4,8 @@ import { Card } from "@/components/ui/Card";
 import type { FerrySchedule } from "@/lib/ferries";
 import { HelpRequestForm } from "./HelpRequestForm";
 
+export const dynamic = "force-dynamic";
+
 export default async function FerriesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);

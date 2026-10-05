@@ -6,6 +6,8 @@ import { SKILL_LABELS, type PublicTask, type VolunteerProfileInput, type Applica
 import { ProfileForm } from "./ProfileForm";
 import { ApplyForm } from "./ApplyForm";
 
+export const dynamic = "force-dynamic";
+
 export default async function VolunteerHubPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);

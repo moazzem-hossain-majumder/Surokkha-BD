@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/Card";
 import { Link } from "@/i18n/navigation";
 import { progressPercent, type PublicNeed } from "@/lib/relief";
 
+export const dynamic = "force-dynamic";
+
 export default async function ReliefBoardPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);

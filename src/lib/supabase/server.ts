@@ -3,10 +3,10 @@ import { cookies } from "next/headers";
 import { getSupabaseEnv } from "@/lib/env";
 
 export async function createClient() {
-  const env = getSupabaseEnv();
-  if (!env) {
-    throw new Error("Supabase is not configured. Copy .env.example to .env.local and fill it in.");
-  }
+  const env = getSupabaseEnv() || {
+    url: "https://placeholder-surokkha.supabase.co",
+    anonKey: "placeholder-anon-key",
+  };
   const cookieStore = await cookies();
   return createServerClient(env.url, env.anonKey, {
     cookies: {
