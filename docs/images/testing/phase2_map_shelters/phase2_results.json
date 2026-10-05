@@ -1,0 +1,32 @@
+[
+  {
+    "id": "D1.1",
+    "name": "Live Google Maps Roads View",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "id": "D1.2",
+    "name": "Google Maps Satellite Hybrid View",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "id": "D1.3",
+    "name": "Google Maps Terrain View",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "id": "D1.4",
+    "name": "Shelters & Quakes List View toggle",
+    "status": "PASS",
+    "details": ""
+  },
+  {
+    "id": "D2.1",
+    "name": "Shelter Finder with district search & directions",
+    "status": "PASS",
+    "details": ""
+  }
+]

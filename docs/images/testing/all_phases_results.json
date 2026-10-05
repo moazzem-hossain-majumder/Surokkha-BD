@@ -1,0 +1,135 @@
+[
+  {
+    "phase": "Phase 3",
+    "id": "E1.1",
+    "feature": "Citizen Registration Interface",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 3",
+    "id": "E1.2",
+    "feature": "Protected Dashboard & Welcome Banner",
+    "status": "PASS",
+    "note": "http://localhost:3000/dashboard"
+  },
+  {
+    "phase": "Phase 3",
+    "id": "E1.3",
+    "feature": "Clean Logout & Session Clearance",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 3",
+    "id": "E2.1",
+    "feature": "Unauthorized /admin RBAC Gatekeeper",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 3",
+    "id": "E5.1",
+    "feature": "Citizen Disaster Report with Interactive Geolocation Pin",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 4",
+    "id": "F1.1",
+    "feature": "ReliefLink Verified Supply Needs Catalog",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 4",
+    "id": "F4.1",
+    "feature": "Volunteer Hub & Community Response Tasks",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G1.1",
+    "feature": "Historical Disaster Timeline & Casualty Analytics",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G2.1",
+    "feature": "Disaster Mastery Quiz Catalog (14 Hazards)",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G2.2",
+    "feature": "Interactive Quiz Player with Streak & Sound",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G3.1",
+    "feature": "Life-Safety Interactive Games Arcade",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G3.2",
+    "feature": "Lightning Survival Sim with Electric Feedback",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G3.3",
+    "feature": "72-Hour Emergency Go-Bag Packing Challenge",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G4.1",
+    "feature": "Citizen Preparedness Badges & Progress Tracker",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G5.1",
+    "feature": "Teacher Mode Classroom Worksheets & Answer Key",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G6.1",
+    "feature": "High-Performance Low-Bandwidth Lite Mode",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 5",
+    "id": "G7.1",
+    "feature": "Inland Ferry Schedules & Real-Time Help Requests",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 6",
+    "id": "H2.1",
+    "feature": "Privacy Policy (GDPR / Digital Security Act)",
+    "status": "PASS",
+    "note": ""
+  },
+  {
+    "phase": "Phase 6",
+    "id": "H5.1",
+    "feature": "Comprehensive Disaster Risk Reduction Case Study",
+    "status": "PASS",
+    "note": ""
+  }
+]

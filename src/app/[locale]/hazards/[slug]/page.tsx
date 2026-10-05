@@ -5,7 +5,6 @@ import { Link } from "@/i18n/navigation";
 import { getHazard, HAZARD_SLUGS, isHazardSlug, type Bilingual } from "@/lib/hazards";
 import { ReadAloud } from "@/components/ReadAloud";
 import { Card } from "@/components/ui/Card";
-import { Landscape } from "@/components/Landscape";
 
 export function generateStaticParams() {
   return HAZARD_SLUGS.map((slug) => ({ slug }));
@@ -54,26 +53,48 @@ export default async function HazardPage({
 
   return (
     <div data-hazard={slug}>
-      <section className="relative overflow-hidden border-b border-border bg-accent-soft">
-        <div className="relative z-10 mx-auto max-w-[1200px] px-5 pb-24 pt-12">
-          <Link href="/hazards" className="text-sm font-medium text-ink-2 hover:text-ink">
+      <section className="relative overflow-hidden border-b border-border bg-surface-2">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src={`/images/hazards/${slug}.jpg`}
+            alt=""
+            aria-hidden="true"
+            className="h-full w-full object-cover opacity-15 filter blur-[2px] dark:opacity-25"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/85 to-transparent" />
+        </div>
+        <div className="relative z-10 mx-auto max-w-[1200px] px-5 pb-16 pt-10">
+          <Link href="/hazards" className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
             ← {t("allHazards")}
           </Link>
-          <h1 className="mt-3 text-3xl sm:text-5xl">{tHaz(`items.${slug}`)}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-ink-2">{p(hazard.summary)}</p>
-          <div className="mt-5 flex flex-wrap gap-4 text-sm text-ink-2">
-            <span>
-              <strong className="text-ink">{t("season")}:</strong> {p(hazard.season)}
-            </span>
-            <span>
-              <strong className="text-ink">{t("where")}:</strong> {p(hazard.where)}
-            </span>
-          </div>
-          <div className="mt-6">
-            <ReadAloud text={readAloudText} />
+          <div className="mt-4 grid gap-8 lg:grid-cols-12 lg:items-center">
+            <div className="lg:col-span-7">
+              <h1 className="text-3xl font-extrabold sm:text-5xl text-ink tracking-tight">{tHaz(`items.${slug}`)}</h1>
+              <p className="mt-4 max-w-2xl text-lg text-ink-2">{p(hazard.summary)}</p>
+              <div className="mt-5 flex flex-wrap gap-3 text-sm text-ink-2">
+                <span className="rounded-full bg-surface px-3 py-1.5 border border-border shadow-xs">
+                  <strong className="text-ink">{t("season")}:</strong> {p(hazard.season)}
+                </span>
+                <span className="rounded-full bg-surface px-3 py-1.5 border border-border shadow-xs">
+                  <strong className="text-ink">{t("where")}:</strong> {p(hazard.where)}
+                </span>
+              </div>
+              <div className="mt-6">
+                <ReadAloud text={readAloudText} />
+              </div>
+            </div>
+            <div className="lg:col-span-5">
+              <div className="group relative overflow-hidden rounded-2xl border border-border shadow-md aspect-video">
+                <img
+                  src={`/images/hazards/${slug}.jpg`}
+                  alt={tHaz(`items.${slug}`)}
+                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl" />
+              </div>
+            </div>
           </div>
         </div>
-        <Landscape className="absolute inset-x-0 bottom-0 h-32 w-full" />
       </section>
 
       <div className="mx-auto max-w-[1200px] px-5 py-12">

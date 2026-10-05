@@ -29,6 +29,19 @@ export default async function AccountPage({ params }: { params: Promise<{ locale
 
   return (
     <div className="mx-auto max-w-md px-5 py-16">
+      <div
+        id="welcome-banner"
+        data-testid="welcome-banner"
+        role="region"
+        aria-label="Welcome banner"
+        className="mb-6 rounded-card border border-brand/20 bg-brand/10 p-4 font-semibold text-brand shadow-sm flex items-center justify-between"
+      >
+        <span>
+          {locale === "bn"
+            ? `সুরক্ষা বিডিতে স্বাগতম, ${profile.display_name || "নাগরিক"}!`
+            : `Welcome to Surokkha BD, ${profile.display_name || "Citizen"}!`}
+        </span>
+      </div>
       <h1 className="text-3xl">{t("accountTitle")}</h1>
       <Card className="mt-6 space-y-3 p-6">
         <p>

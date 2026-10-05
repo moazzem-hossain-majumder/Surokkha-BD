@@ -9,7 +9,13 @@ export function SignOutButton({ locale }: { locale: string }) {
   const t = useTranslations("auth");
   const [pending, startTransition] = useTransition();
   return (
-    <Button variant="secondary" disabled={pending} onClick={() => startTransition(() => signOut(locale))}>
+    <Button
+      id="logout-button"
+      data-testid="logout-button"
+      variant="secondary"
+      disabled={pending}
+      onClick={() => startTransition(() => signOut(locale))}
+    >
       {pending ? t("signingOut") : t("signOut")}
     </Button>
   );

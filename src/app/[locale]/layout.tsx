@@ -73,7 +73,7 @@ export default async function LocaleLayout({
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="apple-touch-icon" href="/icons/icon-192.png" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <NextIntlClientProvider>
           <a
             href="#main"

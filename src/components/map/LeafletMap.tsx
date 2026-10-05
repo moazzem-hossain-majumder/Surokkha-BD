@@ -20,8 +20,30 @@ export interface MapReport {
   createdAt: string;
 }
 
-const OSM_ATTRIBUTION = '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
-const OSM_TILE_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+export type MapStyle = "google-streets" | "google-hybrid" | "google-terrain" | "osm";
+
+export const TILE_PROVIDERS: Record<MapStyle, { url: string; attribution: string; name: { en: string; bn: string } }> = {
+  "google-streets": {
+    name: { en: "Google Maps", bn: "গুগল ম্যাপস" },
+    url: "https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}",
+    attribution: "© Google Maps",
+  },
+  "google-hybrid": {
+    name: { en: "Google Satellite", bn: "গুগল স্যাটেলাইট" },
+    url: "https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}",
+    attribution: "© Google Maps Satellite Imagery",
+  },
+  "google-terrain": {
+    name: { en: "Google Terrain", bn: "গুগল ভূসংস্থান" },
+    url: "https://mt1.google.com/vt/lyrs=p&x={x}&y={y}&z={z}",
+    attribution: "© Google Maps Terrain",
+  },
+  osm: {
+    name: { en: "OpenStreetMap", bn: "ওপেনস্ট্রিটম্যাপ" },
+    url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  },
+};
 
 const SHELTER_COLOR: Record<Shelter["type"], string> = {
   cyclone: "#4B3FBF",
@@ -72,6 +94,7 @@ export function LeafletMap({
   showShelters,
   showQuakes,
   showReports = false,
+  mapStyle = "google-streets",
   locale,
   center = [23.685, 90.3563],
   zoom = 7,
@@ -82,12 +105,14 @@ export function LeafletMap({
   showShelters: boolean;
   showQuakes: boolean;
   showReports?: boolean;
+  mapStyle?: MapStyle;
   locale: string;
   center?: [number, number];
   zoom?: number;
 }) {
   const t = useTranslations("map");
   const theme = useEffectiveTheme();
+  const provider = TILE_PROVIDERS[mapStyle] || TILE_PROVIDERS["google-streets"];
 
   const fitPoints = useMemo<[number, number][]>(() => {
     const pts: [number, number][] = [];
@@ -100,9 +125,10 @@ export function LeafletMap({
   return (
     <MapContainer center={center} zoom={zoom} scrollWheelZoom className="h-full w-full">
       <TileLayer
-        url={OSM_TILE_URL}
-        attribution={OSM_ATTRIBUTION}
-        className={theme === "dark" ? "map-tiles-dark" : undefined}
+        key={mapStyle}
+        url={provider.url}
+        attribution={provider.attribution}
+        className={theme === "dark" && mapStyle === "osm" ? "map-tiles-dark" : undefined}
       />
       {fitPoints.length > 1 && <FitOnMount points={fitPoints} />}
 
