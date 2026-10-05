@@ -207,8 +207,8 @@ node tests/e2e/test_all_phases_master.js
 - **Phase 6 (Security & Legal):** 2/2 PASS (Privacy policy GDPR/DSA, DRR case study)
 - **Overall Score:** **31 / 31 (100% PASS)**
 
-Detailed test recordings and screenshots are saved in:
-- `docs/images/testing/videos/`
+Detailed test recordings and automated results:
+- `docs/images/readme_dark_showcase/master_full_experience_dark.webm`
 - `docs/images/testing/all_phases_results.json`
 
 ---

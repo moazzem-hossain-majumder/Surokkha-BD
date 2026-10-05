@@ -16,3 +16,19 @@ Thumbs.db
 !.vscode/extensions.json
 !.vscode/settings.json
 CLAUDE.md
+AGENTS.md
+
+# Test captures, redundant screenshots and videos
+public/screenshots/
+docs/images/hazard_guides/
+docs/images/testing/videos/
+docs/images/testing/phase1_knowledge/
+docs/images/testing/phase2_map_shelters/
+docs/images/testing/phase3_auth_reports_admin/
+docs/images/testing/phase4_relief_volunteer/
+docs/images/testing/phase5_learning_remote/
+docs/images/testing/phase6_security_legal_seo/
+docs/images/*.jpg
+docs/images/*.png
+docs/images/*.webm
+!docs/images/readme_dark_showcase/
