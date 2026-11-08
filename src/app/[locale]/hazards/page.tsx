@@ -28,37 +28,37 @@ export default async function HazardsIndex({ params }: { params: Promise<{ local
         <p className="mt-3 text-base text-ink-2">{t("intro")}</p>
       </div>
 
-      <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {hazardsData.map((h) => (
           <li key={h.slug} data-hazard={h.slug} className="group">
             <Link href={`/hazards/${h.slug}`} className="block h-full focus:outline-none">
-              <Card className="flex h-full flex-col overflow-hidden border border-border/80 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-brand/40">
+              <Card className="flex h-full flex-col overflow-hidden border border-border transition-colors duration-150 hover:bg-surface-2 hover:border-ink-3/40">
                 <div className="relative aspect-video w-full overflow-hidden bg-surface-2">
                   <img
                     src={`/images/hazards/${h.slug}.jpg`}
                     alt={h.title}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <span className="absolute bottom-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-black/60 text-white backdrop-blur-xs border border-white/20">
+                  <div className="absolute inset-0 bg-black/40" />
+                  <span className="absolute bottom-2.5 left-2.5 text-xs font-mono font-semibold px-2 py-0.5 rounded-sm bg-black/75 text-white border border-white/20">
                     {h.season}
                   </span>
                 </div>
 
-                <div className="flex flex-1 flex-col justify-between p-5">
+                <div className="flex flex-1 flex-col justify-between p-4">
                   <div>
-                    <h2 className="text-xl font-bold text-ink group-hover:text-brand transition-colors">
+                    <h2 className="text-base font-bold text-ink group-hover:text-brand transition-colors">
                       {h.title}
                     </h2>
-                    <p className="mt-2 line-clamp-2 text-sm text-ink-2">
+                    <p className="mt-1.5 line-clamp-2 text-xs text-ink-2 leading-relaxed">
                       {h.summary}
                     </p>
                   </div>
 
-                  <div className="mt-4 flex items-center justify-between border-t border-border/50 pt-3 text-sm font-semibold text-brand">
+                  <div className="mt-3 flex items-center justify-between border-t border-border pt-2 text-xs font-semibold text-brand">
                     <span>{tGuide("before")} &amp; {tGuide("during")}</span>
-                    <span className="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">→</span>
+                    <span aria-hidden="true">→</span>
                   </div>
                 </div>
               </Card>

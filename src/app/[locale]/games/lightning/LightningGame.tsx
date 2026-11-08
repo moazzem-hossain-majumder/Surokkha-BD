@@ -11,7 +11,6 @@ interface Scenario {
   text: { en: string; bn: string };
   safe: boolean;
   explanation: { en: string; bn: string };
-  icon: string;
 }
 
 const SCENARIOS: Scenario[] = [
@@ -19,49 +18,41 @@ const SCENARIOS: Scenario[] = [
     text: { en: "Sheltering inside a strong, concrete building.", bn: "একটি মজবুত পাকা দালানের ভেতরে আশ্রয় নেওয়া।" },
     safe: true,
     explanation: { en: "A strong building is the safest place to be during a thunderstorm.", bn: "বজ্রপাতের সময় পাকা দালানই সবচেয়ে নিরাপদ স্থান।" },
-    icon: "🏢",
   },
   {
     text: { en: "Standing under a tall, isolated tree in an open field.", bn: "খোলা মাঠে একটি লম্বা, একাকী গাছের নিচে দাঁড়ানো।" },
     safe: false,
     explanation: { en: "Tall trees attract lightning strikes and are one of the most dangerous places to stand.", bn: "লম্বা গাছে বজ্রপাত বেশি পড়ে, তাই এটি দাঁড়ানোর জন্য সবচেয়ে বিপজ্জনক জায়গাগুলোর একটি।" },
-    icon: "🌳",
   },
   {
     text: { en: "Crouching low on the balls of your feet, feet together, with no shelter nearby.", bn: "কাছে কোনো আশ্রয় না থাকলে দুই পা একসাথে রেখে, পায়ের পাতায় ভর দিয়ে নিচু হয়ে বসা।" },
     safe: true,
     explanation: { en: "If you're truly stuck outside with no shelter, this crouch reduces your risk (though going indoors is always better).", bn: "সত্যিই বাইরে আটকা পড়লে এবং কাছে আশ্রয় না থাকলে এই ভঙ্গি ঝুঁকি কমায় (তবে ঘরে ঢোকাই সবসময় সেরা)।" },
-    icon: "🧘",
   },
   {
     text: { en: "Lying flat on the ground in an open field during a storm.", bn: "ঝড়ের সময় খোলা মাঠে মাটিতে চিত হয়ে শোয়া।" },
     safe: false,
     explanation: { en: "Lying flat increases the ground contact area current can travel through. Crouch instead -- don't lie down.", bn: "চিত হয়ে শুলে বিদ্যুৎ প্রবাহিত হওয়ার জন্য মাটির সংস্পর্শের ক্ষেত্র বেড়ে যায়। শুয়ে না পড়ে নিচু হয়ে বসুন।" },
-    icon: "⚠️",
   },
   {
     text: { en: "Standing in a small boat on open water.", bn: "খোলা পানিতে একটি ছোট নৌকায় দাঁড়ানো।" },
     safe: false,
     explanation: { en: "Get off the water and away from open water as soon as you hear thunder.", bn: "মেঘ ডাকা শোনামাত্র পানি থেকে উঠে আসুন এবং খোলা পানি থেকে দূরে থাকুন।" },
-    icon: "🛶",
   },
   {
     text: { en: "Touching a plugged-in appliance or a water tap indoors during the storm.", bn: "ঝড়ের সময় ঘরের ভেতরে প্লাগে লাগানো যন্ত্র বা পানির কল স্পর্শ করা।" },
     safe: false,
     explanation: { en: "Lightning can travel through wiring and plumbing. Stay away from both indoors.", bn: "বজ্রপাত তার ও পানির লাইন দিয়ে ভেতরে প্রবেশ করতে পারে। ঘরের ভেতরেও দুটো থেকে দূরে থাকুন।" },
-    icon: "🔌",
   },
   {
     text: { en: "Sitting inside a car with a hard metal roof and the windows up.", bn: "শক্ত ধাতব ছাদ ও জানালা বন্ধ রেখে গাড়ির ভেতরে বসে থাকা।" },
     safe: true,
     explanation: { en: "A hard-topped vehicle's metal shell directs a strike around the occupants -- a well-known safe spot (avoid touching metal parts inside).", bn: "গাড়ির শক্ত ধাতব খোলস বজ্রপাতকে ভেতরের মানুষের চারপাশ দিয়ে সরিয়ে দেয় -- এটি একটি সুপরিচিত নিরাপদ জায়গা (ভেতরের ধাতব অংশ স্পর্শ করা এড়িয়ে চলুন)।" },
-    icon: "🚗",
   },
   {
     text: { en: "Standing near a window indoors, watching the storm.", bn: "ঘরের ভেতরে জানালার কাছে দাঁড়িয়ে ঝড় দেখা।" },
     safe: false,
     explanation: { en: "Stay away from windows even when you're inside a strong building.", bn: "পাকা দালানের ভেতরে থাকলেও জানালা থেকে দূরে থাকুন।" },
-    icon: "🪟",
   },
 ];
 
@@ -109,30 +100,32 @@ export function LightningGame() {
   if (done) {
     const score = Math.round((correct / SCENARIOS.length) * 100);
     return (
-      <Card className="animate-pop relative overflow-hidden p-8 text-center border border-border shadow-xl bg-gradient-to-b from-surface to-surface-2">
+      <Card className="p-8 text-center border border-border bg-surface rounded-md">
         <Confetti active={score >= 70} />
-        <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-3xl bg-brand/10 border-2 border-brand text-5xl shadow-md animate-float">
-          {score === 100 ? "⚡" : score >= 75 ? "🛡️" : "⛈️"}
+        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-md bg-brand/10 border border-brand text-brand">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
         </div>
-        <p className="text-3xl font-black text-ink tracking-tight">
+        <p className="text-2xl font-bold text-ink tracking-tight">
           {t("resultsTitle", { correct, total: SCENARIOS.length })}
         </p>
-        <p className="mt-2 text-ink-2 text-base max-w-md mx-auto">
+        <p className="mt-1 text-ink-2 text-sm max-w-md mx-auto">
           {score === 100 ? t("perfect") : t("resultsNote")}
         </p>
 
-        <div className="mt-8 flex justify-center gap-4">
-          <div className="rounded-2xl bg-surface px-6 py-4 border border-border shadow-xs">
-            <span className="block text-xs font-bold uppercase tracking-wider text-ink-3">Survival Rating</span>
-            <span className="text-3xl font-extrabold text-brand">{score}%</span>
+        <div className="mt-6 flex justify-center gap-3">
+          <div className="rounded-md bg-surface-2 px-5 py-3 border border-border text-center">
+            <span className="block text-[11px] font-mono uppercase tracking-wider text-ink-3">Rating</span>
+            <span className="text-2xl font-bold text-brand">{score}%</span>
           </div>
-          <div className="rounded-2xl bg-surface px-6 py-4 border border-border shadow-xs">
-            <span className="block text-xs font-bold uppercase tracking-wider text-ink-3">Safe Choices</span>
-            <span className="text-3xl font-extrabold text-ink">{correct} / {SCENARIOS.length}</span>
+          <div className="rounded-md bg-surface-2 px-5 py-3 border border-border text-center">
+            <span className="block text-[11px] font-mono uppercase tracking-wider text-ink-3">Safe Choices</span>
+            <span className="text-2xl font-bold text-ink">{correct} / {SCENARIOS.length}</span>
           </div>
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-6 flex justify-center">
           <button
             type="button"
             onClick={() => {
@@ -142,7 +135,7 @@ export function LightningGame() {
               setChosen(null);
               setDone(false);
             }}
-            className="h-12 rounded-full bg-brand px-8 text-base font-bold text-white shadow-md hover:bg-brand/90 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+            className="h-10 rounded-md bg-brand px-6 text-sm font-semibold text-brand-ink hover:bg-brand/90 transition-colors duration-150 cursor-pointer"
           >
             {locale === "bn" ? "আবার খেলুন" : "Play Again"}
           </button>
@@ -153,125 +146,104 @@ export function LightningGame() {
 
   return (
     <div className="relative">
-      {/* Screen flash effect */}
-      {flashEffect === "lightning" && (
-        <div className="pointer-events-none fixed inset-0 z-50 animate-lightning" />
-      )}
-
       <Card
-        className={`relative overflow-hidden p-6 sm:p-8 border transition-all duration-300 shadow-xl bg-surface ${
-          flashEffect === "lightning"
-            ? "border-sun shadow-sun/30 animate-shake"
-            : flashEffect === "shield"
-            ? "border-brand shadow-brand/30 animate-shield"
+        className={`p-6 border bg-surface rounded-md transition-colors duration-150 ${
+          flashEffect === "shield"
+            ? "border-brand ring-1 ring-brand/30"
+            : flashEffect === "lightning"
+            ? "border-sun ring-1 ring-sun/30"
             : "border-border"
         }`}
       >
-        {/* Storm Atmospheric Backdrop Header */}
-        <div className="flex flex-wrap items-center justify-between border-b border-border/80 pb-4 gap-2">
+        {/* Storm Atmospheric Header */}
+        <div className="flex flex-wrap items-center justify-between border-b border-border pb-3 gap-2">
           <div className="flex items-center gap-2">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-amber-500/15 text-lg">
-              ⚡
-            </span>
-            <span className="text-sm font-extrabold text-ink">
+            <span className="text-xs font-mono font-bold text-ink uppercase">
               {locale === "bn" ? "বজ্রপাত নিরাপত্তা সিমুলেশন" : "Lightning Survival Sim"}
             </span>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             {streak > 1 && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/15 border border-amber-500/30 px-2.5 py-0.5 text-xs font-bold text-amber-600 animate-pop">
-                🔥 {streak}x Streak!
+              <span className="inline-flex items-center rounded-sm bg-surface-2 border border-border px-2 py-0.5 text-[11px] font-mono font-semibold text-brand">
+                STREAK: {streak}
               </span>
             )}
-            <span className="rounded-full bg-surface-2 px-3 py-1 text-xs font-bold text-ink-2 border border-border">
+            <span className="rounded-sm bg-surface-2 px-2 py-0.5 text-xs font-mono font-semibold text-ink-2 border border-border">
               {index + 1} / {SCENARIOS.length}
             </span>
           </div>
         </div>
 
-        {/* Dynamic Electric Progress Line */}
-        <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-surface-2 border border-border/40">
+        {/* Progress Line */}
+        <div className="mt-3 h-1.5 w-full overflow-hidden rounded-xs bg-surface-2 border border-border">
           <div
-            className="h-full bg-gradient-to-r from-teal-500 via-brand to-emerald-400 transition-all duration-500 ease-out"
+            className="h-full bg-brand transition-all duration-200 ease-out"
             style={{ width: `${((index + 1) / SCENARIOS.length) * 100}%` }}
           />
         </div>
 
-        {/* Scenario Card with Realistic Icon & Context */}
-        <div className="mt-8 flex items-start gap-5">
-          <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-surface-2 border border-border text-3xl shadow-sm animate-float">
-            {scenario.icon}
+        {/* Scenario Card */}
+        <div className="mt-6">
+          <span className="inline-block text-[11px] font-mono font-bold uppercase tracking-wider text-ink-3">
+            {locale === "bn" ? "পরিস্থিতি" : "SCENARIO"} {index + 1}
           </span>
-          <div>
-            <span className="inline-block text-xs font-extrabold uppercase tracking-wider text-ink-3">
-              {locale === "bn" ? "পরিস্থিতি" : "Scenario"}
-            </span>
-            <p className="mt-1 text-xl sm:text-2xl font-black text-ink leading-snug tracking-tight">
-              {locale === "bn" ? scenario.text.bn : scenario.text.en}
-            </p>
-          </div>
+          <p className="mt-1 text-lg sm:text-xl font-bold text-ink leading-snug tracking-tight">
+            {locale === "bn" ? scenario.text.bn : scenario.text.en}
+          </p>
         </div>
 
-        {/* Action Choice Buttons with rich spring feedback */}
-        <div className="mt-8 flex flex-col gap-3.5 sm:flex-row">
+        {/* Action Choice Buttons */}
+        <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
           <button
             type="button"
             onClick={() => choose(true)}
             disabled={chosen !== null}
-            className={`group flex flex-1 items-center justify-center gap-3 rounded-2xl border px-6 py-4 text-base font-extrabold transition-all duration-200 cursor-pointer ${
+            className={`flex flex-1 items-center justify-center gap-2 rounded-md border px-5 py-3 text-sm font-semibold transition-colors duration-150 cursor-pointer ${
               chosen !== null && scenario.safe
-                ? "border-brand bg-brand/15 text-brand shadow-md scale-[1.02] ring-2 ring-brand/40"
+                ? "border-brand bg-brand/10 text-brand font-bold"
                 : chosen === true
-                ? "border-sun bg-sun/15 text-sun animate-shake"
-                : "border-border bg-surface hover:bg-brand/10 hover:border-brand/40 hover:-translate-y-0.5 active:scale-95 text-ink shadow-xs"
+                ? "border-sun bg-sun/10 text-sun font-bold"
+                : "border-border bg-surface hover:bg-surface-2 hover:border-ink-3/40 text-ink"
             }`}
           >
-            <span className="text-2xl transition-transform group-hover:scale-110">🛡️</span>
-            <span>{t("safe")}</span>
+            <span>[SAFE] {t("safe")}</span>
           </button>
 
           <button
             type="button"
             onClick={() => choose(false)}
             disabled={chosen !== null}
-            className={`group flex flex-1 items-center justify-center gap-3 rounded-2xl border px-6 py-4 text-base font-extrabold transition-all duration-200 cursor-pointer ${
+            className={`flex flex-1 items-center justify-center gap-2 rounded-md border px-5 py-3 text-sm font-semibold transition-colors duration-150 cursor-pointer ${
               chosen !== null && !scenario.safe
-                ? "border-brand bg-brand/15 text-brand shadow-md scale-[1.02] ring-2 ring-brand/40"
+                ? "border-brand bg-brand/10 text-brand font-bold"
                 : chosen === false
-                ? "border-sun bg-sun/15 text-sun animate-shake"
-                : "border-border bg-surface hover:bg-sun/10 hover:border-sun/40 hover:-translate-y-0.5 active:scale-95 text-ink shadow-xs"
+                ? "border-sun bg-sun/10 text-sun font-bold"
+                : "border-border bg-surface hover:bg-surface-2 hover:border-ink-3/40 text-ink"
             }`}
           >
-            <span className="text-2xl transition-transform group-hover:scale-110">⚡</span>
-            <span>{t("notSafe")}</span>
+            <span>[DANGEROUS] {t("notSafe")}</span>
           </button>
         </div>
 
-        {/* Feedback Section with animated explanation */}
+        {/* Feedback Section */}
         {chosen !== null && (
-          <div className="mt-6 animate-pop rounded-2xl border border-border bg-surface-2 p-5 shadow-sm">
-            <div className="flex items-start gap-3.5">
-              <span className="text-3xl">
-                {chosen === scenario.safe ? "✅" : "⚠️"}
-              </span>
-              <div>
-                <p className="text-lg font-black text-ink">
-                  {chosen === scenario.safe
-                    ? (locale === "bn" ? "সঠিক জীবনরক্ষাকারী সিদ্ধান্ত!" : "Safe Survival Decision!")
-                    : (locale === "bn" ? "মারাত্মক বিপজ্জনক ভুল!" : "Extremely Dangerous Mistake!")}
-                </p>
-                <p className="mt-1.5 text-sm text-ink-2 leading-relaxed font-normal">
-                  {locale === "bn" ? scenario.explanation.bn : scenario.explanation.en}
-                </p>
-              </div>
+          <div className="mt-6 rounded-md border border-border bg-surface-2 p-4">
+            <div>
+              <p className="text-xs font-mono font-bold uppercase text-ink">
+                {chosen === scenario.safe
+                  ? (locale === "bn" ? "সঠিক সিদ্ধান্ত" : "SAFE SURVIVAL PROTOCOL")
+                  : (locale === "bn" ? "বিপজ্জনক ভুল" : "HAZARDOUS ACTION")}
+              </p>
+              <p className="mt-1 text-xs text-ink-2 leading-relaxed">
+                {locale === "bn" ? scenario.explanation.bn : scenario.explanation.en}
+              </p>
             </div>
-
-            <div className="mt-5 flex justify-end">
+            <div className="mt-4 flex justify-end">
               <button
                 type="button"
                 onClick={next}
-                className="h-11 rounded-full bg-brand px-7 text-sm font-bold text-white shadow-md hover:bg-brand/90 hover:scale-105 active:scale-95 transition-all cursor-pointer"
+                className="h-9 rounded-md bg-brand px-5 text-xs font-semibold text-brand-ink hover:bg-brand/90 transition-colors duration-150 cursor-pointer"
               >
                 {index + 1 >= SCENARIOS.length ? t("finish") : t("next")}
               </button>

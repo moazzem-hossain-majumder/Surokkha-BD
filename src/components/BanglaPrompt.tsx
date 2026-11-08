@@ -26,14 +26,14 @@ export function BanglaPrompt() {
           locale="bn"
           lang="bn"
           onClick={() => bnPromptStore.set("1")}
-          className="inline-flex h-11 items-center rounded-full bg-brand px-4 text-sm font-semibold text-brand-ink"
+          className="inline-flex h-8 items-center rounded-md bg-brand px-3 text-xs font-semibold text-brand-ink transition-colors duration-150 hover:bg-brand/90"
         >
           বাংলায় দেখুন
         </Link>
         <button
           type="button"
           onClick={() => bnPromptStore.set("1")}
-          className="inline-flex h-11 items-center rounded-full px-3 text-sm font-medium text-ink-2 hover:text-ink"
+          className="inline-flex h-8 items-center rounded-md px-2.5 text-xs font-medium text-ink-2 hover:text-ink transition-colors duration-150"
         >
           Stay in English
         </button>

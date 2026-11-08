@@ -8,18 +8,18 @@ export function MoreNav({ label, items }: { label: string; items: { href: string
   const pathname = usePathname();
   return (
     <details key={pathname} className="group relative">
-      <summary className="flex min-h-11 cursor-pointer list-none items-center gap-1 whitespace-nowrap rounded-full px-3 text-sm font-semibold text-ink-2 hover:bg-surface-2 hover:text-ink [&::-webkit-details-marker]:hidden">
+      <summary className="flex min-h-9 cursor-pointer list-none items-center gap-1 whitespace-nowrap rounded-md px-2.5 text-sm font-medium text-ink-2 hover:bg-surface-2 hover:text-ink [&::-webkit-details-marker]:hidden transition-colors duration-150">
         {label}
         <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="transition-transform group-open:rotate-180">
           <path d="m6 9 6 6 6-6" />
         </svg>
       </summary>
-      <div className="absolute right-0 top-full z-50 mt-1 min-w-44 rounded-card border border-border bg-surface p-1 shadow-lg">
+      <div className="absolute right-0 top-full z-50 mt-1 min-w-44 rounded-md border border-border bg-surface p-1 shadow-md">
         {items.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className="flex min-h-11 items-center whitespace-nowrap rounded-lg px-3 text-sm font-semibold text-ink-2 hover:bg-surface-2 hover:text-ink"
+            className="flex min-h-9 items-center whitespace-nowrap rounded-md px-3 text-sm font-medium text-ink-2 hover:bg-surface-2 hover:text-ink transition-colors duration-150"
           >
             {item.label}
           </Link>

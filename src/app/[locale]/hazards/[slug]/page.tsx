@@ -53,44 +53,34 @@ export default async function HazardPage({
 
   return (
     <div data-hazard={slug}>
-      <section className="relative overflow-hidden border-b border-border bg-surface-2">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <img
-            src={`/images/hazards/${slug}.jpg`}
-            alt=""
-            aria-hidden="true"
-            className="h-full w-full object-cover opacity-15 filter blur-[2px] dark:opacity-25"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/85 to-transparent" />
-        </div>
-        <div className="relative z-10 mx-auto max-w-[1200px] px-5 pb-16 pt-10">
+      <section className="relative overflow-hidden border-b border-border bg-surface">
+        <div className="relative z-10 mx-auto max-w-[1200px] px-5 pb-12 pt-8">
           <Link href="/hazards" className="inline-flex items-center gap-1 text-sm font-semibold text-brand hover:underline">
             ← {t("allHazards")}
           </Link>
           <div className="mt-4 grid gap-8 lg:grid-cols-12 lg:items-center">
             <div className="lg:col-span-7">
-              <h1 className="text-3xl font-extrabold sm:text-5xl text-ink tracking-tight">{tHaz(`items.${slug}`)}</h1>
-              <p className="mt-4 max-w-2xl text-lg text-ink-2">{p(hazard.summary)}</p>
-              <div className="mt-5 flex flex-wrap gap-3 text-sm text-ink-2">
-                <span className="rounded-full bg-surface px-3 py-1.5 border border-border shadow-xs">
+              <h1 className="text-3xl font-extrabold sm:text-4xl text-ink tracking-tight">{tHaz(`items.${slug}`)}</h1>
+              <p className="mt-3 max-w-2xl text-base text-ink-2 leading-relaxed">{p(hazard.summary)}</p>
+              <div className="mt-4 flex flex-wrap gap-2 text-xs">
+                <span className="rounded-md bg-surface-2 px-2.5 py-1 border border-border text-ink-2">
                   <strong className="text-ink">{t("season")}:</strong> {p(hazard.season)}
                 </span>
-                <span className="rounded-full bg-surface px-3 py-1.5 border border-border shadow-xs">
+                <span className="rounded-md bg-surface-2 px-2.5 py-1 border border-border text-ink-2">
                   <strong className="text-ink">{t("where")}:</strong> {p(hazard.where)}
                 </span>
               </div>
-              <div className="mt-6">
+              <div className="mt-5">
                 <ReadAloud text={readAloudText} />
               </div>
             </div>
             <div className="lg:col-span-5">
-              <div className="group relative overflow-hidden rounded-2xl border border-border shadow-md aspect-video">
+              <div className="relative overflow-hidden rounded-md border border-border aspect-video">
                 <img
                   src={`/images/hazards/${slug}.jpg`}
                   alt={tHaz(`items.${slug}`)}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl" />
               </div>
             </div>
           </div>

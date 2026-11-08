@@ -1,0 +1,9 @@
+# Frontend Anti-Slop Rules
+- NO gradient text (`bg-clip-text`) or glowing neon background blobs. Use high-contrast solid monochrome palettes with 1 solid accent color.
+- NO "✨ Introducing X" pill badges above hero `<h1>` tags.
+- NO 3-column symmetrical feature grids of identical icon-in-a-box cards. Use border grids (`1px solid`), specification tables, or code/UI split views.
+- NO emojis anywhere in the UI or copy.
+- NO placeholder links (`href="#"`), fake testimonials, or unverified user counts. If a route doesn't exist, do not render a link for it.
+- NO marketing fluff ("seamless", "elevate", "unleash", "next-gen", "it's not X, it's Y"). Write dry, specific, technical copy describing exact inputs, architectures, and outputs.
+- Standardize border-radius to `4px` or `6px` (`rounded` or `rounded-md`) across all cards, inputs, and buttons.
+

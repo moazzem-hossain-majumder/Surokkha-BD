@@ -16,7 +16,7 @@ export function LanguageSwitch() {
   const router = useRouter();
 
   return (
-    <div role="group" aria-label={t("label")} className="flex rounded-full border border-border bg-surface p-0.5">
+    <div role="group" aria-label={t("label")} className="flex rounded-md border border-border bg-surface p-0.5">
       {options.map((o) => (
         <button
           key={o.locale}
@@ -30,7 +30,7 @@ export function LanguageSwitch() {
             bnPromptStore.set("1");
             router.replace(pathname, { locale: o.locale, scroll: false });
           }}
-          className="h-11 min-w-11 rounded-full px-3 text-sm font-semibold text-ink-2 transition-colors hover:text-ink aria-pressed:bg-brand aria-pressed:text-brand-ink"
+          className="h-8 min-w-8 rounded-sm px-2 text-xs font-semibold text-ink-2 transition-colors duration-150 hover:text-ink aria-pressed:bg-brand aria-pressed:text-brand-ink"
         >
           {o.label}
         </button>

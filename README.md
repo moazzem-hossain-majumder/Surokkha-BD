@@ -17,14 +17,20 @@
 
 ---
 
-## 🎬 Master System Walkthrough (Dark Mode)
+## Master System Walkthrough (Dark Mode Showcase)
 
-Experience the complete end-to-end platform in high resolution. Click below to view the master walkthrough video:
+Experience the complete end-to-end disaster management platform recorded in high definition (1440×900) Dark Mode:
 
-[![Surokkha-BD Master Tour](docs/images/readme_dark_showcase/01_home_header_dark.png)](docs/images/readme_dark_showcase/master_full_experience_dark.webm)
+[![Surokkha-BD Dark Mode Full Workflow GIF](docs/images/readme_dark_showcase/surokkha_dark_mode_workflow.gif)](docs/images/readme_dark_showcase/surokkha_dark_mode_voiceover_walkthrough.mp4)
 
-> 📹 **Master Session Video:** [Watch the Full Unclipped Dark Mode Walkthrough (`master_full_experience_dark.webm`)](docs/images/readme_dark_showcase/master_full_experience_dark.webm)  
-> *Demonstrates all 6 operational phases: Knowledge Core, GIS Map & Shelters, Citizen Auth & Incident Reporting, ReliefLink & Volunteers, Interactive Learning Arcade, and Low-Bandwidth Mode.*
+> **Download & Inspect Workflow Assets:**
+> - **[Animated GIF Preview](docs/images/readme_dark_showcase/surokkha_dark_mode_workflow.gif)** — *Optimized looping animation.*
+> - **[Animated WebP Preview](docs/images/readme_dark_showcase/surokkha_dark_mode_workflow.webp)** — *Lightweight looping teaser.*
+> - **[Voiceover Walkthrough MP4 (H.264 + AAC Audio)](docs/images/readme_dark_showcase/surokkha_dark_mode_voiceover_walkthrough.mp4)** — *Full narrated system walkthrough.*
+> - **[Quick Tour MP4 (No Voice, 02:04 min)](docs/images/readme_dark_showcase/surokkha_dark_mode_workflow.mp4)** — *Fast visual demonstration.*
+> - **[Master WebM Stream](docs/images/readme_dark_showcase/surokkha_dark_mode_voiceover_walkthrough.webm)** — *VP8/Vorbis master.*
+>
+> *Walkthrough chapters: Hero Telemetry Specifications ➔ 14-Hazard Vulnerability Catalog & Cyclone Guide ➔ Interactive GIS Disaster Map (Leaflet) with Coastal Surge Zoom ➔ Cyclone Shelters Proximity Search ➔ Citizen Crowdsourced Incident Reporting with Map Pin ➔ ReliefLink Supplies & Volunteer Response Hub ➔ Historical Disaster Data Explorer & Casualty Trends ➔ Interactive Quiz Player & Feedback ➔ Life-Safety Games (Lightning Survival & 72h Go-Bag Challenge) ➔ Inland Waterway Ferries Tracking ➔ 24/7 Verified Emergency Hotlines.*
 
 ---
 

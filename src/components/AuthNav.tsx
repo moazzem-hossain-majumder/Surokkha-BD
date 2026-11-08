@@ -39,7 +39,7 @@ export function AuthNav() {
   return (
     <Link
       href={signedIn ? "/account" : "/login"}
-      className="flex h-10 items-center rounded-full px-3.5 text-sm font-semibold text-ink-2 hover:bg-surface-2 hover:text-ink"
+      className="flex h-9 items-center rounded-md px-3 text-sm font-medium text-ink-2 hover:bg-surface-2 hover:text-ink transition-colors duration-150"
     >
       {signedIn ? t("nav.account") : t("nav.login")}
     </Link>

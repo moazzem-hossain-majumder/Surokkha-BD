@@ -97,23 +97,23 @@ export function MapClient() {
 
   return (
     <div className="space-y-4">
-      {/* Google Maps Official Status Bar & Coordinate HUD */}
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-border/80 bg-surface/90 px-4 py-2.5 backdrop-blur-md shadow-xs">
+      {/* Map Status Bar & Coordinate HUD */}
+      <div className="flex flex-wrap items-center justify-between gap-3 rounded-md border border-border bg-surface px-4 py-2.5">
         <div className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-white shadow-xs border border-border text-base">
-            🗺️
-          </span>
+          <div className="flex h-7 w-7 items-center justify-center rounded-sm bg-surface-2 border border-border text-ink font-mono text-xs font-bold">
+            GIS
+          </div>
           <div>
             <div className="flex items-center gap-2">
               <span className="text-xs font-bold text-ink tracking-tight">
-                {locale === "bn" ? "গুগল ম্যাপস ইঞ্জিন সক্রিয়" : "Google Maps Engine Active"}
+                {locale === "bn" ? "জিআইএস ইঞ্জিন সক্রিয়" : "GIS Engine Active"}
               </span>
-              <span className="inline-flex items-center rounded-full bg-emerald-500/15 border border-emerald-500/30 px-2 py-0.5 text-[10px] font-bold text-emerald-600 dark:text-emerald-400">
+              <span className="inline-flex items-center rounded-sm bg-surface-2 border border-border px-1.5 py-0.5 text-[10px] font-mono font-semibold text-brand">
                 LIVE
               </span>
             </div>
-            <p className="text-[11px] text-ink-3">
-              23.6850° N, 90.3563° E • Bangladesh Delta Basin
+            <p className="text-[11px] font-mono text-ink-3">
+              23.6850° N, 90.3563° E · Bangladesh Delta Basin
             </p>
           </div>
         </div>
@@ -123,14 +123,13 @@ export function MapClient() {
           <button
             type="button"
             onClick={() => setNativeEmbed((v) => !v)}
-            className={`flex h-8 items-center gap-1.5 rounded-full px-3 text-xs font-bold transition-all cursor-pointer ${
+            className={`flex h-8 items-center gap-1.5 rounded-md px-3 text-xs font-semibold transition-colors duration-150 cursor-pointer ${
               nativeEmbed
-                ? "bg-brand text-white shadow-xs"
+                ? "bg-brand text-brand-ink"
                 : "border border-border bg-surface text-ink-2 hover:bg-surface-2 hover:text-ink"
             }`}
           >
-            <span>🌐</span>
-            <span>{nativeEmbed ? (locale === "bn" ? "ডিজাস্টার ম্যাপে ফিরুন" : "Back to Disaster Map") : (locale === "bn" ? "নেটিভ গুগল ম্যাপস ভিউ" : "Native Google Maps View")}</span>
+            <span>{nativeEmbed ? (locale === "bn" ? "ডিজাস্টার ম্যাপে ফিরুন" : "Disaster Map") : (locale === "bn" ? "গুগল ম্যাপস ভিউ" : "Google Maps View")}</span>
           </button>
         </div>
       </div>
@@ -142,11 +141,11 @@ export function MapClient() {
             type="button"
             aria-pressed={showShelters}
             onClick={() => setShowShelters((v) => !v)}
-            className="flex h-10 items-center gap-2 rounded-full border border-border bg-surface px-3.5 text-sm font-semibold transition-all cursor-pointer aria-pressed:border-brand aria-pressed:bg-brand-soft shadow-2xs hover:shadow-xs active:scale-95"
+            className="flex h-9 items-center gap-2 rounded-md border border-border bg-surface px-3 text-xs font-semibold transition-colors duration-150 cursor-pointer aria-pressed:border-brand aria-pressed:bg-brand-soft"
           >
-            <span className="h-2.5 w-2.5 rounded-full" style={{ background: "#4B3FBF" }} aria-hidden="true" />
+            <span className="h-2 w-2 rounded-xs" style={{ background: "#4B3FBF" }} aria-hidden="true" />
             <span>{t("layerShelters")}</span>
-            <span className="rounded-full bg-black/10 dark:bg-white/10 px-1.5 py-0.2 text-xs font-bold">
+            <span className="rounded-xs bg-surface-2 px-1.5 py-0.5 text-[10px] font-mono font-bold text-ink-2">
               {SHELTERS.length}
             </span>
           </button>
@@ -154,12 +153,12 @@ export function MapClient() {
             type="button"
             aria-pressed={showQuakes}
             onClick={() => setShowQuakes((v) => !v)}
-            className="flex h-10 items-center gap-2 rounded-full border border-border bg-surface px-3.5 text-sm font-semibold transition-all cursor-pointer aria-pressed:border-brand aria-pressed:bg-brand-soft shadow-2xs hover:shadow-xs active:scale-95"
+            className="flex h-9 items-center gap-2 rounded-md border border-border bg-surface px-3 text-xs font-semibold transition-colors duration-150 cursor-pointer aria-pressed:border-brand aria-pressed:bg-brand-soft"
           >
-            <span className="h-2.5 w-2.5 rounded-full" style={{ background: "#B3261E" }} aria-hidden="true" />
+            <span className="h-2 w-2 rounded-xs" style={{ background: "#B3261E" }} aria-hidden="true" />
             <span>{t("layerQuakes")}</span>
             {quakes.length > 0 && (
-              <span className="rounded-full bg-sun/15 text-sun px-1.5 py-0.2 text-xs font-bold">
+              <span className="rounded-xs bg-sun/10 text-sun px-1.5 py-0.5 text-[10px] font-mono font-bold">
                 {quakes.length}
               </span>
             )}
@@ -168,12 +167,12 @@ export function MapClient() {
             type="button"
             aria-pressed={showReports}
             onClick={() => setShowReports((v) => !v)}
-            className="flex h-10 items-center gap-2 rounded-full border border-border bg-surface px-3.5 text-sm font-semibold transition-all cursor-pointer aria-pressed:border-brand aria-pressed:bg-brand-soft shadow-2xs hover:shadow-xs active:scale-95"
+            className="flex h-9 items-center gap-2 rounded-md border border-border bg-surface px-3 text-xs font-semibold transition-colors duration-150 cursor-pointer aria-pressed:border-brand aria-pressed:bg-brand-soft"
           >
-            <span className="h-2.5 w-2.5 rotate-45 rounded-[3px]" style={{ background: "#D9730D" }} aria-hidden="true" />
+            <span className="h-2 w-2 rotate-45 rounded-[2px]" style={{ background: "#D9730D" }} aria-hidden="true" />
             <span>{t("layerReports")}</span>
             {reports.length > 0 && (
-              <span className="rounded-full bg-amber-500/15 text-amber-600 px-1.5 py-0.2 text-xs font-bold">
+              <span className="rounded-xs bg-surface-2 px-1.5 py-0.5 text-[10px] font-mono font-bold text-ink-2">
                 {reports.length}
               </span>
             )}
@@ -182,23 +181,23 @@ export function MapClient() {
 
         <div className="flex flex-wrap items-center gap-2">
           {view === "map" && !nativeEmbed && (
-            <div className="flex flex-wrap items-center gap-1 rounded-full border border-border bg-surface p-1 text-xs shadow-2xs">
-              <span className="hidden pl-2 pr-1 font-bold text-ink-3 sm:inline">Google Style:</span>
+            <div className="flex flex-wrap items-center gap-1 rounded-md border border-border bg-surface p-0.5 text-xs">
+              <span className="hidden pl-2 pr-1 font-mono text-ink-3 sm:inline text-[11px]">LAYER:</span>
               {(["google-streets", "google-hybrid", "google-terrain", "osm"] as const).map((style) => (
                 <button
                   key={style}
                   type="button"
                   onClick={() => setMapStyle(style)}
-                  className={`rounded-full px-3 py-1 text-xs font-bold transition-all cursor-pointer ${
+                  className={`rounded-sm px-2.5 py-1 text-xs font-medium transition-colors duration-150 cursor-pointer ${
                     mapStyle === style
-                      ? "bg-brand text-white shadow-sm"
+                      ? "bg-brand text-brand-ink font-semibold"
                       : "text-ink-2 hover:bg-surface-2 hover:text-ink"
                   }`}
                 >
                   {style === "google-streets"
-                    ? (locale === "bn" ? "গুগল রাস্তা" : "Google Roads")
+                    ? (locale === "bn" ? "রাস্তা" : "Roads")
                     : style === "google-hybrid"
-                    ? (locale === "bn" ? "স্যাটেলাইট" : "Satellite Hybrid")
+                    ? (locale === "bn" ? "স্যাটেলাইট" : "Satellite")
                     : style === "google-terrain"
                     ? (locale === "bn" ? "ভূসংস্থান" : "Terrain")
                     : "OSM"}
@@ -240,8 +239,8 @@ export function MapClient() {
                 loading="lazy"
                 allowFullScreen
               />
-              <div className="absolute top-4 left-4 z-10 rounded-xl bg-surface/90 px-3 py-1.5 backdrop-blur-md border border-border shadow-md text-xs font-bold text-ink">
-                🌐 Native Google Maps Mode • Live Satellite &amp; Navigation
+              <div className="absolute top-4 left-4 z-10 rounded-md bg-surface px-2.5 py-1 border border-border text-xs font-mono font-semibold text-ink">
+                Google Maps Satellite Mode · Bangladesh
               </div>
             </div>
           ) : (

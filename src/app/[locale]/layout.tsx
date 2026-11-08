@@ -77,7 +77,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider>
           <a
             href="#main"
-            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-brand focus:px-5 focus:py-3 focus:text-brand-ink"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-brand focus:px-4 focus:py-2 focus:text-brand-ink focus:text-sm font-semibold"
           >
             {t("skip")}
           </a>

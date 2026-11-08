@@ -39,7 +39,7 @@ export function ThemeToggle() {
   const current: Theme = raw === "light" || raw === "dark" ? raw : "system";
 
   return (
-    <div role="group" aria-label={t("label")} className="flex rounded-full border border-border bg-surface p-0.5">
+    <div role="group" aria-label={t("label")} className="flex rounded-md border border-border bg-surface p-0.5">
       {(["light", "dark", "system"] as const).map((theme) => (
         <button
           key={theme}
@@ -48,7 +48,7 @@ export function ThemeToggle() {
           aria-label={t(theme)}
           title={t(theme)}
           onClick={() => apply(theme)}
-          className="grid h-11 w-11 place-items-center rounded-full text-ink-2 transition-colors hover:text-ink aria-pressed:bg-brand aria-pressed:text-brand-ink"
+          className="grid h-8 w-8 place-items-center rounded-sm text-ink-2 transition-colors duration-150 hover:text-ink aria-pressed:bg-brand aria-pressed:text-brand-ink"
         >
           {icons[theme]}
         </button>

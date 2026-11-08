@@ -105,7 +105,7 @@ export function ReadAloud({ text }: { text: string }) {
         type="button"
         onClick={toggle}
         aria-pressed={speaking}
-        className="inline-flex h-11 items-center gap-2 rounded-full border border-border bg-surface px-4 text-sm font-semibold hover:bg-surface-2"
+        className="inline-flex h-9 items-center gap-2 rounded-md border border-border bg-surface px-3 text-xs font-semibold hover:bg-surface-2 transition-colors duration-150"
       >
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d="M4 9v6h4l5 5V4L8 9H4Z" />

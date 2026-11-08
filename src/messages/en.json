@@ -37,17 +37,17 @@
     "label": "Language"
   },
   "hero": {
-    "title": "Be ready. Stay safe.",
-    "subtitle": "Free guides, safe places, and community help for every natural disaster in Bangladesh.",
-    "primary": "Explore hazards",
-    "secondary": "See severity levels",
-    "emergency": "Emergency numbers"
+    "title": "Open disaster protocols and shelter navigation for Bangladesh",
+    "subtitle": "Standardized survival checklists across 14 hazards, offline GIS shelter routing, and verified emergency dispatch directories.",
+    "primary": "Browse 14 hazard protocols",
+    "secondary": "Emergency contacts",
+    "map": "GIS shelter map"
   },
   "hazards": {
-    "title": "Every hazard, one palette each",
-    "intro": "Each disaster gets its own color. Select one to see how the interface changes.",
-    "selected": "Selected hazard",
-    "previewNote": "Full guides with before, during, and after steps arrive in the next phase.",
+    "title": "Standard Operating Procedures by Hazard",
+    "intro": "Select a hazard to inspect operational protocols, meteorological thresholds, and survival guidance.",
+    "selected": "Active protocol",
+    "previewNote": "Complete operational checklist covering pre-disaster mitigation, active event response, and post-impact recovery.",
     "items": {
       "cyclone": "Cyclone and storm surge",
       "riverine-flood": "Riverine flood",

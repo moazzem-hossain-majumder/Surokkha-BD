@@ -25,9 +25,9 @@ function Shape({ level }: { level: 0 | 1 | 2 | 3 | 4 }) {
 export function SeverityBadge({ level }: { level: 0 | 1 | 2 | 3 | 4 }) {
   const t = useTranslations("severity");
   return (
-    <div className={`flex items-center gap-3 rounded-card border border-l-[4px] border-border bg-surface px-4 py-3 ${edge[level]}`}>
+    <div className={`flex items-center gap-3 rounded-md border border-l-[4px] border-border bg-surface px-3.5 py-2.5 ${edge[level]}`}>
       <span className={color[level]}><Shape level={level} /></span>
-      <span className="font-semibold">{t(`levels.${level}`)}</span>
+      <span className="text-sm font-semibold">{t(`levels.${level}`)}</span>
     </div>
   );
 }

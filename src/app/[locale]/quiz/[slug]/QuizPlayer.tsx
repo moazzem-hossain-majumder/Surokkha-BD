@@ -54,29 +54,32 @@ export function QuizPlayer({ hazardSlug, questions, locale }: { hazardSlug: stri
   if (done) {
     const percentage = Math.round((score / questions.length) * 100);
     return (
-      <Card className="animate-pop relative overflow-hidden p-8 sm:p-10 text-center shadow-xl border border-border bg-surface">
+      <Card className="p-8 text-center border border-border bg-surface rounded-md">
         <Confetti active={percentage >= 70} />
 
-        <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-3xl bg-brand/10 border-2 border-brand text-5xl shadow-md animate-float">
-          {percentage >= 70 ? "🎉" : "📚"}
+        <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-md bg-brand/10 border border-brand text-brand">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+            <polyline points="22 4 12 14.01 9 11.01" />
+          </svg>
         </div>
-        <p className="text-3xl font-black text-ink tracking-tight">
+        <p className="text-2xl font-bold text-ink tracking-tight">
           {t("resultsTitle", { score, total: questions.length })}
         </p>
-        <p className="mt-2 text-ink-2 text-base max-w-md mx-auto">{t("resultsNote")}</p>
+        <p className="mt-1 text-ink-2 text-sm max-w-md mx-auto">{t("resultsNote")}</p>
 
-        <div className="mt-8 flex justify-center gap-4">
-          <div className="rounded-2xl bg-surface-2 px-6 py-4 border border-border shadow-xs">
-            <span className="block text-xs font-bold uppercase tracking-wider text-ink-3">Mastery Level</span>
-            <span className="text-3xl font-extrabold text-brand">{percentage}%</span>
+        <div className="mt-6 flex justify-center gap-3">
+          <div className="rounded-md bg-surface-2 px-5 py-3 border border-border text-center">
+            <span className="block text-[11px] font-mono uppercase tracking-wider text-ink-3">Score</span>
+            <span className="text-2xl font-bold text-brand">{percentage}%</span>
           </div>
-          <div className="rounded-2xl bg-surface-2 px-6 py-4 border border-border shadow-xs">
-            <span className="block text-xs font-bold uppercase tracking-wider text-ink-3">Completed</span>
-            <span className="text-3xl font-extrabold text-ink">{questions.length} Qs</span>
+          <div className="rounded-md bg-surface-2 px-5 py-3 border border-border text-center">
+            <span className="block text-[11px] font-mono uppercase tracking-wider text-ink-3">Total</span>
+            <span className="text-2xl font-bold text-ink">{questions.length} Questions</span>
           </div>
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-6 flex justify-center">
           <Button
             type="button"
             onClick={() => {
@@ -86,7 +89,7 @@ export function QuizPlayer({ hazardSlug, questions, locale }: { hazardSlug: stri
               setStreak(0);
               setDone(false);
             }}
-            className="px-8 h-12 text-base font-bold shadow-md cursor-pointer"
+            className="px-6 h-10 text-sm font-semibold cursor-pointer"
           >
             {locale === "bn" ? "আবার চেষ্টা করুন" : "Retake Quiz"}
           </Button>
@@ -96,45 +99,45 @@ export function QuizPlayer({ hazardSlug, questions, locale }: { hazardSlug: stri
   }
 
   return (
-    <Card className="relative overflow-hidden border border-border p-6 sm:p-8 shadow-xl bg-surface transition-all">
-      {/* Animated progress bar and streak tracker */}
+    <Card className="border border-border p-6 bg-surface rounded-md">
+      {/* Progress bar and streak tracker */}
       <div className="mb-6">
-        <div className="flex items-center justify-between text-xs font-bold text-ink-3 uppercase tracking-wide">
+        <div className="flex items-center justify-between text-xs font-mono text-ink-3 uppercase">
           <span>{t("questionOf", { current: index + 1, total: questions.length })}</span>
           <div className="flex items-center gap-2">
             {streak > 1 && (
-              <span className="inline-flex items-center gap-1 rounded-full bg-amber-500/15 border border-amber-500/30 px-2 py-0.5 text-[11px] font-extrabold text-amber-600 animate-pop">
-                🔥 {streak} Streak!
+              <span className="inline-flex items-center rounded-sm bg-surface-2 border border-border px-2 py-0.5 text-[11px] font-mono font-semibold text-brand">
+                STREAK: {streak}
               </span>
             )}
-            <span className="text-brand font-mono font-bold">{progressPercent}%</span>
+            <span className="text-brand font-mono font-semibold">{progressPercent}%</span>
           </div>
         </div>
-        <div className="mt-2.5 h-2.5 w-full overflow-hidden rounded-full bg-surface-2 border border-border/50">
+        <div className="mt-2 h-1.5 w-full overflow-hidden rounded-xs bg-surface-2 border border-border">
           <div
-            className="h-full bg-gradient-to-r from-teal-500 to-brand transition-all duration-500 ease-out"
+            className="h-full bg-brand transition-all duration-200 ease-out"
             style={{ width: `${((index + 1) / questions.length) * 100}%` }}
           />
         </div>
       </div>
 
-      <p className="mt-2 text-xl sm:text-2xl font-black text-ink leading-snug tracking-tight">
+      <p className="mt-2 text-lg sm:text-xl font-bold text-ink leading-snug tracking-tight">
         {locale === "bn" ? q.question_bn : q.question_en}
       </p>
 
-      <div className="mt-7 space-y-3">
+      <div className="mt-6 space-y-2.5">
         {options.map((opt, i) => {
           const isCorrect = i === q.answer_index;
           const isSelected = i === selected;
           const showState = selected !== null;
 
-          let btnClass = "border-border bg-surface hover:bg-surface-2 hover:border-brand/40 hover:-translate-y-0.5 text-ink";
+          let btnClass = "border-border bg-surface hover:bg-surface-2 hover:border-ink-3/40 text-ink";
           if (showState && isCorrect) {
-            btnClass = "border-brand bg-brand/15 text-brand font-bold shadow-md ring-2 ring-brand/40 animate-shield";
+            btnClass = "border-brand bg-brand/10 text-brand font-semibold";
           } else if (showState && isSelected) {
-            btnClass = "border-sun bg-sun/15 text-sun font-bold animate-shake";
+            btnClass = "border-sun bg-sun/10 text-sun font-semibold";
           } else if (showState) {
-            btnClass = "border-border/50 opacity-55 bg-surface/50 text-ink-3";
+            btnClass = "border-border/50 opacity-50 bg-surface/50 text-ink-3";
           }
 
           return (
@@ -143,40 +146,39 @@ export function QuizPlayer({ hazardSlug, questions, locale }: { hazardSlug: stri
               type="button"
               onClick={() => choose(i)}
               disabled={selected !== null}
-              className={`group flex w-full items-center justify-between rounded-xl border px-5 py-4 text-left text-sm sm:text-base font-semibold transition-all duration-200 cursor-pointer shadow-2xs ${btnClass}`}
+              className={`flex w-full items-center justify-between rounded-md border px-4 py-3 text-left text-sm font-medium transition-colors duration-150 cursor-pointer ${btnClass}`}
             >
-              <div className="flex items-center gap-3.5">
+              <div className="flex items-center gap-3">
                 <span
-                  className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold transition-all ${
+                  className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-xs text-xs font-mono font-bold transition-colors ${
                     showState && isCorrect
-                      ? "bg-brand text-white shadow-xs scale-110"
+                      ? "bg-brand text-brand-ink"
                       : showState && isSelected
-                      ? "bg-sun text-white shadow-xs"
-                      : "bg-surface-2 text-ink-2 group-hover:bg-brand group-hover:text-white"
+                      ? "bg-sun text-white"
+                      : "bg-surface-2 text-ink-2"
                   }`}
                 >
                   {OPTION_LETTERS[i]}
                 </span>
                 <span className="leading-snug">{opt}</span>
               </div>
-              {showState && isCorrect && <span className="text-xl font-black text-brand">✓</span>}
-              {showState && isSelected && !isCorrect && <span className="text-xl font-black text-sun">✗</span>}
+              {showState && isCorrect && <span className="text-sm font-mono font-bold text-brand">[CORRECT]</span>}
+              {showState && isSelected && !isCorrect && <span className="text-sm font-mono font-bold text-sun">[INCORRECT]</span>}
             </button>
           );
         })}
       </div>
 
       {selected !== null && (
-        <div className="mt-7 animate-pop rounded-2xl border border-border/80 bg-surface-2 p-5 shadow-xs">
-          <div className="flex items-start gap-3">
-            <span className="text-2xl">💡</span>
+        <div className="mt-6 rounded-md border border-border bg-surface-2 p-4">
+          <div className="flex items-start gap-2.5">
             <div>
-              <p className="text-sm font-bold text-ink">
+              <p className="text-xs font-mono font-bold uppercase text-ink">
                 {selected === q.answer_index
-                  ? (locale === "bn" ? "সঠিক উত্তর!" : "Correct!")
-                  : (locale === "bn" ? "সঠিক উত্তরটি লক্ষ্য করুন:" : "Notice the explanation:")}
+                  ? (locale === "bn" ? "সঠিক উত্তর" : "EXPLANATION")
+                  : (locale === "bn" ? "ব্যাখ্যা" : "EXPLANATION")}
               </p>
-              <p className="mt-1 text-sm text-ink-2 leading-relaxed font-normal">
+              <p className="mt-1 text-xs text-ink-2 leading-relaxed">
                 {locale === "bn" ? q.explanation_bn : q.explanation_en}
               </p>
             </div>

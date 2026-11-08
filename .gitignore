@@ -32,3 +32,8 @@ docs/images/*.jpg
 docs/images/*.png
 docs/images/*.webm
 !docs/images/readme_dark_showcase/
+docs/images/readme_dark_showcase/temp_video/
+docs/images/readme_dark_showcase/temp_voice_video/
+docs/images/readme_dark_showcase/voiceover_audio/
+tests/*.wav
+

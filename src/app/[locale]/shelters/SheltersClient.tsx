@@ -104,10 +104,12 @@ export function SheltersClient() {
                     <div className="shrink-0 text-right">
                       <p className="font-bold">{s.distanceKm.toFixed(1)} km</p>
                       <a
-                        href={`https://www.openstreetmap.org/directions?to=${s.lat}%2C${s.lng}`}
+                        href={`https://www.google.com/maps/dir/?api=1&destination=${s.lat},${s.lng}`}
+                        target="_blank"
+                        rel="noreferrer"
                         className="mt-1 inline-block text-sm font-semibold text-brand underline"
                       >
-                        {t("directions")}
+                        Google Maps
                       </a>
                     </div>
                   </div>

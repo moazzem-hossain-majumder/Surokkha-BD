@@ -12,7 +12,7 @@ export function Segmented<T extends string>({
   label: string;
 }) {
   return (
-    <div role="tablist" aria-label={label} className="inline-flex flex-wrap gap-1 rounded-full border border-border bg-surface p-1">
+    <div role="tablist" aria-label={label} className="inline-flex flex-wrap gap-1 rounded-md border border-border bg-surface p-0.5">
       {options.map((o) => (
         <button
           key={o.value}
@@ -20,7 +20,7 @@ export function Segmented<T extends string>({
           type="button"
           aria-selected={value === o.value}
           onClick={() => onChange(o.value)}
-          className="h-11 rounded-full px-4 text-sm font-semibold text-ink-2 transition-colors hover:text-ink aria-selected:bg-accent aria-selected:text-white"
+          className="h-8 rounded-sm px-3 text-xs font-semibold text-ink-2 transition-colors duration-150 hover:text-ink aria-selected:bg-brand aria-selected:text-brand-ink"
         >
           {o.label}
         </button>
